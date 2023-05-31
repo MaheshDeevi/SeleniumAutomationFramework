@@ -1,0 +1,3953 @@
+Logging into sqlplus and dropping sc_base
+
+Session altered.
+
+drop user sc_base cascade
+*
+ERROR at line 1:
+ORA-01940: cannot drop a user that is currently connected
+
+
+copying MKP300702_18022022_full.dmp file from the elysium db
+12:41:04
+############################################################################
+# You are accessing an information system owned and operated by HealthEdge #
+# Software, Inc., (HealthEdge) which includes this computer, this computer #
+# network, all computers connected to this network, and all devices and/or #
+# storage media attached to this network or to a computer on this network. #
+# This information system is provided for HealthEdge authorized use only.  #
+# Unauthorized or improper use of this system may result in disciplinary   #
+# action, and civil and criminal penalties. By using this information      #
+# system, you understand and consent to the following: You have no         #
+# reasonable expectation of privacy regarding any communications           #
+# transmitted through or data stored on this information system. At any    #
+# time, HealthEdge may monitor, intercept, search and/or seize data        #
+# transmitted or stored on this information system or on any connected     #
+# storage media. Any communications transmitted through or data stored     #
+# on this information system may be disclosed or used for any HealthEdge   #
+# authorized purpose.                                                      #
+############################################################################
+
+12:42:52
+copied MKP300702_18022022_full.dmp to /tmp
+granting read write permission
+Logging as oracle sudo user and move the MKP300702_18022022_full.dmp file to /u10/oradata/HE_DUMP directory
+Copied MKP300702_18022022_full.dmp to /u10/oradata/HE_DUMP
+Last login: Wed Jun  8 12:36:47 EDT 2022
+importing MP_DB
+
+Import: Release 12.1.0.2.0 - Production on Wed Jun 8 12:42:53 2022
+
+Copyright (c) 1982, 2014, Oracle and/or its affiliates.  All rights reserved.
+
+Connected to: Oracle Database 12c Enterprise Edition Release 12.1.0.2.0 - 64bit Production
+With the Partitioning, OLAP, Advanced Analytics and Real Application Testing options
+Master table "HEDBA"."SYS_IMPORT_SCHEMA_01" successfully loaded/unloaded
+Starting "HEDBA"."SYS_IMPORT_SCHEMA_01":  hedba/******** schemas=SC_BASE directory=HE_DUMP dumpfile=MKP300702_18022022_full.dmp logfile=SC_BASE.log REMAP_TABLESPACE=TABLES:DATA1,INDEXES:INDX1,REPORT:DATA1 
+Processing object type DATABASE_EXPORT/SCHEMA/USER
+ORA-31684: Object type USER:"SC_BASE" already exists
+Processing object type DATABASE_EXPORT/SCHEMA/GRANT/SYSTEM_GRANT
+Processing object type DATABASE_EXPORT/SCHEMA/ROLE_GRANT
+ORA-39083: Object type ROLE_GRANT failed to create with error:
+ORA-01919: role 'MP_BASE' does not exist
+Failing sql is:
+ GRANT "MP_BASE" TO "SC_BASE" WITH ADMIN OPTION
+ORA-39083: Object type ROLE_GRANT failed to create with error:
+ORA-01919: role 'MP_QUERY' does not exist
+Failing sql is:
+ GRANT "MP_QUERY" TO "SC_BASE" WITH ADMIN OPTION
+Processing object type DATABASE_EXPORT/SCHEMA/DEFAULT_ROLE
+Processing object type DATABASE_EXPORT/SCHEMA/TABLESPACE_QUOTA
+Processing object type DATABASE_EXPORT/SCHEMA/SEQUENCE/SEQUENCE
+ORA-31684: Object type SEQUENCE:"SC_BASE"."SEQ_INVOICE_NUMBER" already exists
+ORA-31684: Object type SEQUENCE:"SC_BASE"."SMHOSTAUTHSEQUENCE" already exists
+ORA-31684: Object type SEQUENCE:"SC_BASE"."SMDATABASESEQUENCE" already exists
+ORA-31684: Object type SEQUENCE:"SC_BASE"."SMCONSOLESOSETTINGSEQUENCE" already exists
+ORA-31684: Object type SEQUENCE:"SC_BASE"."SMHOSTSEQUENCE" already exists
+ORA-31684: Object type SEQUENCE:"SC_BASE"."SEQ_MP_CARD_LOG" already exists
+ORA-31684: Object type SEQUENCE:"SC_BASE"."SMGLOBALCONFIGURATIONSEQUENCE" already exists
+ORA-31684: Object type SEQUENCE:"SC_BASE"."SMTABLESPACESEQUENCE" already exists
+ORA-31684: Object type SEQUENCE:"SC_BASE"."SMPACKAGESEQUENCE" already exists
+ORA-31684: Object type SEQUENCE:"SC_BASE"."SMLOGMESSAGESEQUENCE" already exists
+ORA-31684: Object type SEQUENCE:"SC_BASE"."SMAGENTJOBSEQUENCE" already exists
+ORA-31684: Object type SEQUENCE:"SC_BASE"."SC_ID" already exists
+ORA-31684: Object type SEQUENCE:"SC_BASE"."SMDBAUTHSEQUENCE" already exists
+ORA-31684: Object type SEQUENCE:"SC_BASE"."SMACTUALPARAMETERSEQUENCE" already exists
+ORA-31684: Object type SEQUENCE:"SC_BASE"."SMRELEASESEQUENCE" already exists
+ORA-31684: Object type SEQUENCE:"SC_BASE"."SMMONTHWEEKENTRYSEQUENCE" already exists
+ORA-31684: Object type SEQUENCE:"SC_BASE"."SMDISTRIBUTIONSETSEQUENCE" already exists
+ORA-31684: Object type SEQUENCE:"SC_BASE"."SMSHAREDORACLECONFIGSEQUENCE" already exists
+ORA-31684: Object type SEQUENCE:"SC_BASE"."SMFORMALPARAMETERSEQUENCE" already exists
+ORA-31684: Object type SEQUENCE:"SC_BASE"."SMRUNSEQUENCE" already exists
+ORA-31684: Object type SEQUENCE:"SC_BASE"."SMVCENDPOINTSEQUENCE" already exists
+ORA-31684: Object type SEQUENCE:"SC_BASE"."SMINSTALLATIONSEQUENCE" already exists
+ORA-31684: Object type SEQUENCE:"SC_BASE"."SEQ_MMR_LOG" already exists
+ORA-31684: Object type SEQUENCE:"SC_BASE"."SMOMSTRINGSEQUENCE" already exists
+ORA-31684: Object type SEQUENCE:"SC_BASE"."SMTEMPORARYSEQUENCE" already exists
+ORA-31684: Object type SEQUENCE:"SC_BASE"."HOUSE_SEQUENCE" already exists
+ORA-31684: Object type SEQUENCE:"SC_BASE"."SMDEFAUTHSEQUENCE" already exists
+ORA-31684: Object type SEQUENCE:"SC_BASE"."SEQ_EDI_ERROR" already exists
+ORA-31684: Object type SEQUENCE:"SC_BASE"."SMMONTHLYENTRYSEQUENCE" already exists
+ORA-31684: Object type SEQUENCE:"SC_BASE"."SMPARALLELJOBSEQUENCE" already exists
+ORA-31684: Object type SEQUENCE:"SC_BASE"."SMPARALLELSTATEMENTSEQUENCE" already exists
+ORA-31684: Object type SEQUENCE:"SC_BASE"."SMSHAREDORACLECLIENTSEQUENCE" already exists
+ORA-31684: Object type SEQUENCE:"SC_BASE"."SEQ_EDI_REC_TEXT" already exists
+ORA-31684: Object type SEQUENCE:"SC_BASE"."AUTOENROLL_ID" already exists
+ORA-31684: Object type SEQUENCE:"SC_BASE"."SMFOLDERSEQUENCE" already exists
+ORA-31684: Object type SEQUENCE:"SC_BASE"."SMPARALLELOPERATIONSEQUENCE" already exists
+ORA-31684: Object type SEQUENCE:"SC_BASE"."SMPRODUCTSEQUENCE" already exists
+ORA-31684: Object type SEQUENCE:"SC_BASE"."SMARCHIVESEQUENCE" already exists
+ORA-31684: Object type SEQUENCE:"SC_BASE"."SMSCHEDULESEQUENCE" already exists
+ORA-31684: Object type SEQUENCE:"SC_BASE"."AMYSIS_ID" already exists
+ORA-31684: Object type SEQUENCE:"SC_BASE"."MBR_ID" already exists
+ORA-31684: Object type SEQUENCE:"SC_BASE"."SMWEEKLYENTRYSEQUENCE" already exists
+ORA-31684: Object type SEQUENCE:"SC_BASE"."SEQ_XREF_HCC_BENEFIT_PLAN_ID" already exists
+Processing object type DATABASE_EXPORT/SCHEMA/SEQUENCE/GRANT/OWNER_GRANT/OBJECT_GRANT
+ORA-39111: Dependent object type OBJECT_GRANT:"SC_BASE" skipped, base object type SEQUENCE:"SC_BASE"."SEQ_MP_CARD_LOG" already exists
+Processing object type DATABASE_EXPORT/SCHEMA/TYPE/TYPE_SPEC
+ORA-31684: Object type TYPE:"SC_BASE"."ELEMENTTBL" already exists
+ORA-31684: Object type TYPE:"SC_BASE"."PREMIUMINFO" already exists
+ORA-31684: Object type TYPE:"SC_BASE"."MMR_VARTYPE" already exists
+ORA-31684: Object type TYPE:"SC_BASE"."MEDICARE_SPAN_FLAGS" already exists
+ORA-31684: Object type TYPE:"SC_BASE"."MYLOAD" already exists
+ORA-31684: Object type TYPE:"SC_BASE"."TOLISTIMP1" already exists
+ORA-31684: Object type TYPE:"SC_BASE"."TOLISTHCC1" already exists
+ORA-31684: Object type TYPE:"SC_BASE"."PREMIUMINFOTBL" already exists
+Processing object type DATABASE_EXPORT/SCHEMA/PROCACT_SCHEMA
+Processing object type DATABASE_EXPORT/SCHEMA/TABLE/TABLE
+ORA-39151: Table "SC_BASE"."HCFA_DATE_IOT" exists. All dependent metadata and data will be skipped due to table_exists_action of skip
+ORA-39151: Table "SC_BASE"."HCFA_DATE_IOT_PB" exists. All dependent metadata and data will be skipped due to table_exists_action of skip
+ORA-39151: Table "SC_BASE"."SPAN_LIBRARY" exists. All dependent metadata and data will be skipped due to table_exists_action of skip
+ORA-39151: Table "SC_BASE"."HCFA_PAYMENT_ORG_HCC" exists. All dependent metadata and data will be skipped due to table_exists_action of skip
+ORA-39151: Table "SC_BASE"."HCFA_HCC_GOV" exists. All dependent metadata and data will be skipped due to table_exists_action of skip
+ORA-39151: Table "SC_BASE"."HCC_MODEL_LIBRARY" exists. All dependent metadata and data will be skipped due to table_exists_action of skip
+ORA-39151: Table "SC_BASE"."HCC_DIAGNOSES" exists. All dependent metadata and data will be skipped due to table_exists_action of skip
+ORA-39151: Table "SC_BASE"."AMISYS_MCO_PROVIDERS" exists. All dependent metadata and data will be skipped due to table_exists_action of skip
+ORA-39151: Table "SC_BASE"."BANK_INFO" exists. All dependent metadata and data will be skipped due to table_exists_action of skip
+ORA-39151: Table "SC_BASE"."BANK_INFO_ERRORS" exists. All dependent metadata and data will be skipped due to table_exists_action of skip
+ORA-39151: Table "SC_BASE"."FL_ARCHIVE" exists. All dependent metadata and data will be skipped due to table_exists_action of skip
+ORA-39151: Table "SC_BASE"."FL_ERROR_LOG" exists. All dependent metadata and data will be skipped due to table_exists_action of skip
+ORA-39151: Table "SC_BASE"."FUNCTION_OLD" exists. All dependent metadata and data will be skipped due to table_exists_action of skip
+ORA-39151: Table "SC_BASE"."ACTION_LIBRARY" exists. All dependent metadata and data will be skipped due to table_exists_action of skip
+ORA-39151: Table "SC_BASE"."ACTION_LOG" exists. All dependent metadata and data will be skipped due to table_exists_action of skip
+ORA-39151: Table "SC_BASE"."ACXIOM_EXPORT_ARCHIVE" exists. All dependent metadata and data will be skipped due to table_exists_action of skip
+ORA-39151: Table "SC_BASE"."ACXIOM_IMPORT_ARCHIVE" exists. All dependent metadata and data will be skipped due to table_exists_action of skip
+ORA-39151: Table "SC_BASE"."AFFILIATION_LIBRARY" exists. All dependent metadata and data will be skipped due to table_exists_action of skip
+ORA-39151: Table "SC_BASE"."AFFILIATION_PROGRAM_LINK" exists. All dependent metadata and data will be skipped due to table_exists_action of skip
+ORA-39151: Table "SC_BASE"."ANSWER_GROUP_LINK" exists. All dependent metadata and data will be skipped due to table_exists_action of skip
+ORA-39151: Table "SC_BASE"."ANSWER_LIBRARY" exists. All dependent metadata and data will be skipped due to table_exists_action of skip
+ORA-39151: Table "SC_BASE"."ARCHIVE_HCFA_NAME_ORG" exists. All dependent metadata and data will be skipped due to table_exists_action of skip
+ORA-39151: Table "SC_BASE"."ARCHIVE_MP" exists. All dependent metadata and data will be skipped due to table_exists_action of skip
+ORA-39151: Table "SC_BASE"."ARCHIVE_MP_PROCESS" exists. All dependent metadata and data will be skipped due to table_exists_action of skip
+ORA-39151: Table "SC_BASE"."ARCH_AUTO_TRR" exists. All dependent metadata and data will be skipped due to table_exists_action of skip
+ORA-39151: Table "SC_BASE"."ARCH_PAYMENT_LOAD" exists. All dependent metadata and data will be skipped due to table_exists_action of skip
+ORA-39151: Table "SC_BASE"."ARCH_UPDATE_SPANS" exists. All dependent metadata and data will be skipped due to table_exists_action of skip
+ORA-39151: Table "SC_BASE"."AUDIT_COMPLIANCE_ISSUES" exists. All dependent metadata and data will be skipped due to table_exists_action of skip
+ORA-39151: Table "SC_BASE"."AUDIT_ITEM" exists. All dependent metadata and data will be skipped due to table_exists_action of skip
+ORA-39151: Table "SC_BASE"."AUDIT_LIBRARY" exists. All dependent metadata and data will be skipped due to table_exists_action of skip
+ORA-39151: Table "SC_BASE"."AUDIT_LINK" exists. All dependent metadata and data will be skipped due to table_exists_action of skip
+ORA-39151: Table "SC_BASE"."AUDIT_ROW" exists. All dependent metadata and data will be skipped due to table_exists_action of skip
+ORA-39151: Table "SC_BASE"."AUDIT_SETTING" exists. All dependent metadata and data will be skipped due to table_exists_action of skip
+ORA-39151: Table "SC_BASE"."AUDIT_SUBTABLE" exists. All dependent metadata and data will be skipped due to table_exists_action of skip
+ORA-39151: Table "SC_BASE"."AUDIT_TABLE" exists. All dependent metadata and data will be skipped due to table_exists_action of skip
+ORA-39151: Table "SC_BASE"."AUTOENROLL" exists. All dependent metadata and data will be skipped due to table_exists_action of skip
+ORA-39151: Table "SC_BASE"."AUTOENROLL_BAD" exists. All dependent metadata and data will be skipped due to table_exists_action of skip
+ORA-39151: Table "SC_BASE"."AUTOENROLL_PACKAGES" exists. All dependent metadata and data will be skipped due to table_exists_action of skip
+ORA-39151: Table "SC_BASE"."AUTOENROLL_TEMP" exists. All dependent metadata and data will be skipped due to table_exists_action of skip
+ORA-39151: Table "SC_BASE"."CAMPAIGN_EVENT_LINK" exists. All dependent metadata and data will be skipped due to table_exists_action of skip
+ORA-39151: Table "SC_BASE"."CAMPAIGN_LIBRARY" exists. All dependent metadata and data will be skipped due to table_exists_action of skip
+ORA-39151: Table "SC_BASE"."CAMPAIGN_PROGRAM_LINK" exists. All dependent metadata and data will be skipped due to table_exists_action of skip
+ORA-39151: Table "SC_BASE"."CARD_USAGE" exists. All dependent metadata and data will be skipped due to table_exists_action of skip
+ORA-39151: Table "SC_BASE"."CERTIFY_LIBRARY" exists. All dependent metadata and data will be skipped due to table_exists_action of skip
+ORA-39151: Table "SC_BASE"."CERTIFY_PROGRAM_LINK" exists. All dependent metadata and data will be skipped due to table_exists_action of skip
+ORA-39151: Table "SC_BASE"."CHECKLIST_ITEM" exists. All dependent metadata and data will be skipped due to table_exists_action of skip
+ORA-39151: Table "SC_BASE"."CHECKLIST_LIBRARY" exists. All dependent metadata and data will be skipped due to table_exists_action of skip
+ORA-39151: Table "SC_BASE"."CHECKLIST_PROGRAM_LINK" exists. All dependent metadata and data will be skipped due to table_exists_action of skip
+ORA-39151: Table "SC_BASE"."CHECK_NAME" exists. All dependent metadata and data will be skipped due to table_exists_action of skip
+ORA-39151: Table "SC_BASE"."CHP_INCOME" exists. All dependent metadata and data will be skipped due to table_exists_action of skip
+ORA-39151: Table "SC_BASE"."CHP_RATE" exists. All dependent metadata and data will be skipped due to table_exists_action of skip
+ORA-39151: Table "SC_BASE"."CHP_RATE_ADJUSTMENT" exists. All dependent metadata and data will be skipped due to table_exists_action of skip
+ORA-39151: Table "SC_BASE"."CLIENT_CUSTOMIZATION" exists. All dependent metadata and data will be skipped due to table_exists_action of skip
+ORA-39151: Table "SC_BASE"."COB_EXPORT_ARCHIVE" exists. All dependent metadata and data will be skipped due to table_exists_action of skip
+ORA-39151: Table "SC_BASE"."COB_EXPORT_ERRORS" exists. All dependent metadata and data will be skipped due to table_exists_action of skip
+ORA-39151: Table "SC_BASE"."COB_IMPORT_ARCHIVE" exists. All dependent metadata and data will be skipped due to table_exists_action of skip
+ORA-39151: Table "SC_BASE"."COB_IMPORT_ERRORS" exists. All dependent metadata and data will be skipped due to table_exists_action of skip
+ORA-39151: Table "SC_BASE"."CODEPROCESS_GROUP_LINK" exists. All dependent metadata and data will be skipped due to table_exists_action of skip
+ORA-39151: Table "SC_BASE"."COLUMN_LIBRARY" exists. All dependent metadata and data will be skipped due to table_exists_action of skip
+ORA-39151: Table "SC_BASE"."CTI_CALL_HISTORY" exists. All dependent metadata and data will be skipped due to table_exists_action of skip
+ORA-39151: Table "SC_BASE"."DATE_SPAN" exists. All dependent metadata and data will be skipped due to table_exists_action of skip
+ORA-39151: Table "SC_BASE"."DEDUPE_LOG" exists. All dependent metadata and data will be skipped due to table_exists_action of skip
+ORA-39151: Table "SC_BASE"."DEPARTMENT_LIBRARY" exists. All dependent metadata and data will be skipped due to table_exists_action of skip
+ORA-39151: Table "SC_BASE"."DETAIL_LIBRARY" exists. All dependent metadata and data will be skipped due to table_exists_action of skip
+ORA-39151: Table "SC_BASE"."DETAIL_PROGRAM_LINK" exists. All dependent metadata and data will be skipped due to table_exists_action of skip
+ORA-39151: Table "SC_BASE"."EDI_FILE_DATA" exists. All dependent metadata and data will be skipped due to table_exists_action of skip
+ORA-39151: Table "SC_BASE"."EDI_FILE_HISTORY" exists. All dependent metadata and data will be skipped due to table_exists_action of skip
+ORA-39151: Table "SC_BASE"."EDI_FILE_LIBRARY" exists. All dependent metadata and data will be skipped due to table_exists_action of skip
+ORA-39151: Table "SC_BASE"."EDI_GENERICFILE" exists. All dependent metadata and data will be skipped due to table_exists_action of skip
+ORA-39151: Table "SC_BASE"."EDI_PYMTINFO_IMP" exists. All dependent metadata and data will be skipped due to table_exists_action of skip
+ORA-39151: Table "SC_BASE"."EMAIL_LIBRARY" exists. All dependent metadata and data will be skipped due to table_exists_action of skip
+ORA-39151: Table "SC_BASE"."ENTITY" exists. All dependent metadata and data will be skipped due to table_exists_action of skip
+ORA-39151: Table "SC_BASE"."ENTITY_CHP" exists. All dependent metadata and data will be skipped due to table_exists_action of skip
+ORA-39151: Table "SC_BASE"."ENTITY_COMPANY" exists. All dependent metadata and data will be skipped due to table_exists_action of skip
+ORA-39151: Table "SC_BASE"."ENTITY_ENROLL_APP" exists. All dependent metadata and data will be skipped due to table_exists_action of skip
+ORA-39151: Table "SC_BASE"."ENTITY_EXTRA" exists. All dependent metadata and data will be skipped due to table_exists_action of skip
+ORA-39151: Table "SC_BASE"."ENTITY_NAME_LINK" exists. All dependent metadata and data will be skipped due to table_exists_action of skip
+ORA-39151: Table "SC_BASE"."ERROR_LOG" exists. All dependent metadata and data will be skipped due to table_exists_action of skip
+ORA-39151: Table "SC_BASE"."ESCALATION_EMAIL" exists. All dependent metadata and data will be skipped due to table_exists_action of skip
+ORA-39151: Table "SC_BASE"."ESCALATION_HISTORY" exists. All dependent metadata and data will be skipped due to table_exists_action of skip
+ORA-39151: Table "SC_BASE"."ESCALATION_LIBRARY" exists. All dependent metadata and data will be skipped due to table_exists_action of skip
+ORA-39151: Table "SC_BASE"."EVENT_LIBRARY" exists. All dependent metadata and data will be skipped due to table_exists_action of skip
+ORA-39151: Table "SC_BASE"."EVENT_PROGRAM_LINK" exists. All dependent metadata and data will be skipped due to table_exists_action of skip
+ORA-39151: Table "SC_BASE"."FIELD_LIBRARY" exists. All dependent metadata and data will be skipped due to table_exists_action of skip
+ORA-39151: Table "SC_BASE"."FILTER_LIBRARY" exists. All dependent metadata and data will be skipped due to table_exists_action of skip
+ORA-39151: Table "SC_BASE"."FUNCTION_LIBRARY" exists. All dependent metadata and data will be skipped due to table_exists_action of skip
+ORA-39151: Table "SC_BASE"."GROUP_ACTION_LINK" exists. All dependent metadata and data will be skipped due to table_exists_action of skip
+ORA-39151: Table "SC_BASE"."GROUP_LIBRARY" exists. All dependent metadata and data will be skipped due to table_exists_action of skip
+ORA-39151: Table "SC_BASE"."GROUP_PROGRAM_LINK" exists. All dependent metadata and data will be skipped due to table_exists_action of skip
+ORA-39151: Table "SC_BASE"."HCCUTIL_CMS_ERRORS" exists. All dependent metadata and data will be skipped due to table_exists_action of skip
+ORA-39151: Table "SC_BASE"."HCCUTIL_COMPARISON" exists. All dependent metadata and data will be skipped due to table_exists_action of skip
+ORA-39151: Table "SC_BASE"."HCCUTIL_HCC_COMPARISON" exists. All dependent metadata and data will be skipped due to table_exists_action of skip
+ORA-39151: Table "SC_BASE"."HCCUTIL_SUBMISSION" exists. All dependent metadata and data will be skipped due to table_exists_action of skip
+ORA-39151: Table "SC_BASE"."HCFA_ADJUSTMENT_NAMES" exists. All dependent metadata and data will be skipped due to table_exists_action of skip
+ORA-39151: Table "SC_BASE"."HCFA_ARCH_BEQ" exists. All dependent metadata and data will be skipped due to table_exists_action of skip
+ORA-39151: Table "SC_BASE"."HCFA_ARCH_CORRECT" exists. All dependent metadata and data will be skipped due to table_exists_action of skip
+ORA-39151: Table "SC_BASE"."HCFA_ARCH_ENROLL" exists. All dependent metadata and data will be skipped due to table_exists_action of skip
+ORA-39151: Table "SC_BASE"."HCFA_ARCH_FOURRX" exists. All dependent metadata and data will be skipped due to table_exists_action of skip
+ORA-39151: Table "SC_BASE"."HCFA_ARCH_HCC" exists. All dependent metadata and data will be skipped due to table_exists_action of skip
+ORA-39151: Table "SC_BASE"."HCFA_ARCH_LISAHD" exists. All dependent metadata and data will be skipped due to table_exists_action of skip
+ORA-39151: Table "SC_BASE"."HCFA_ARCH_LISHIST" exists. All dependent metadata and data will be skipped due to table_exists_action of skip
+ORA-39151: Table "SC_BASE"."HCFA_ARCH_LISLEP" exists. All dependent metadata and data will be skipped due to table_exists_action of skip
+ORA-39151: Table "SC_BASE"."HCFA_ARCH_LISPRMD" exists. All dependent metadata and data will be skipped due to table_exists_action of skip
+ORA-39151: Table "SC_BASE"."HCFA_ARCH_LISPRMD_ERRORS" exists. All dependent metadata and data will be skipped due to table_exists_action of skip
+ORA-39151: Table "SC_BASE"."HCFA_ARCH_MONMEMB" exists. All dependent metadata and data will be skipped due to table_exists_action of skip
+ORA-39151: Table "SC_BASE"."HCFA_ARCH_NORX" exists. All dependent metadata and data will be skipped due to table_exists_action of skip
+ORA-39151: Table "SC_BASE"."HCFA_ARCH_PREMIUMWITHHOLD" exists. All dependent metadata and data will be skipped due to table_exists_action of skip
+ORA-39151: Table "SC_BASE"."HCFA_ARCH_RAPS" exists. All dependent metadata and data will be skipped due to table_exists_action of skip
+ORA-39151: Table "SC_BASE"."HCFA_ARCH_REPLY" exists. All dependent metadata and data will be skipped due to table_exists_action of skip
+ORA-39151: Table "SC_BASE"."HCFA_ARCH_RXHCC" exists. All dependent metadata and data will be skipped due to table_exists_action of skip
+ORA-39151: Table "SC_BASE"."HCFA_ARCH_WEEKLYTRR" exists. All dependent metadata and data will be skipped due to table_exists_action of skip
+ORA-39151: Table "SC_BASE"."HCFA_CODE_GROUP_LINK" exists. All dependent metadata and data will be skipped due to table_exists_action of skip
+ORA-39151: Table "SC_BASE"."HCFA_CODE_LIBRARY" exists. All dependent metadata and data will be skipped due to table_exists_action of skip
+ORA-39151: Table "SC_BASE"."HCFA_CODE_PROGRAM_LINK" exists. All dependent metadata and data will be skipped due to table_exists_action of skip
+ORA-39151: Table "SC_BASE"."HCFA_DATE" exists. All dependent metadata and data will be skipped due to table_exists_action of skip
+ORA-39151: Table "SC_BASE"."HCFA_DIAGNOSIS_CODES" exists. All dependent metadata and data will be skipped due to table_exists_action of skip
+ORA-39151: Table "SC_BASE"."HCFA_DIAGNOSIS_WORKSPACE" exists. All dependent metadata and data will be skipped due to table_exists_action of skip
+ORA-39151: Table "SC_BASE"."HCFA_FILES_LOADED" exists. All dependent metadata and data will be skipped due to table_exists_action of skip
+ORA-39151: Table "SC_BASE"."HCFA_HCC_ORG" exists. All dependent metadata and data will be skipped due to table_exists_action of skip
+ORA-39151: Table "SC_BASE"."HCFA_NAME_ORG" exists. All dependent metadata and data will be skipped due to table_exists_action of skip
+ORA-39151: Table "SC_BASE"."HCFA_PAYMENT_ORG" exists. All dependent metadata and data will be skipped due to table_exists_action of skip
+ORA-39151: Table "SC_BASE"."HCFA_PAYMENT_PLANLEVEL" exists. All dependent metadata and data will be skipped due to table_exists_action of skip
+ORA-39151: Table "SC_BASE"."HCFA_RATE" exists. All dependent metadata and data will be skipped due to table_exists_action of skip
+ORA-39151: Table "SC_BASE"."HCFA_RATE_FACTOR" exists. All dependent metadata and data will be skipped due to table_exists_action of skip
+ORA-39151: Table "SC_BASE"."HCFA_RATE_INFO" exists. All dependent metadata and data will be skipped due to table_exists_action of skip
+ORA-39151: Table "SC_BASE"."HCFA_RECALCULATE_PAYMENT" exists. All dependent metadata and data will be skipped due to table_exists_action of skip
+ORA-39151: Table "SC_BASE"."HCFA_SALES_AND_MKTG" exists. All dependent metadata and data will be skipped due to table_exists_action of skip
+ORA-39151: Table "SC_BASE"."HCFA_VARIANCE" exists. All dependent metadata and data will be skipped due to table_exists_action of skip
+ORA-39151: Table "SC_BASE"."HCFA_VARIANCE_MONTH" exists. All dependent metadata and data will be skipped due to table_exists_action of skip
+ORA-39151: Table "SC_BASE"."INTF_REPLY_PROCESSING" exists. All dependent metadata and data will be skipped due to table_exists_action of skip
+ORA-39151: Table "SC_BASE"."INVOICE_SUMMARY" exists. All dependent metadata and data will be skipped due to table_exists_action of skip
+ORA-39151: Table "SC_BASE"."LAUNCH_LIBRARY" exists. All dependent metadata and data will be skipped due to table_exists_action of skip
+ORA-39151: Table "SC_BASE"."LIB_FIND" exists. All dependent metadata and data will be skipped due to table_exists_action of skip
+ORA-39151: Table "SC_BASE"."LIST_LIBRARY" exists. All dependent metadata and data will be skipped due to table_exists_action of skip
+ORA-39151: Table "SC_BASE"."LOCATION_EVENT_LINK" exists. All dependent metadata and data will be skipped due to table_exists_action of skip
+ORA-39151: Table "SC_BASE"."LOCATION_LIBRARY" exists. All dependent metadata and data will be skipped due to table_exists_action of skip
+ORA-39151: Table "SC_BASE"."MAIL_IDS" exists. All dependent metadata and data will be skipped due to table_exists_action of skip
+ORA-39151: Table "SC_BASE"."MASTER_SCCODE" exists. All dependent metadata and data will be skipped due to table_exists_action of skip
+ORA-39151: Table "SC_BASE"."MEDIA_EVENT_LINK" exists. All dependent metadata and data will be skipped due to table_exists_action of skip
+ORA-39151: Table "SC_BASE"."MEDIA_LIBRARY" exists. All dependent metadata and data will be skipped due to table_exists_action of skip
+ORA-39151: Table "SC_BASE"."MEDIA_PROGRAM_LINK" exists. All dependent metadata and data will be skipped due to table_exists_action of skip
+ORA-39151: Table "SC_BASE"."MEDICAID_RATE" exists. All dependent metadata and data will be skipped due to table_exists_action of skip
+ORA-39151: Table "SC_BASE"."MEDICARE_SPANS_ARCH" exists. All dependent metadata and data will be skipped due to table_exists_action of skip
+ORA-39151: Table "SC_BASE"."MILESTONE_LIBRARY" exists. All dependent metadata and data will be skipped due to table_exists_action of skip
+ORA-39151: Table "SC_BASE"."MILESTONE_PROGRAM_LINK" exists. All dependent metadata and data will be skipped due to table_exists_action of skip
+ORA-39151: Table "SC_BASE"."MMR_LOG" exists. All dependent metadata and data will be skipped due to table_exists_action of skip
+ORA-39151: Table "SC_BASE"."NAME" exists. All dependent metadata and data will be skipped due to table_exists_action of skip
+ORA-39151: Table "SC_BASE"."NAME_ADDRESS" exists. All dependent metadata and data will be skipped due to table_exists_action of skip
+ORA-39151: Table "SC_BASE"."NAME_ADDRESS_PHONE_DUP" exists. All dependent metadata and data will be skipped due to table_exists_action of skip
+ORA-39151: Table "SC_BASE"."NAME_AFFILIATION_LINK" exists. All dependent metadata and data will be skipped due to table_exists_action of skip
+ORA-39151: Table "SC_BASE"."NAME_ANSWER" exists. All dependent metadata and data will be skipped due to table_exists_action of skip
+ORA-39151: Table "SC_BASE"."NAME_ATTACHMENT" exists. All dependent metadata and data will be skipped due to table_exists_action of skip
+ORA-39151: Table "SC_BASE"."NAME_CERTIFY" exists. All dependent metadata and data will be skipped due to table_exists_action of skip
+ORA-39151: Table "SC_BASE"."NAME_CHECKLIST" exists. All dependent metadata and data will be skipped due to table_exists_action of skip
+ORA-39151: Table "SC_BASE"."NAME_CHECKLISTITEM" exists. All dependent metadata and data will be skipped due to table_exists_action of skip
+ORA-39151: Table "SC_BASE"."NAME_CHP" exists. All dependent metadata and data will be skipped due to table_exists_action of skip
+ORA-39151: Table "SC_BASE"."NAME_CLAIM" exists. All dependent metadata and data will be skipped due to table_exists_action of skip
+ORA-39151: Table "SC_BASE"."NAME_CLAIM_DETAIL" exists. All dependent metadata and data will be skipped due to table_exists_action of skip
+ORA-39151: Table "SC_BASE"."NAME_COB" exists. All dependent metadata and data will be skipped due to table_exists_action of skip
+ORA-39151: Table "SC_BASE"."NAME_COMPANY" exists. All dependent metadata and data will be skipped due to table_exists_action of skip
+ORA-39151: Table "SC_BASE"."NAME_CONTACT" exists. All dependent metadata and data will be skipped due to table_exists_action of skip
+ORA-39151: Table "SC_BASE"."NAME_DETAIL" exists. All dependent metadata and data will be skipped due to table_exists_action of skip
+ORA-39151: Table "SC_BASE"."NAME_EMAIL" exists. All dependent metadata and data will be skipped due to table_exists_action of skip
+ORA-39151: Table "SC_BASE"."NAME_MEMBER_LINK" exists. All dependent metadata and data will be skipped due to table_exists_action of skip
+ORA-39151: Table "SC_BASE"."NAME_MILESTONE" exists. All dependent metadata and data will be skipped due to table_exists_action of skip
+ORA-39151: Table "SC_BASE"."NAME_PAYMENT" exists. All dependent metadata and data will be skipped due to table_exists_action of skip
+ORA-39151: Table "SC_BASE"."NAME_PHONE_NUMBERS" exists. All dependent metadata and data will be skipped due to table_exists_action of skip
+ORA-39151: Table "SC_BASE"."NAME_PROJECT" exists. All dependent metadata and data will be skipped due to table_exists_action of skip
+ORA-39151: Table "SC_BASE"."NAME_PROVIDER" exists. All dependent metadata and data will be skipped due to table_exists_action of skip
+ORA-39151: Table "SC_BASE"."NAME_QMB" exists. All dependent metadata and data will be skipped due to table_exists_action of skip
+ORA-39151: Table "SC_BASE"."NAME_QUOTE" exists. All dependent metadata and data will be skipped due to table_exists_action of skip
+ORA-39151: Table "SC_BASE"."NAME_REFERRAL" exists. All dependent metadata and data will be skipped due to table_exists_action of skip
+ORA-39151: Table "SC_BASE"."NAME_SCRIPT" exists. All dependent metadata and data will be skipped due to table_exists_action of skip
+ORA-39151: Table "SC_BASE"."NAME_STAFF_LINK" exists. All dependent metadata and data will be skipped due to table_exists_action of skip
+ORA-39151: Table "SC_BASE"."NAME_STATUS" exists. All dependent metadata and data will be skipped due to table_exists_action of skip
+ORA-39151: Table "SC_BASE"."NAME_TRANSACTION" exists. All dependent metadata and data will be skipped due to table_exists_action of skip
+ORA-39151: Table "SC_BASE"."NOTE_LIBRARY" exists. All dependent metadata and data will be skipped due to table_exists_action of skip
+ORA-39151: Table "SC_BASE"."NOTE_PROGRAM_LINK" exists. All dependent metadata and data will be skipped due to table_exists_action of skip
+ORA-39151: Table "SC_BASE"."OBJECT_TRUTHTABLE_LINK" exists. All dependent metadata and data will be skipped due to table_exists_action of skip
+ORA-39151: Table "SC_BASE"."OBJECT_VALIDATION_LINK" exists. All dependent metadata and data will be skipped due to table_exists_action of skip
+ORA-39151: Table "SC_BASE"."PACKAGE_COUNTY_LINK" exists. All dependent metadata and data will be skipped due to table_exists_action of skip
+ORA-39151: Table "SC_BASE"."PACKAGE_COUNTY_RATES" exists. All dependent metadata and data will be skipped due to table_exists_action of skip
+ORA-39151: Table "SC_BASE"."PACKAGE_DETAIL" exists. All dependent metadata and data will be skipped due to table_exists_action of skip
+ORA-39151: Table "SC_BASE"."PACKAGE_GROUPNUMBER_PREMIUMS" exists. All dependent metadata and data will be skipped due to table_exists_action of skip
+ORA-39151: Table "SC_BASE"."PACKAGE_LIBRARY" exists. All dependent metadata and data will be skipped due to table_exists_action of skip
+ORA-39151: Table "SC_BASE"."PREMIUM_ADJUSTMENTS" exists. All dependent metadata and data will be skipped due to table_exists_action of skip
+ORA-39151: Table "SC_BASE"."PROCEDURE_CTL" exists. All dependent metadata and data will be skipped due to table_exists_action of skip
+ORA-39151: Table "SC_BASE"."PROCEDURE_ERROR_LOG" exists. All dependent metadata and data will be skipped due to table_exists_action of skip
+ORA-39151: Table "SC_BASE"."PROCEDURE_LIBRARY" exists. All dependent metadata and data will be skipped due to table_exists_action of skip
+ORA-39151: Table "SC_BASE"."PROCESS_HISTORY" exists. All dependent metadata and data will be skipped due to table_exists_action of skip
+ORA-39151: Table "SC_BASE"."PROCESS_LIBRARY" exists. All dependent metadata and data will be skipped due to table_exists_action of skip
+ORA-39151: Table "SC_BASE"."PROCESS_LINK" exists. All dependent metadata and data will be skipped due to table_exists_action of skip
+ORA-39151: Table "SC_BASE"."PROJECT_ITEM_LINK" exists. All dependent metadata and data will be skipped due to table_exists_action of skip
+ORA-39151: Table "SC_BASE"."PROJECT_NOTES" exists. All dependent metadata and data will be skipped due to table_exists_action of skip
+ORA-39151: Table "SC_BASE"."PROJECT_TO_DO" exists. All dependent metadata and data will be skipped due to table_exists_action of skip
+ORA-39151: Table "SC_BASE"."PROVIDER_LIBRARY" exists. All dependent metadata and data will be skipped due to table_exists_action of skip
+ORA-39151: Table "SC_BASE"."PROVIDER_LOAD" exists. All dependent metadata and data will be skipped due to table_exists_action of skip
+ORA-39151: Table "SC_BASE"."QUERY_LIBRARY" exists. All dependent metadata and data will be skipped due to table_exists_action of skip
+ORA-39151: Table "SC_BASE"."QUEUE_LIBRARY" exists. All dependent metadata and data will be skipped due to table_exists_action of skip
+ORA-39151: Table "SC_BASE"."QUEUE_LIST" exists. All dependent metadata and data will be skipped due to table_exists_action of skip
+ORA-39151: Table "SC_BASE"."RATING_LIBRARY" exists. All dependent metadata and data will be skipped due to table_exists_action of skip
+ORA-39151: Table "SC_BASE"."REFERRAL_DETAIL" exists. All dependent metadata and data will be skipped due to table_exists_action of skip
+ORA-39151: Table "SC_BASE"."REMINDER_EVENT_LINK" exists. All dependent metadata and data will be skipped due to table_exists_action of skip
+ORA-39151: Table "SC_BASE"."REMINDER_LIBRARY" exists. All dependent metadata and data will be skipped due to table_exists_action of skip
+ORA-39151: Table "SC_BASE"."REPORT_EVENT_LINK" exists. All dependent metadata and data will be skipped due to table_exists_action of skip
+ORA-39151: Table "SC_BASE"."REPORT_LIBRARY" exists. All dependent metadata and data will be skipped due to table_exists_action of skip
+ORA-39151: Table "SC_BASE"."RESULT_GROUP_LINK" exists. All dependent metadata and data will be skipped due to table_exists_action of skip
+ORA-39151: Table "SC_BASE"."RESULT_LIBRARY" exists. All dependent metadata and data will be skipped due to table_exists_action of skip
+ORA-39151: Table "SC_BASE"."RESULT_PROGRAM_LINK" exists. All dependent metadata and data will be skipped due to table_exists_action of skip
+ORA-39151: Table "SC_BASE"."RIGHTS_FEATURE_LINK" exists. All dependent metadata and data will be skipped due to table_exists_action of skip
+ORA-39151: Table "SC_BASE"."RIGHTS_LIBRARY" exists. All dependent metadata and data will be skipped due to table_exists_action of skip
+ORA-39151: Table "SC_BASE"."RIGHTS_STAFF_LINK" exists. All dependent metadata and data will be skipped due to table_exists_action of skip
+ORA-39151: Table "SC_BASE"."RISK_ADJUSTER" exists. All dependent metadata and data will be skipped due to table_exists_action of skip
+ORA-39151: Table "SC_BASE"."RISK_ADJUSTER_HCC" exists. All dependent metadata and data will be skipped due to table_exists_action of skip
+ORA-39151: Table "SC_BASE"."RX_RISK_ADJUSTER" exists. All dependent metadata and data will be skipped due to table_exists_action of skip
+ORA-39151: Table "SC_BASE"."R_DETAIL_AFFIL" exists. All dependent metadata and data will be skipped due to table_exists_action of skip
+ORA-39151: Table "SC_BASE"."R_MILESTONE_SUMMARY" exists. All dependent metadata and data will be skipped due to table_exists_action of skip
+ORA-39151: Table "SC_BASE"."SCRIPTS_ITEM_LINK" exists. All dependent metadata and data will be skipped due to table_exists_action of skip
+ORA-39151: Table "SC_BASE"."SCRIPT_CARD_LINK" exists. All dependent metadata and data will be skipped due to table_exists_action of skip
+ORA-39151: Table "SC_BASE"."SCRIPT_LIBRARY" exists. All dependent metadata and data will be skipped due to table_exists_action of skip
+ORA-39151: Table "SC_BASE"."SCRIPT_LINK" exists. All dependent metadata and data will be skipped due to table_exists_action of skip
+ORA-39151: Table "SC_BASE"."SCRIPT_PROGRAM_LINK" exists. All dependent metadata and data will be skipped due to table_exists_action of skip
+ORA-39151: Table "SC_BASE"."SETTING_LIBRARY" exists. All dependent metadata and data will be skipped due to table_exists_action of skip
+ORA-39151: Table "SC_BASE"."STAFF" exists. All dependent metadata and data will be skipped due to table_exists_action of skip
+ORA-39151: Table "SC_BASE"."STAFF_ADDRESS" exists. All dependent metadata and data will be skipped due to table_exists_action of skip
+ORA-39151: Table "SC_BASE"."STAFF_AFFILIATION_LINK" exists. All dependent metadata and data will be skipped due to table_exists_action of skip
+ORA-39151: Table "SC_BASE"."STAFF_EMAIL" exists. All dependent metadata and data will be skipped due to table_exists_action of skip
+ORA-39151: Table "SC_BASE"."STAFF_EXCLUSION" exists. All dependent metadata and data will be skipped due to table_exists_action of skip
+ORA-39151: Table "SC_BASE"."STAFF_FEATURE_LINK" exists. All dependent metadata and data will be skipped due to table_exists_action of skip
+ORA-39151: Table "SC_BASE"."STAFF_LOCATION_LINK" exists. All dependent metadata and data will be skipped due to table_exists_action of skip
+ORA-39151: Table "SC_BASE"."STAFF_LOG" exists. All dependent metadata and data will be skipped due to table_exists_action of skip
+ORA-39151: Table "SC_BASE"."STAFF_NUMBERS" exists. All dependent metadata and data will be skipped due to table_exists_action of skip
+ORA-39151: Table "SC_BASE"."STAFF_PROGRAM_LINK" exists. All dependent metadata and data will be skipped due to table_exists_action of skip
+ORA-39151: Table "SC_BASE"."STAFF_QUEUE_LINK" exists. All dependent metadata and data will be skipped due to table_exists_action of skip
+ORA-39151: Table "SC_BASE"."STAFF_TERRITORY_LINK" exists. All dependent metadata and data will be skipped due to table_exists_action of skip
+ORA-39151: Table "SC_BASE"."STAFF_ZONE_LINK" exists. All dependent metadata and data will be skipped due to table_exists_action of skip
+ORA-39151: Table "SC_BASE"."SYSTEM_CONTROL" exists. All dependent metadata and data will be skipped due to table_exists_action of skip
+ORA-39151: Table "SC_BASE"."TABLE_TYPES" exists. All dependent metadata and data will be skipped due to table_exists_action of skip
+ORA-39151: Table "SC_BASE"."TEMP_XLATE_LANGUAGE" exists. All dependent metadata and data will be skipped due to table_exists_action of skip
+ORA-39151: Table "SC_BASE"."TERRITORY_LIBRARY" exists. All dependent metadata and data will be skipped due to table_exists_action of skip
+ORA-39151: Table "SC_BASE"."TERRITORY_PROGRAM_LINK" exists. All dependent metadata and data will be skipped due to table_exists_action of skip
+ORA-39151: Table "SC_BASE"."TO_DO" exists. All dependent metadata and data will be skipped due to table_exists_action of skip
+ORA-39151: Table "SC_BASE"."TO_DO_EMAIL" exists. All dependent metadata and data will be skipped due to table_exists_action of skip
+ORA-39151: Table "SC_BASE"."TO_DO_HISTORY" exists. All dependent metadata and data will be skipped due to table_exists_action of skip
+ORA-39151: Table "SC_BASE"."TO_DO_LETTER" exists. All dependent metadata and data will be skipped due to table_exists_action of skip
+ORA-39151: Table "SC_BASE"."TO_DO_PHONE" exists. All dependent metadata and data will be skipped due to table_exists_action of skip
+ORA-39151: Table "SC_BASE"."TO_DO_SEMINAR" exists. All dependent metadata and data will be skipped due to table_exists_action of skip
+ORA-39151: Table "SC_BASE"."TO_DO_TASK" exists. All dependent metadata and data will be skipped due to table_exists_action of skip
+ORA-39151: Table "SC_BASE"."TO_DO_VISIT" exists. All dependent metadata and data will be skipped due to table_exists_action of skip
+ORA-39151: Table "SC_BASE"."TO_DO_ZONE" exists. All dependent metadata and data will be skipped due to table_exists_action of skip
+ORA-39151: Table "SC_BASE"."TRUTHTABLE_HISTORY" exists. All dependent metadata and data will be skipped due to table_exists_action of skip
+ORA-39151: Table "SC_BASE"."TRUTHTABLE_ITEM" exists. All dependent metadata and data will be skipped due to table_exists_action of skip
+ORA-39151: Table "SC_BASE"."TRUTHTABLE_JUMP" exists. All dependent metadata and data will be skipped due to table_exists_action of skip
+ORA-39151: Table "SC_BASE"."TRUTHTABLE_LIBRARY" exists. All dependent metadata and data will be skipped due to table_exists_action of skip
+ORA-39151: Table "SC_BASE"."TRUTHTABLE_ROW" exists. All dependent metadata and data will be skipped due to table_exists_action of skip
+ORA-39151: Table "SC_BASE"."TYPE_LIBRARY" exists. All dependent metadata and data will be skipped due to table_exists_action of skip
+ORA-39151: Table "SC_BASE"."UPGRADE_CONTROL" exists. All dependent metadata and data will be skipped due to table_exists_action of skip
+ORA-39151: Table "SC_BASE"."USER_SETTING_LINK" exists. All dependent metadata and data will be skipped due to table_exists_action of skip
+ORA-39151: Table "SC_BASE"."VALIDATION_LIBRARY" exists. All dependent metadata and data will be skipped due to table_exists_action of skip
+ORA-39151: Table "SC_BASE"."VERSION_REGISTRY" exists. All dependent metadata and data will be skipped due to table_exists_action of skip
+ORA-39151: Table "SC_BASE"."ZONE_LIBRARY" exists. All dependent metadata and data will be skipped due to table_exists_action of skip
+ORA-39151: Table "SC_BASE"."ZONE_PROGRAM_LINK" exists. All dependent metadata and data will be skipped due to table_exists_action of skip
+ORA-39151: Table "SC_BASE"."ZONE_TIMEBLOCK_LINK" exists. All dependent metadata and data will be skipped due to table_exists_action of skip
+ORA-39151: Table "SC_BASE"."ZONE_ZIP_LINK" exists. All dependent metadata and data will be skipped due to table_exists_action of skip
+ORA-39151: Table "SC_BASE"."HCFA_ARCH_OHC" exists. All dependent metadata and data will be skipped due to table_exists_action of skip
+ORA-39151: Table "SC_BASE"."NAME_OHCI" exists. All dependent metadata and data will be skipped due to table_exists_action of skip
+ORA-39151: Table "SC_BASE"."HCFA_ARCH_MSPSUMMARY" exists. All dependent metadata and data will be skipped due to table_exists_action of skip
+ORA-39151: Table "SC_BASE"."HCFA_ARCH_ECRS" exists. All dependent metadata and data will be skipped due to table_exists_action of skip
+ORA-39151: Table "SC_BASE"."HCFA_ARCH_COB" exists. All dependent metadata and data will be skipped due to table_exists_action of skip
+ORA-39151: Table "SC_BASE"."HCFA_ARCH_INTEGRIGUARD" exists. All dependent metadata and data will be skipped due to table_exists_action of skip
+ORA-39151: Table "SC_BASE"."NAME_OHCI_BACKUP" exists. All dependent metadata and data will be skipped due to table_exists_action of skip
+ORA-39151: Table "SC_BASE"."NAME_ADDRESS_MEDICARE" exists. All dependent metadata and data will be skipped due to table_exists_action of skip
+ORA-39151: Table "SC_BASE"."HCFA_ARCH_TRR" exists. All dependent metadata and data will be skipped due to table_exists_action of skip
+ORA-39151: Table "SC_BASE"."MP_PROCESS_LOG" exists. All dependent metadata and data will be skipped due to table_exists_action of skip
+ORA-39151: Table "SC_BASE"."HCC_LIBRARY" exists. All dependent metadata and data will be skipped due to table_exists_action of skip
+ORA-39151: Table "SC_BASE"."HCC_INTERACTIONS" exists. All dependent metadata and data will be skipped due to table_exists_action of skip
+ORA-39151: Table "SC_BASE"."HCC_DISABLED_INTERACTIONS" exists. All dependent metadata and data will be skipped due to table_exists_action of skip
+ORA-39151: Table "SC_BASE"."HCC_FACTOR" exists. All dependent metadata and data will be skipped due to table_exists_action of skip
+ORA-39151: Table "SC_BASE"."HCFA_HCC_GOV_OLD" exists. All dependent metadata and data will be skipped due to table_exists_action of skip
+ORA-39151: Table "SC_BASE"."HCC_EXCLUSIONS" exists. All dependent metadata and data will be skipped due to table_exists_action of skip
+ORA-39151: Table "SC_BASE"."ZIP_LIBRARY" exists. All dependent metadata and data will be skipped due to table_exists_action of skip
+ORA-39151: Table "SC_BASE"."MASTER_ZIP_LIBRARY" exists. All dependent metadata and data will be skipped due to table_exists_action of skip
+ORA-39151: Table "SC_BASE"."NAME_PAYMENT_INVOICE" exists. All dependent metadata and data will be skipped due to table_exists_action of skip
+ORA-39151: Table "SC_BASE"."PACKAGE_MIGRATION_CROSSWALK" exists. All dependent metadata and data will be skipped due to table_exists_action of skip
+ORA-39151: Table "SC_BASE"."HCFA_ARCH_FEF" exists. All dependent metadata and data will be skipped due to table_exists_action of skip
+ORA-39151: Table "SC_BASE"."EDI_ERROR" exists. All dependent metadata and data will be skipped due to table_exists_action of skip
+ORA-39151: Table "SC_BASE"."EDI_FILE_DATA_ARCH" exists. All dependent metadata and data will be skipped due to table_exists_action of skip
+ORA-39151: Table "SC_BASE"."EDI_RECORD_PATTERN" exists. All dependent metadata and data will be skipped due to table_exists_action of skip
+ORA-39151: Table "SC_BASE"."EDI_RECORD_SET_DEF" exists. All dependent metadata and data will be skipped due to table_exists_action of skip
+ORA-39151: Table "SC_BASE"."EDI_RECORD_TEXT_DEF" exists. All dependent metadata and data will be skipped due to table_exists_action of skip
+ORA-39151: Table "SC_BASE"."DATAFORM_LIBRARY" exists. All dependent metadata and data will be skipped due to table_exists_action of skip
+ORA-39151: Table "SC_BASE"."DATAFORM_MP_MAP" exists. All dependent metadata and data will be skipped due to table_exists_action of skip
+ORA-39151: Table "SC_BASE"."NAME_MEDICARE_ELECTION" exists. All dependent metadata and data will be skipped due to table_exists_action of skip
+ORA-39151: Table "SC_BASE"."DATE_SPANS_ARCH" exists. All dependent metadata and data will be skipped due to table_exists_action of skip
+ORA-39151: Table "SC_BASE"."BKP_HCFARATEFAC_2013REBUILD" exists. All dependent metadata and data will be skipped due to table_exists_action of skip
+ORA-39151: Table "SC_BASE"."BKP_HCC_LIBRARY_2013REBUILD" exists. All dependent metadata and data will be skipped due to table_exists_action of skip
+ORA-39151: Table "SC_BASE"."BKP_HCC_FACTOR_2013REBUILD" exists. All dependent metadata and data will be skipped due to table_exists_action of skip
+ORA-39151: Table "SC_BASE"."BKP_HCC_EXCLUSIONS_2013REBUILD" exists. All dependent metadata and data will be skipped due to table_exists_action of skip
+ORA-39151: Table "SC_BASE"."BKP_HCC_INTERACT_2013REBUILD" exists. All dependent metadata and data will be skipped due to table_exists_action of skip
+ORA-39151: Table "SC_BASE"."BKP_HCC_DISB_INT_2013REBUILD" exists. All dependent metadata and data will be skipped due to table_exists_action of skip
+ORA-39151: Table "SC_BASE"."BKP_HCC_DIAGNOSES_2013REBUILD" exists. All dependent metadata and data will be skipped due to table_exists_action of skip
+ORA-39151: Table "SC_BASE"."PROGRAM_TITLE_LIST" exists. All dependent metadata and data will be skipped due to table_exists_action of skip
+ORA-39151: Table "SC_BASE"."DATAFORM_QUERY_LINK" exists. All dependent metadata and data will be skipped due to table_exists_action of skip
+ORA-39151: Table "SC_BASE"."ERR$_NAME_GROUP_LINK" exists. All dependent metadata and data will be skipped due to table_exists_action of skip
+ORA-39151: Table "SC_BASE"."ERR$_HCFA_ARCH_ENROLL" exists. All dependent metadata and data will be skipped due to table_exists_action of skip
+ORA-39151: Table "SC_BASE"."PACKAGE_RX_LINK" exists. All dependent metadata and data will be skipped due to table_exists_action of skip
+ORA-39151: Table "SC_BASE"."TEMP_LIST_LANGUAGE" exists. All dependent metadata and data will be skipped due to table_exists_action of skip
+ORA-39151: Table "SC_BASE"."TEMP_LIST_LANGUAGE2" exists. All dependent metadata and data will be skipped due to table_exists_action of skip
+ORA-39151: Table "SC_BASE"."INT_PAYOR_ARCHIVE" exists. All dependent metadata and data will be skipped due to table_exists_action of skip
+ORA-39151: Table "SC_BASE"."INT_PAYOR_ERRORS" exists. All dependent metadata and data will be skipped due to table_exists_action of skip
+ORA-39151: Table "SC_BASE"."HCFA_ARCH_MAO004" exists. All dependent metadata and data will be skipped due to table_exists_action of skip
+ORA-39151: Table "SC_BASE"."HCFA_PAYMENT_ORG_FACTOR" exists. All dependent metadata and data will be skipped due to table_exists_action of skip
+ORA-39151: Table "SC_BASE"."MAO004_DIAGNOSES" exists. All dependent metadata and data will be skipped due to table_exists_action of skip
+ORA-39151: Table "SC_BASE"."BKP_ARCH_HCC_2017CHFCOPDSWAP" exists. All dependent metadata and data will be skipped due to table_exists_action of skip
+ORA-39151: Table "SC_BASE"."POS_EDIT_APP" exists. All dependent metadata and data will be skipped due to table_exists_action of skip
+ORA-39151: Table "SC_BASE"."EMPLOYER_GROUP" exists. All dependent metadata and data will be skipped due to table_exists_action of skip
+ORA-39151: Table "SC_BASE"."EMPLOYER_SUBGROUP" exists. All dependent metadata and data will be skipped due to table_exists_action of skip
+ORA-39151: Table "SC_BASE"."ERR$_HCFA_ARCH_ECRS" exists. All dependent metadata and data will be skipped due to table_exists_action of skip
+ORA-39151: Table "SC_BASE"."DATE_SPAN_25401" exists. All dependent metadata and data will be skipped due to table_exists_action of skip
+ORA-39151: Table "SC_BASE"."EGWP_COUNTY_RATES" exists. All dependent metadata and data will be skipped due to table_exists_action of skip
+ORA-39151: Table "SC_BASE"."MEDICAID_LIBRARY" exists. All dependent metadata and data will be skipped due to table_exists_action of skip
+ORA-39151: Table "SC_BASE"."MEDICAID_PAYMENT_ORG" exists. All dependent metadata and data will be skipped due to table_exists_action of skip
+ORA-39151: Table "SC_BASE"."MEDICAID_PAYMENT_GOV" exists. All dependent metadata and data will be skipped due to table_exists_action of skip
+ORA-39151: Table "SC_BASE"."PAYMENTSEARCH_LIBRARY" exists. All dependent metadata and data will be skipped due to table_exists_action of skip
+ORA-39151: Table "SC_BASE"."MEDICAID_VARIANCE" exists. All dependent metadata and data will be skipped due to table_exists_action of skip
+ORA-39151: Table "SC_BASE"."MEDICAID_RATE_BASE" exists. All dependent metadata and data will be skipped due to table_exists_action of skip
+ORA-39151: Table "SC_BASE"."HCFA_ARCH_DUALSTATUS" exists. All dependent metadata and data will be skipped due to table_exists_action of skip
+ORA-39151: Table "SC_BASE"."PACKAGE_EXTRA_LINK" exists. All dependent metadata and data will be skipped due to table_exists_action of skip
+ORA-39151: Table "SC_BASE"."HCFA_ARCH_MBICROSSWALK" exists. All dependent metadata and data will be skipped due to table_exists_action of skip
+ORA-39151: Table "SC_BASE"."SET_MBI_ARCHIVE" exists. All dependent metadata and data will be skipped due to table_exists_action of skip
+ORA-39151: Table "SC_BASE"."NAME_AFFILIATION_HISTORY" exists. All dependent metadata and data will be skipped due to table_exists_action of skip
+ORA-39151: Table "SC_BASE"."QUEUE_HISTORY" exists. All dependent metadata and data will be skipped due to table_exists_action of skip
+ORA-39151: Table "SC_BASE"."QUEUELIST_ITEM_LINK" exists. All dependent metadata and data will be skipped due to table_exists_action of skip
+ORA-39151: Table "SC_BASE"."MP_CARD_LOG" exists. All dependent metadata and data will be skipped due to table_exists_action of skip
+ORA-39151: Table "SC_BASE"."IC_MODEL_APP" exists. All dependent metadata and data will be skipped due to table_exists_action of skip
+ORA-39151: Table "SC_BASE"."DRUG_LIMIT_APP" exists. All dependent metadata and data will be skipped due to table_exists_action of skip
+ORA-39151: Table "SC_BASE"."RECON_ISSUE_LOG" exists. All dependent metadata and data will be skipped due to table_exists_action of skip
+ORA-39151: Table "SC_BASE"."QUEUELIST_ITEM_HISTORY" exists. All dependent metadata and data will be skipped due to table_exists_action of skip
+ORA-39151: Table "SC_BASE"."HCFA_RECALCULATE_PAYMENT_LOG" exists. All dependent metadata and data will be skipped due to table_exists_action of skip
+ORA-39151: Table "SC_BASE"."HCFA_RECALCULATE_INPROGRESS" exists. All dependent metadata and data will be skipped due to table_exists_action of skip
+ORA-39151: Table "SC_BASE"."HCFA_ARCH_LTI" exists. All dependent metadata and data will be skipped due to table_exists_action of skip
+ORA-39151: Table "SC_BASE"."XREF_HCC_BENEFIT_PLAN_ID" exists. All dependent metadata and data will be skipped due to table_exists_action of skip
+ORA-39151: Table "SC_BASE"."CARD_LIBRARY" exists. All dependent metadata and data will be skipped due to table_exists_action of skip
+ORA-39151: Table "SC_BASE"."NAME_NOTES" exists. All dependent metadata and data will be skipped due to table_exists_action of skip
+ORA-39151: Table "SC_BASE"."DATAWINDOW_LIBRARY" exists. All dependent metadata and data will be skipped due to table_exists_action of skip
+ORA-39151: Table "SC_BASE"."R_REP_DAILY_HISTORY" exists. All dependent metadata and data will be skipped due to table_exists_action of skip
+ORA-39151: Table "SC_BASE"."R_REP_DAILY_SCHED" exists. All dependent metadata and data will be skipped due to table_exists_action of skip
+ORA-39151: Table "SC_BASE"."OHC_INFO_STAGE" exists. All dependent metadata and data will be skipped due to table_exists_action of skip
+ORA-39151: Table "SC_BASE"."EMAIL_TEMPLATES" exists. All dependent metadata and data will be skipped due to table_exists_action of skip
+ORA-39151: Table "SC_BASE"."ACTION_WORKSPACE" exists. All dependent metadata and data will be skipped due to table_exists_action of skip
+ORA-39151: Table "SC_BASE"."HCFA_ARCH_MONMEMB_GT" exists. All dependent metadata and data will be skipped due to table_exists_action of skip
+ORA-39151: Table "SC_BASE"."HCFA_BEQ_WORKSPACE" exists. All dependent metadata and data will be skipped due to table_exists_action of skip
+ORA-39151: Table "SC_BASE"."HCFA_PAYMENT_WORKSPACE" exists. All dependent metadata and data will be skipped due to table_exists_action of skip
+ORA-39151: Table "SC_BASE"."HCFA_RECALCULATE_WORKSPACE" exists. All dependent metadata and data will be skipped due to table_exists_action of skip
+ORA-39151: Table "SC_BASE"."HCFA_VARIANCE_LOOKUP" exists. All dependent metadata and data will be skipped due to table_exists_action of skip
+ORA-39151: Table "SC_BASE"."HCFA_VARIANCE_WORKSPACE" exists. All dependent metadata and data will be skipped due to table_exists_action of skip
+ORA-39151: Table "SC_BASE"."MEDICARE_SPANS_WORKSPACE" exists. All dependent metadata and data will be skipped due to table_exists_action of skip
+ORA-39151: Table "SC_BASE"."NAME_GROUP_LINK" exists. All dependent metadata and data will be skipped due to table_exists_action of skip
+ORA-39151: Table "SC_BASE"."NUNCMO_WORKSPACE" exists. All dependent metadata and data will be skipped due to table_exists_action of skip
+ORA-39151: Table "SC_BASE"."TRANSREPLY_PROCESS" exists. All dependent metadata and data will be skipped due to table_exists_action of skip
+ORA-39151: Table "SC_BASE"."WKSPACE_MMR_RECORDIDS" exists. All dependent metadata and data will be skipped due to table_exists_action of skip
+ORA-39151: Table "SC_BASE"."TMP_MMR_SINGLESDUPES" exists. All dependent metadata and data will be skipped due to table_exists_action of skip
+ORA-39151: Table "SC_BASE"."TMP_UNALLOCATESINGLES" exists. All dependent metadata and data will be skipped due to table_exists_action of skip
+ORA-39151: Table "SC_BASE"."NAME_PAYMENT_WORKSPACE" exists. All dependent metadata and data will be skipped due to table_exists_action of skip
+ORA-39151: Table "SC_BASE"."HCFA_ARCH_ECRSRSP_STAGE" exists. All dependent metadata and data will be skipped due to table_exists_action of skip
+ORA-39151: Table "SC_BASE"."HCFA_HCC_WORKSPACE" exists. All dependent metadata and data will be skipped due to table_exists_action of skip
+ORA-39151: Table "SC_BASE"."GT_ACTIONS" exists. All dependent metadata and data will be skipped due to table_exists_action of skip
+ORA-39151: Table "SC_BASE"."DATE_SPAN_WORKSPACE" exists. All dependent metadata and data will be skipped due to table_exists_action of skip
+ORA-39151: Table "SC_BASE"."CUSTOM_SPAN_LIBRARY" exists. All dependent metadata and data will be skipped due to table_exists_action of skip
+ORA-39151: Table "SC_BASE"."DATE_SPANS_HISTORY_WORKSPACE" exists. All dependent metadata and data will be skipped due to table_exists_action of skip
+ORA-39151: Table "SC_BASE"."MEDICARE_SEND_WORKSPACE" exists. All dependent metadata and data will be skipped due to table_exists_action of skip
+ORA-39151: Table "SC_BASE"."HCFA_FACTOR_WORKSPACE" exists. All dependent metadata and data will be skipped due to table_exists_action of skip
+ORA-39151: Table "SC_BASE"."DIAGNOSIS_CODE_WORKSPACE" exists. All dependent metadata and data will be skipped due to table_exists_action of skip
+ORA-39151: Table "SC_BASE"."MEDICAID_PAYMENT_WORKSPACE" exists. All dependent metadata and data will be skipped due to table_exists_action of skip
+ORA-39151: Table "SC_BASE"."SET_MBI_WORKSPACE" exists. All dependent metadata and data will be skipped due to table_exists_action of skip
+ORA-39151: Table "SC_BASE"."MAO004_DIAGNOSES_WORKSPACE" exists. All dependent metadata and data will be skipped due to table_exists_action of skip
+ORA-39151: Table "SC_BASE"."HCFA_ARCH_MAO004_WORKSPACE" exists. All dependent metadata and data will be skipped due to table_exists_action of skip
+ORA-39151: Table "SC_BASE"."RECON_ISSUE_WKSPC" exists. All dependent metadata and data will be skipped due to table_exists_action of skip
+Processing object type DATABASE_EXPORT/SCHEMA/TABLE/TABLE_DATA
+Processing object type DATABASE_EXPORT/SCHEMA/TABLE/GRANT/OWNER_GRANT/OBJECT_GRANT
+ORA-39083: Object type OBJECT_GRANT failed to create with error:
+ORA-01917: user or role 'MP_QUERY' does not exist
+Failing sql is:
+GRANT SELECT ON "SC_BASE"."NAME_PAYMENT_INVOICE_WORKSPACE" TO "MP_QUERY"
+Processing object type DATABASE_EXPORT/SCHEMA/TABLE/COMMENT
+Processing object type DATABASE_EXPORT/SCHEMA/PACKAGE/PACKAGE_SPEC
+ORA-31684: Object type PACKAGE:"SC_BASE"."MP_ACTION" already exists
+ORA-31684: Object type PACKAGE:"SC_BASE"."MP_COMMON" already exists
+ORA-31684: Object type PACKAGE:"SC_BASE"."MP_DEDUPE" already exists
+ORA-31684: Object type PACKAGE:"SC_BASE"."MP_EMAIL" already exists
+ORA-31684: Object type PACKAGE:"SC_BASE"."MP_ENV" already exists
+ORA-31684: Object type PACKAGE:"SC_BASE"."MP_ESCALATION" already exists
+ORA-31684: Object type PACKAGE:"SC_BASE"."MP_MEDICARE_BEQ" already exists
+ORA-31684: Object type PACKAGE:"SC_BASE"."MP_MEDICARE_COMMON" already exists
+ORA-31684: Object type PACKAGE:"SC_BASE"."MP_MEDICARE_CUSTOM" already exists
+ORA-31684: Object type PACKAGE:"SC_BASE"."MP_MEDICARE_ENROLL" already exists
+ORA-31684: Object type PACKAGE:"SC_BASE"."MP_MEDICARE_HCC" already exists
+ORA-31684: Object type PACKAGE:"SC_BASE"."MP_MEDICARE_INDIVIDUAL" already exists
+ORA-31684: Object type PACKAGE:"SC_BASE"."MP_MEDICARE_LIS" already exists
+ORA-31684: Object type PACKAGE:"SC_BASE"."MP_MEDICARE_MMR" already exists
+ORA-31684: Object type PACKAGE:"SC_BASE"."MP_MEDICARE_MSP" already exists
+ORA-31684: Object type PACKAGE:"SC_BASE"."MP_MEDICARE_NUNCMO" already exists
+ORA-31684: Object type PACKAGE:"SC_BASE"."MP_MEDICARE_SPANS" already exists
+ORA-31684: Object type PACKAGE:"SC_BASE"."MP_MEDICARE_TRR" already exists
+ORA-31684: Object type PACKAGE:"SC_BASE"."MP_MEDICARE_UTILITY" already exists
+ORA-31684: Object type PACKAGE:"SC_BASE"."MP_PREMIUMBILLING" already exists
+ORA-31684: Object type PACKAGE:"SC_BASE"."MP_SETUP" already exists
+ORA-31684: Object type PACKAGE:"SC_BASE"."MP_TRUTHTABLE" already exists
+ORA-31684: Object type PACKAGE:"SC_BASE"."MP_WRAP_MEDICARE" already exists
+ORA-31684: Object type PACKAGE:"SC_BASE"."MP_XML" already exists
+ORA-31684: Object type PACKAGE:"SC_BASE"."MP_PACKAGE_MIGRATION" already exists
+ORA-31684: Object type PACKAGE:"SC_BASE"."MP_ARCHIVE" already exists
+ORA-31684: Object type PACKAGE:"SC_BASE"."MP_MEDICARE_MMR_ADJ" already exists
+ORA-31684: Object type PACKAGE:"SC_BASE"."MP_EDI_DATA" already exists
+ORA-31684: Object type PACKAGE:"SC_BASE"."MP_MEDICARE_FEF" already exists
+ORA-31684: Object type PACKAGE:"SC_BASE"."MP_DATE_SPANS" already exists
+ORA-31684: Object type PACKAGE:"SC_BASE"."MP_MEDICARE_ELECPERIOD" already exists
+ORA-31684: Object type PACKAGE:"SC_BASE"."FP_BEQ" already exists
+ORA-31684: Object type PACKAGE:"SC_BASE"."FP_TRR" already exists
+ORA-31684: Object type PACKAGE:"SC_BASE"."FP_ENROLL" already exists
+ORA-31684: Object type PACKAGE:"SC_BASE"."MP_MEDICARE_EDPS" already exists
+ORA-31684: Object type PACKAGE:"SC_BASE"."FP_EDPS" already exists
+ORA-31684: Object type PACKAGE:"SC_BASE"."FP_COB" already exists
+ORA-31684: Object type PACKAGE:"SC_BASE"."FP_ECRS" already exists
+ORA-31684: Object type PACKAGE:"SC_BASE"."FP_HCC" already exists
+ORA-31684: Object type PACKAGE:"SC_BASE"."FP_LEP" already exists
+ORA-31684: Object type PACKAGE:"SC_BASE"."FP_MPWR" already exists
+ORA-31684: Object type PACKAGE:"SC_BASE"."FP_MSPI" already exists
+ORA-31684: Object type PACKAGE:"SC_BASE"."FP_RXHCC" already exists
+ORA-31684: Object type PACKAGE:"SC_BASE"."MP_CONSTANTS_DBMSSQL" already exists
+ORA-31684: Object type PACKAGE:"SC_BASE"."MP_MEDICARE_MEDICAID" already exists
+ORA-31684: Object type PACKAGE:"SC_BASE"."MP_MEDICAID_RECON" already exists
+ORA-31684: Object type PACKAGE:"SC_BASE"."FP_DUALSTATUS" already exists
+ORA-31684: Object type PACKAGE:"SC_BASE"."FP_FEF" already exists
+ORA-31684: Object type PACKAGE:"SC_BASE"."FP_MBI" already exists
+ORA-31684: Object type PACKAGE:"SC_BASE"."FP_MMR" already exists
+ORA-31684: Object type PACKAGE:"SC_BASE"."MP_MEDICARE_MBI" already exists
+ORA-31684: Object type PACKAGE:"SC_BASE"."MP_QUEUE" already exists
+ORA-31684: Object type PACKAGE:"SC_BASE"."FP_LTI" already exists
+ORA-31684: Object type PACKAGE:"SC_BASE"."MP_MEDICARE_LTI" already exists
+ORA-31684: Object type PACKAGE:"SC_BASE"."MP_ELECTION_PERIOD" already exists
+Processing object type DATABASE_EXPORT/SCHEMA/PACKAGE/GRANT/OWNER_GRANT/OBJECT_GRANT
+ORA-39111: Dependent object type OBJECT_GRANT:"SC_BASE" skipped, base object type PACKAGE:"SC_BASE"."MP_COMMON" already exists
+ORA-39111: Dependent object type OBJECT_GRANT:"SC_BASE" skipped, base object type PACKAGE:"SC_BASE"."MP_MEDICARE_MSP" already exists
+ORA-39111: Dependent object type OBJECT_GRANT:"SC_BASE" skipped, base object type PACKAGE:"SC_BASE"."MP_ARCHIVE" already exists
+ORA-39111: Dependent object type OBJECT_GRANT:"SC_BASE" skipped, base object type PACKAGE:"SC_BASE"."MP_MEDICARE_MMR_ADJ" already exists
+ORA-39111: Dependent object type OBJECT_GRANT:"SC_BASE" skipped, base object type PACKAGE:"SC_BASE"."MP_MEDICARE_ELECPERIOD" already exists
+ORA-39111: Dependent object type OBJECT_GRANT:"SC_BASE" skipped, base object type PACKAGE:"SC_BASE"."FP_BEQ" already exists
+ORA-39111: Dependent object type OBJECT_GRANT:"SC_BASE" skipped, base object type PACKAGE:"SC_BASE"."FP_TRR" already exists
+ORA-39111: Dependent object type OBJECT_GRANT:"SC_BASE" skipped, base object type PACKAGE:"SC_BASE"."FP_ENROLL" already exists
+ORA-39111: Dependent object type OBJECT_GRANT:"SC_BASE" skipped, base object type PACKAGE:"SC_BASE"."MP_MEDICARE_EDPS" already exists
+ORA-39111: Dependent object type OBJECT_GRANT:"SC_BASE" skipped, base object type PACKAGE:"SC_BASE"."FP_EDPS" already exists
+ORA-39111: Dependent object type OBJECT_GRANT:"SC_BASE" skipped, base object type PACKAGE:"SC_BASE"."FP_COB" already exists
+ORA-39111: Dependent object type OBJECT_GRANT:"SC_BASE" skipped, base object type PACKAGE:"SC_BASE"."FP_ECRS" already exists
+ORA-39111: Dependent object type OBJECT_GRANT:"SC_BASE" skipped, base object type PACKAGE:"SC_BASE"."FP_HCC" already exists
+ORA-39111: Dependent object type OBJECT_GRANT:"SC_BASE" skipped, base object type PACKAGE:"SC_BASE"."FP_LEP" already exists
+ORA-39111: Dependent object type OBJECT_GRANT:"SC_BASE" skipped, base object type PACKAGE:"SC_BASE"."FP_MPWR" already exists
+ORA-39111: Dependent object type OBJECT_GRANT:"SC_BASE" skipped, base object type PACKAGE:"SC_BASE"."FP_MSPI" already exists
+ORA-39111: Dependent object type OBJECT_GRANT:"SC_BASE" skipped, base object type PACKAGE:"SC_BASE"."FP_RXHCC" already exists
+ORA-39111: Dependent object type OBJECT_GRANT:"SC_BASE" skipped, base object type PACKAGE:"SC_BASE"."FP_MMR" already exists
+ORA-39111: Dependent object type OBJECT_GRANT:"SC_BASE" skipped, base object type PACKAGE:"SC_BASE"."MP_QUEUE" already exists
+Processing object type DATABASE_EXPORT/SCHEMA/FUNCTION/FUNCTION
+ORA-31684: Object type FUNCTION:"SC_BASE"."ALLOCATE_ANAME" already exists
+ORA-31684: Object type FUNCTION:"SC_BASE"."ALLOCATE_CALLQUEUE" already exists
+ORA-31684: Object type FUNCTION:"SC_BASE"."ASSIGNVALIDATEDRUGLIMITDATES" already exists
+ORA-31684: Object type FUNCTION:"SC_BASE"."CRYPT" already exists
+ORA-31684: Object type FUNCTION:"SC_BASE"."DATAFORM_GETROWLOCK" already exists
+ORA-31684: Object type FUNCTION:"SC_BASE"."DATAFORM_TO_MP" already exists
+ORA-31684: Object type FUNCTION:"SC_BASE"."DAYSAFTER" already exists
+ORA-31684: Object type FUNCTION:"SC_BASE"."DECRYPT" already exists
+ORA-31684: Object type FUNCTION:"SC_BASE"."ELECTION_TO_MP" already exists
+ORA-31684: Object type FUNCTION:"SC_BASE"."GETELECPERIODS" already exists
+ORA-31684: Object type FUNCTION:"SC_BASE"."GETMEMBERID" already exists
+ORA-31684: Object type FUNCTION:"SC_BASE"."GETOAUTHTOKEN" already exists
+ORA-31684: Object type FUNCTION:"SC_BASE"."GETPACKAGEDETAILID" already exists
+ORA-31684: Object type FUNCTION:"SC_BASE"."MP_CALC_MEDICAID_PAYMENT" already exists
+ORA-31684: Object type FUNCTION:"SC_BASE"."MP_GETID" already exists
+ORA-31684: Object type FUNCTION:"SC_BASE"."MP_VARIANCELIST" already exists
+ORA-31684: Object type FUNCTION:"SC_BASE"."RELATIVEDATE" already exists
+ORA-31684: Object type FUNCTION:"SC_BASE"."TOLIST" already exists
+ORA-31684: Object type FUNCTION:"SC_BASE"."TOLISTHCC" already exists
+ORA-31684: Object type FUNCTION:"SC_BASE"."VALIDATE_DATE_SPANS" already exists
+ORA-31684: Object type FUNCTION:"SC_BASE"."VEFIFYDEATAILID" already exists
+ORA-31684: Object type FUNCTION:"SC_BASE"."XML_GETVALUE" already exists
+Processing object type DATABASE_EXPORT/SCHEMA/PROCEDURE/PROCEDURE
+ORA-31684: Object type PROCEDURE:"SC_BASE"."ASSIGN_MEMBER_ID" already exists
+ORA-31684: Object type PROCEDURE:"SC_BASE"."ASSIGN_MEMBER_ID_TEMP" already exists
+ORA-31684: Object type PROCEDURE:"SC_BASE"."BROKER_CHANGE_DATE" already exists
+ORA-31684: Object type PROCEDURE:"SC_BASE"."CHANGE_DUPE_VALUES" already exists
+ORA-31684: Object type PROCEDURE:"SC_BASE"."CREATE_RETRO_PREMIUMS" already exists
+ORA-31684: Object type PROCEDURE:"SC_BASE"."DEDUPE" already exists
+ORA-31684: Object type PROCEDURE:"SC_BASE"."DISENROLL_MEMBER_OOA" already exists
+ORA-31684: Object type PROCEDURE:"SC_BASE"."DRUG_LIMIT_STATUS_UPDATE" already exists
+ORA-31684: Object type PROCEDURE:"SC_BASE"."MP_MODIFY_PAYMENT_VARIABLES" already exists
+ORA-31684: Object type PROCEDURE:"SC_BASE"."MP_UNALLOCATE_ADJUSTMENTS" already exists
+ORA-31684: Object type PROCEDURE:"SC_BASE"."MP_UPDATE_4RX_FIELDS" already exists
+ORA-31684: Object type PROCEDURE:"SC_BASE"."POS_EDIT_UPDT_STATUS" already exists
+ORA-31684: Object type PROCEDURE:"SC_BASE"."PREMBILL_MODIFY_INDIV_PREMIUM" already exists
+ORA-31684: Object type PROCEDURE:"SC_BASE"."PREMBILL_MODIFY_MASS_PREMIUM" already exists
+ORA-31684: Object type PROCEDURE:"SC_BASE"."R_ASSIGN_MEMBER_ID" already exists
+ORA-31684: Object type PROCEDURE:"SC_BASE"."SET_LETTER_REFERENCE_DATE" already exists
+ORA-31684: Object type PROCEDURE:"SC_BASE"."TRUTHTABLE_ACTION" already exists
+ORA-31684: Object type PROCEDURE:"SC_BASE"."UPDATE_APP_STATUS_ANSWER" already exists
+ORA-31684: Object type PROCEDURE:"SC_BASE"."UPDATE_DISENROLL_CODE_93" already exists
+ORA-31684: Object type PROCEDURE:"SC_BASE"."VALIDATE_ADDRESS" already exists
+ORA-31684: Object type PROCEDURE:"SC_BASE"."VERIFYDEATAILID" already exists
+Processing object type DATABASE_EXPORT/SCHEMA/PROCEDURE/GRANT/OWNER_GRANT/OBJECT_GRANT
+ORA-39111: Dependent object type OBJECT_GRANT:"SC_BASE" skipped, base object type PROCEDURE:"SC_BASE"."ASSIGN_MEMBER_ID" already exists
+ORA-39111: Dependent object type OBJECT_GRANT:"SC_BASE" skipped, base object type PROCEDURE:"SC_BASE"."DRUG_LIMIT_STATUS_UPDATE" already exists
+ORA-39111: Dependent object type OBJECT_GRANT:"SC_BASE" skipped, base object type PROCEDURE:"SC_BASE"."TRUTHTABLE_ACTION" already exists
+ORA-39111: Dependent object type OBJECT_GRANT:"SC_BASE" skipped, base object type PROCEDURE:"SC_BASE"."SET_LETTER_REFERENCE_DATE" already exists
+ORA-39111: Dependent object type OBJECT_GRANT:"SC_BASE" skipped, base object type PROCEDURE:"SC_BASE"."R_ASSIGN_MEMBER_ID" already exists
+ORA-39111: Dependent object type OBJECT_GRANT:"SC_BASE" skipped, base object type PROCEDURE:"SC_BASE"."POS_EDIT_UPDT_STATUS" already exists
+ORA-39111: Dependent object type OBJECT_GRANT:"SC_BASE" skipped, base object type PROCEDURE:"SC_BASE"."MP_UNALLOCATE_ADJUSTMENTS" already exists
+Processing object type DATABASE_EXPORT/SCHEMA/PACKAGE/COMPILE_PACKAGE/PACKAGE_SPEC/ALTER_PACKAGE_SPEC
+ORA-39111: Dependent object type ALTER_PACKAGE_SPEC:"SC_BASE"."MP_ACTION" skipped, base object type PACKAGE:"SC_BASE"."MP_ACTION" already exists
+ORA-39111: Dependent object type ALTER_PACKAGE_SPEC:"SC_BASE"."MP_COMMON" skipped, base object type PACKAGE:"SC_BASE"."MP_COMMON" already exists
+ORA-39111: Dependent object type ALTER_PACKAGE_SPEC:"SC_BASE"."MP_DEDUPE" skipped, base object type PACKAGE:"SC_BASE"."MP_DEDUPE" already exists
+ORA-39111: Dependent object type ALTER_PACKAGE_SPEC:"SC_BASE"."MP_EMAIL" skipped, base object type PACKAGE:"SC_BASE"."MP_EMAIL" already exists
+ORA-39111: Dependent object type ALTER_PACKAGE_SPEC:"SC_BASE"."MP_ENV" skipped, base object type PACKAGE:"SC_BASE"."MP_ENV" already exists
+ORA-39111: Dependent object type ALTER_PACKAGE_SPEC:"SC_BASE"."MP_ESCALATION" skipped, base object type PACKAGE:"SC_BASE"."MP_ESCALATION" already exists
+ORA-39111: Dependent object type ALTER_PACKAGE_SPEC:"SC_BASE"."MP_MEDICARE_BEQ" skipped, base object type PACKAGE:"SC_BASE"."MP_MEDICARE_BEQ" already exists
+ORA-39111: Dependent object type ALTER_PACKAGE_SPEC:"SC_BASE"."MP_MEDICARE_COMMON" skipped, base object type PACKAGE:"SC_BASE"."MP_MEDICARE_COMMON" already exists
+ORA-39111: Dependent object type ALTER_PACKAGE_SPEC:"SC_BASE"."MP_MEDICARE_CUSTOM" skipped, base object type PACKAGE:"SC_BASE"."MP_MEDICARE_CUSTOM" already exists
+ORA-39111: Dependent object type ALTER_PACKAGE_SPEC:"SC_BASE"."MP_MEDICARE_ENROLL" skipped, base object type PACKAGE:"SC_BASE"."MP_MEDICARE_ENROLL" already exists
+ORA-39111: Dependent object type ALTER_PACKAGE_SPEC:"SC_BASE"."MP_MEDICARE_HCC" skipped, base object type PACKAGE:"SC_BASE"."MP_MEDICARE_HCC" already exists
+ORA-39111: Dependent object type ALTER_PACKAGE_SPEC:"SC_BASE"."MP_MEDICARE_INDIVIDUAL" skipped, base object type PACKAGE:"SC_BASE"."MP_MEDICARE_INDIVIDUAL" already exists
+ORA-39111: Dependent object type ALTER_PACKAGE_SPEC:"SC_BASE"."MP_MEDICARE_LIS" skipped, base object type PACKAGE:"SC_BASE"."MP_MEDICARE_LIS" already exists
+ORA-39111: Dependent object type ALTER_PACKAGE_SPEC:"SC_BASE"."MP_MEDICARE_MMR" skipped, base object type PACKAGE:"SC_BASE"."MP_MEDICARE_MMR" already exists
+ORA-39111: Dependent object type ALTER_PACKAGE_SPEC:"SC_BASE"."MP_MEDICARE_MSP" skipped, base object type PACKAGE:"SC_BASE"."MP_MEDICARE_MSP" already exists
+ORA-39111: Dependent object type ALTER_PACKAGE_SPEC:"SC_BASE"."MP_MEDICARE_NUNCMO" skipped, base object type PACKAGE:"SC_BASE"."MP_MEDICARE_NUNCMO" already exists
+ORA-39111: Dependent object type ALTER_PACKAGE_SPEC:"SC_BASE"."MP_MEDICARE_SPANS" skipped, base object type PACKAGE:"SC_BASE"."MP_MEDICARE_SPANS" already exists
+ORA-39111: Dependent object type ALTER_PACKAGE_SPEC:"SC_BASE"."MP_MEDICARE_TRR" skipped, base object type PACKAGE:"SC_BASE"."MP_MEDICARE_TRR" already exists
+ORA-39111: Dependent object type ALTER_PACKAGE_SPEC:"SC_BASE"."MP_MEDICARE_UTILITY" skipped, base object type PACKAGE:"SC_BASE"."MP_MEDICARE_UTILITY" already exists
+ORA-39111: Dependent object type ALTER_PACKAGE_SPEC:"SC_BASE"."MP_PREMIUMBILLING" skipped, base object type PACKAGE:"SC_BASE"."MP_PREMIUMBILLING" already exists
+ORA-39111: Dependent object type ALTER_PACKAGE_SPEC:"SC_BASE"."MP_SETUP" skipped, base object type PACKAGE:"SC_BASE"."MP_SETUP" already exists
+ORA-39111: Dependent object type ALTER_PACKAGE_SPEC:"SC_BASE"."MP_TRUTHTABLE" skipped, base object type PACKAGE:"SC_BASE"."MP_TRUTHTABLE" already exists
+ORA-39111: Dependent object type ALTER_PACKAGE_SPEC:"SC_BASE"."MP_WRAP_MEDICARE" skipped, base object type PACKAGE:"SC_BASE"."MP_WRAP_MEDICARE" already exists
+ORA-39111: Dependent object type ALTER_PACKAGE_SPEC:"SC_BASE"."MP_XML" skipped, base object type PACKAGE:"SC_BASE"."MP_XML" already exists
+ORA-39111: Dependent object type ALTER_PACKAGE_SPEC:"SC_BASE"."MP_PACKAGE_MIGRATION" skipped, base object type PACKAGE:"SC_BASE"."MP_PACKAGE_MIGRATION" already exists
+ORA-39111: Dependent object type ALTER_PACKAGE_SPEC:"SC_BASE"."MP_ARCHIVE" skipped, base object type PACKAGE:"SC_BASE"."MP_ARCHIVE" already exists
+ORA-39111: Dependent object type ALTER_PACKAGE_SPEC:"SC_BASE"."MP_MEDICARE_MMR_ADJ" skipped, base object type PACKAGE:"SC_BASE"."MP_MEDICARE_MMR_ADJ" already exists
+ORA-39111: Dependent object type ALTER_PACKAGE_SPEC:"SC_BASE"."MP_EDI_DATA" skipped, base object type PACKAGE:"SC_BASE"."MP_EDI_DATA" already exists
+ORA-39111: Dependent object type ALTER_PACKAGE_SPEC:"SC_BASE"."MP_MEDICARE_FEF" skipped, base object type PACKAGE:"SC_BASE"."MP_MEDICARE_FEF" already exists
+ORA-39111: Dependent object type ALTER_PACKAGE_SPEC:"SC_BASE"."MP_DATE_SPANS" skipped, base object type PACKAGE:"SC_BASE"."MP_DATE_SPANS" already exists
+ORA-39111: Dependent object type ALTER_PACKAGE_SPEC:"SC_BASE"."MP_MEDICARE_ELECPERIOD" skipped, base object type PACKAGE:"SC_BASE"."MP_MEDICARE_ELECPERIOD" already exists
+ORA-39111: Dependent object type ALTER_PACKAGE_SPEC:"SC_BASE"."FP_BEQ" skipped, base object type PACKAGE:"SC_BASE"."FP_BEQ" already exists
+ORA-39111: Dependent object type ALTER_PACKAGE_SPEC:"SC_BASE"."FP_TRR" skipped, base object type PACKAGE:"SC_BASE"."FP_TRR" already exists
+ORA-39111: Dependent object type ALTER_PACKAGE_SPEC:"SC_BASE"."FP_ENROLL" skipped, base object type PACKAGE:"SC_BASE"."FP_ENROLL" already exists
+ORA-39111: Dependent object type ALTER_PACKAGE_SPEC:"SC_BASE"."MP_MEDICARE_EDPS" skipped, base object type PACKAGE:"SC_BASE"."MP_MEDICARE_EDPS" already exists
+ORA-39111: Dependent object type ALTER_PACKAGE_SPEC:"SC_BASE"."FP_EDPS" skipped, base object type PACKAGE:"SC_BASE"."FP_EDPS" already exists
+ORA-39111: Dependent object type ALTER_PACKAGE_SPEC:"SC_BASE"."FP_COB" skipped, base object type PACKAGE:"SC_BASE"."FP_COB" already exists
+ORA-39111: Dependent object type ALTER_PACKAGE_SPEC:"SC_BASE"."FP_ECRS" skipped, base object type PACKAGE:"SC_BASE"."FP_ECRS" already exists
+ORA-39111: Dependent object type ALTER_PACKAGE_SPEC:"SC_BASE"."FP_HCC" skipped, base object type PACKAGE:"SC_BASE"."FP_HCC" already exists
+ORA-39111: Dependent object type ALTER_PACKAGE_SPEC:"SC_BASE"."FP_LEP" skipped, base object type PACKAGE:"SC_BASE"."FP_LEP" already exists
+ORA-39111: Dependent object type ALTER_PACKAGE_SPEC:"SC_BASE"."FP_MPWR" skipped, base object type PACKAGE:"SC_BASE"."FP_MPWR" already exists
+ORA-39111: Dependent object type ALTER_PACKAGE_SPEC:"SC_BASE"."FP_MSPI" skipped, base object type PACKAGE:"SC_BASE"."FP_MSPI" already exists
+ORA-39111: Dependent object type ALTER_PACKAGE_SPEC:"SC_BASE"."FP_RXHCC" skipped, base object type PACKAGE:"SC_BASE"."FP_RXHCC" already exists
+ORA-39111: Dependent object type ALTER_PACKAGE_SPEC:"SC_BASE"."MP_CONSTANTS_DBMSSQL" skipped, base object type PACKAGE:"SC_BASE"."MP_CONSTANTS_DBMSSQL" already exists
+ORA-39111: Dependent object type ALTER_PACKAGE_SPEC:"SC_BASE"."MP_MEDICARE_MEDICAID" skipped, base object type PACKAGE:"SC_BASE"."MP_MEDICARE_MEDICAID" already exists
+ORA-39111: Dependent object type ALTER_PACKAGE_SPEC:"SC_BASE"."MP_MEDICAID_RECON" skipped, base object type PACKAGE:"SC_BASE"."MP_MEDICAID_RECON" already exists
+ORA-39111: Dependent object type ALTER_PACKAGE_SPEC:"SC_BASE"."FP_DUALSTATUS" skipped, base object type PACKAGE:"SC_BASE"."FP_DUALSTATUS" already exists
+ORA-39111: Dependent object type ALTER_PACKAGE_SPEC:"SC_BASE"."FP_FEF" skipped, base object type PACKAGE:"SC_BASE"."FP_FEF" already exists
+ORA-39111: Dependent object type ALTER_PACKAGE_SPEC:"SC_BASE"."FP_MBI" skipped, base object type PACKAGE:"SC_BASE"."FP_MBI" already exists
+ORA-39111: Dependent object type ALTER_PACKAGE_SPEC:"SC_BASE"."FP_MMR" skipped, base object type PACKAGE:"SC_BASE"."FP_MMR" already exists
+ORA-39111: Dependent object type ALTER_PACKAGE_SPEC:"SC_BASE"."MP_MEDICARE_MBI" skipped, base object type PACKAGE:"SC_BASE"."MP_MEDICARE_MBI" already exists
+ORA-39111: Dependent object type ALTER_PACKAGE_SPEC:"SC_BASE"."MP_QUEUE" skipped, base object type PACKAGE:"SC_BASE"."MP_QUEUE" already exists
+ORA-39111: Dependent object type ALTER_PACKAGE_SPEC:"SC_BASE"."FP_LTI" skipped, base object type PACKAGE:"SC_BASE"."FP_LTI" already exists
+ORA-39111: Dependent object type ALTER_PACKAGE_SPEC:"SC_BASE"."MP_MEDICARE_LTI" skipped, base object type PACKAGE:"SC_BASE"."MP_MEDICARE_LTI" already exists
+ORA-39111: Dependent object type ALTER_PACKAGE_SPEC:"SC_BASE"."MP_ELECTION_PERIOD" skipped, base object type PACKAGE:"SC_BASE"."MP_ELECTION_PERIOD" already exists
+Processing object type DATABASE_EXPORT/SCHEMA/FUNCTION/ALTER_FUNCTION
+ORA-39111: Dependent object type ALTER_FUNCTION:"SC_BASE"."ALLOCATE_ANAME" skipped, base object type FUNCTION:"SC_BASE"."ALLOCATE_ANAME" already exists
+ORA-39111: Dependent object type ALTER_FUNCTION:"SC_BASE"."ALLOCATE_CALLQUEUE" skipped, base object type FUNCTION:"SC_BASE"."ALLOCATE_CALLQUEUE" already exists
+ORA-39111: Dependent object type ALTER_FUNCTION:"SC_BASE"."CRYPT" skipped, base object type FUNCTION:"SC_BASE"."CRYPT" already exists
+ORA-39111: Dependent object type ALTER_FUNCTION:"SC_BASE"."DATAFORM_GETROWLOCK" skipped, base object type FUNCTION:"SC_BASE"."DATAFORM_GETROWLOCK" already exists
+ORA-39111: Dependent object type ALTER_FUNCTION:"SC_BASE"."DATAFORM_TO_MP" skipped, base object type FUNCTION:"SC_BASE"."DATAFORM_TO_MP" already exists
+ORA-39111: Dependent object type ALTER_FUNCTION:"SC_BASE"."DAYSAFTER" skipped, base object type FUNCTION:"SC_BASE"."DAYSAFTER" already exists
+ORA-39111: Dependent object type ALTER_FUNCTION:"SC_BASE"."DECRYPT" skipped, base object type FUNCTION:"SC_BASE"."DECRYPT" already exists
+ORA-39111: Dependent object type ALTER_FUNCTION:"SC_BASE"."ELECTION_TO_MP" skipped, base object type FUNCTION:"SC_BASE"."ELECTION_TO_MP" already exists
+ORA-39111: Dependent object type ALTER_FUNCTION:"SC_BASE"."GETELECPERIODS" skipped, base object type FUNCTION:"SC_BASE"."GETELECPERIODS" already exists
+ORA-39111: Dependent object type ALTER_FUNCTION:"SC_BASE"."GETMEMBERID" skipped, base object type FUNCTION:"SC_BASE"."GETMEMBERID" already exists
+ORA-39111: Dependent object type ALTER_FUNCTION:"SC_BASE"."GETOAUTHTOKEN" skipped, base object type FUNCTION:"SC_BASE"."GETOAUTHTOKEN" already exists
+ORA-39111: Dependent object type ALTER_FUNCTION:"SC_BASE"."MP_CALC_MEDICAID_PAYMENT" skipped, base object type FUNCTION:"SC_BASE"."MP_CALC_MEDICAID_PAYMENT" already exists
+ORA-39111: Dependent object type ALTER_FUNCTION:"SC_BASE"."MP_VARIANCELIST" skipped, base object type FUNCTION:"SC_BASE"."MP_VARIANCELIST" already exists
+ORA-39111: Dependent object type ALTER_FUNCTION:"SC_BASE"."RELATIVEDATE" skipped, base object type FUNCTION:"SC_BASE"."RELATIVEDATE" already exists
+ORA-39111: Dependent object type ALTER_FUNCTION:"SC_BASE"."TOLIST" skipped, base object type FUNCTION:"SC_BASE"."TOLIST" already exists
+ORA-39111: Dependent object type ALTER_FUNCTION:"SC_BASE"."TOLISTHCC" skipped, base object type FUNCTION:"SC_BASE"."TOLISTHCC" already exists
+ORA-39111: Dependent object type ALTER_FUNCTION:"SC_BASE"."VALIDATE_DATE_SPANS" skipped, base object type FUNCTION:"SC_BASE"."VALIDATE_DATE_SPANS" already exists
+ORA-39111: Dependent object type ALTER_FUNCTION:"SC_BASE"."XML_GETVALUE" skipped, base object type FUNCTION:"SC_BASE"."XML_GETVALUE" already exists
+ORA-39111: Dependent object type ALTER_FUNCTION:"SC_BASE"."MP_GETID" skipped, base object type FUNCTION:"SC_BASE"."MP_GETID" already exists
+ORA-39111: Dependent object type ALTER_FUNCTION:"SC_BASE"."ASSIGNVALIDATEDRUGLIMITDATES" skipped, base object type FUNCTION:"SC_BASE"."ASSIGNVALIDATEDRUGLIMITDATES" already exists
+ORA-39111: Dependent object type ALTER_FUNCTION:"SC_BASE"."GETPACKAGEDETAILID" skipped, base object type FUNCTION:"SC_BASE"."GETPACKAGEDETAILID" already exists
+ORA-39111: Dependent object type ALTER_FUNCTION:"SC_BASE"."VEFIFYDEATAILID" skipped, base object type FUNCTION:"SC_BASE"."VEFIFYDEATAILID" already exists
+Processing object type DATABASE_EXPORT/SCHEMA/PROCEDURE/ALTER_PROCEDURE
+ORA-39111: Dependent object type ALTER_PROCEDURE:"SC_BASE"."ASSIGN_MEMBER_ID" skipped, base object type PROCEDURE:"SC_BASE"."ASSIGN_MEMBER_ID" already exists
+ORA-39111: Dependent object type ALTER_PROCEDURE:"SC_BASE"."ASSIGN_MEMBER_ID_TEMP" skipped, base object type PROCEDURE:"SC_BASE"."ASSIGN_MEMBER_ID_TEMP" already exists
+ORA-39111: Dependent object type ALTER_PROCEDURE:"SC_BASE"."BROKER_CHANGE_DATE" skipped, base object type PROCEDURE:"SC_BASE"."BROKER_CHANGE_DATE" already exists
+ORA-39111: Dependent object type ALTER_PROCEDURE:"SC_BASE"."CHANGE_DUPE_VALUES" skipped, base object type PROCEDURE:"SC_BASE"."CHANGE_DUPE_VALUES" already exists
+ORA-39111: Dependent object type ALTER_PROCEDURE:"SC_BASE"."CREATE_RETRO_PREMIUMS" skipped, base object type PROCEDURE:"SC_BASE"."CREATE_RETRO_PREMIUMS" already exists
+ORA-39111: Dependent object type ALTER_PROCEDURE:"SC_BASE"."DEDUPE" skipped, base object type PROCEDURE:"SC_BASE"."DEDUPE" already exists
+ORA-39111: Dependent object type ALTER_PROCEDURE:"SC_BASE"."DISENROLL_MEMBER_OOA" skipped, base object type PROCEDURE:"SC_BASE"."DISENROLL_MEMBER_OOA" already exists
+ORA-39111: Dependent object type ALTER_PROCEDURE:"SC_BASE"."MP_MODIFY_PAYMENT_VARIABLES" skipped, base object type PROCEDURE:"SC_BASE"."MP_MODIFY_PAYMENT_VARIABLES" already exists
+ORA-39111: Dependent object type ALTER_PROCEDURE:"SC_BASE"."MP_UNALLOCATE_ADJUSTMENTS" skipped, base object type PROCEDURE:"SC_BASE"."MP_UNALLOCATE_ADJUSTMENTS" already exists
+ORA-39111: Dependent object type ALTER_PROCEDURE:"SC_BASE"."MP_UPDATE_4RX_FIELDS" skipped, base object type PROCEDURE:"SC_BASE"."MP_UPDATE_4RX_FIELDS" already exists
+ORA-39111: Dependent object type ALTER_PROCEDURE:"SC_BASE"."POS_EDIT_UPDT_STATUS" skipped, base object type PROCEDURE:"SC_BASE"."POS_EDIT_UPDT_STATUS" already exists
+ORA-39111: Dependent object type ALTER_PROCEDURE:"SC_BASE"."PREMBILL_MODIFY_INDIV_PREMIUM" skipped, base object type PROCEDURE:"SC_BASE"."PREMBILL_MODIFY_INDIV_PREMIUM" already exists
+ORA-39111: Dependent object type ALTER_PROCEDURE:"SC_BASE"."PREMBILL_MODIFY_MASS_PREMIUM" skipped, base object type PROCEDURE:"SC_BASE"."PREMBILL_MODIFY_MASS_PREMIUM" already exists
+ORA-39111: Dependent object type ALTER_PROCEDURE:"SC_BASE"."R_ASSIGN_MEMBER_ID" skipped, base object type PROCEDURE:"SC_BASE"."R_ASSIGN_MEMBER_ID" already exists
+ORA-39111: Dependent object type ALTER_PROCEDURE:"SC_BASE"."SET_LETTER_REFERENCE_DATE" skipped, base object type PROCEDURE:"SC_BASE"."SET_LETTER_REFERENCE_DATE" already exists
+ORA-39111: Dependent object type ALTER_PROCEDURE:"SC_BASE"."TRUTHTABLE_ACTION" skipped, base object type PROCEDURE:"SC_BASE"."TRUTHTABLE_ACTION" already exists
+ORA-39111: Dependent object type ALTER_PROCEDURE:"SC_BASE"."UPDATE_APP_STATUS_ANSWER" skipped, base object type PROCEDURE:"SC_BASE"."UPDATE_APP_STATUS_ANSWER" already exists
+ORA-39111: Dependent object type ALTER_PROCEDURE:"SC_BASE"."UPDATE_DISENROLL_CODE_93" skipped, base object type PROCEDURE:"SC_BASE"."UPDATE_DISENROLL_CODE_93" already exists
+ORA-39111: Dependent object type ALTER_PROCEDURE:"SC_BASE"."VALIDATE_ADDRESS" skipped, base object type PROCEDURE:"SC_BASE"."VALIDATE_ADDRESS" already exists
+ORA-39111: Dependent object type ALTER_PROCEDURE:"SC_BASE"."DRUG_LIMIT_STATUS_UPDATE" skipped, base object type PROCEDURE:"SC_BASE"."DRUG_LIMIT_STATUS_UPDATE" already exists
+ORA-39111: Dependent object type ALTER_PROCEDURE:"SC_BASE"."VERIFYDEATAILID" skipped, base object type PROCEDURE:"SC_BASE"."VERIFYDEATAILID" already exists
+Processing object type DATABASE_EXPORT/SCHEMA/TABLE/INDEX/INDEX
+Processing object type DATABASE_EXPORT/SCHEMA/TABLE/INDEX/FUNCTIONAL_INDEX/INDEX
+Processing object type DATABASE_EXPORT/SCHEMA/TABLE/CONSTRAINT/CONSTRAINT
+Processing object type DATABASE_EXPORT/SCHEMA/TABLE/INDEX/STATISTICS/INDEX_STATISTICS
+Processing object type DATABASE_EXPORT/SCHEMA/TABLE/INDEX/STATISTICS/FUNCTIONAL_INDEX/INDEX_STATISTICS
+Processing object type DATABASE_EXPORT/SCHEMA/VIEW/VIEW
+ORA-31684: Object type VIEW:"SC_BASE"."NAME_PAYMENT_SUMMARY" already exists
+ORA-31684: Object type VIEW:"SC_BASE"."INVOICE" already exists
+ORA-31684: Object type VIEW:"SC_BASE"."HCFA_PENDING_CHANGES" already exists
+ORA-31684: Object type VIEW:"SC_BASE"."PACKAGE_LIBRARY_DETAIL" already exists
+ORA-31684: Object type VIEW:"SC_BASE"."HCFA_PENDING_CHANGES_2006" already exists
+ORA-31684: Object type VIEW:"SC_BASE"."V_MAILING_ADDRESS" already exists
+ORA-31684: Object type VIEW:"SC_BASE"."HCFA_PENDING_CHANGES_RX" already exists
+ORA-31684: Object type VIEW:"SC_BASE"."HCFA_PENDING_CHANGES_NUNCMO" already exists
+ORA-31684: Object type VIEW:"SC_BASE"."HCFA_PENDING_CHANGES_PW" already exists
+ORA-31684: Object type VIEW:"SC_BASE"."HCFA_PENDING_CHANGES_MISC" already exists
+ORA-31684: Object type VIEW:"SC_BASE"."NAME_COB_NON_VALIDATED" already exists
+ORA-31684: Object type VIEW:"SC_BASE"."NAME_COB_VALIDATED" already exists
+ORA-31684: Object type VIEW:"SC_BASE"."DEBIT_AUTHORIZATION" already exists
+ORA-31684: Object type VIEW:"SC_BASE"."NAME_HICN_LOOKUP" already exists
+ORA-31684: Object type VIEW:"SC_BASE"."HCFA_ARCH_SUMMARY" already exists
+ORA-31684: Object type VIEW:"SC_BASE"."PACKAGE_INFO" already exists
+ORA-31684: Object type VIEW:"SC_BASE"."V_MEMBER_PREMIUM" already exists
+ORA-31684: Object type VIEW:"SC_BASE"."V_PBP_SPANS" already exists
+ORA-31684: Object type VIEW:"SC_BASE"."HCFA_PAYMENT_SUMMARY" already exists
+ORA-31684: Object type VIEW:"SC_BASE"."NAME_PAYMENT_BILLEE_SUMMARY" already exists
+ORA-31684: Object type VIEW:"SC_BASE"."V_HCFA_PENDING_CHANGES_EGHP" already exists
+ORA-31684: Object type VIEW:"SC_BASE"."V_HCFA_PENDING_CHANGES_PREMIUM" already exists
+ORA-31684: Object type VIEW:"SC_BASE"."V_HCFA_PENDING_CHANGES_SEGMENT" already exists
+ORA-31684: Object type VIEW:"SC_BASE"."V_HCFA_PENDING_CHANGES_OPTOUT" already exists
+ORA-31684: Object type VIEW:"SC_BASE"."V_HCFA_PENDING_CHANGES_RX" already exists
+ORA-31684: Object type VIEW:"SC_BASE"."V_HCFA_PENDING_CHANGES_PW" already exists
+ORA-31684: Object type VIEW:"SC_BASE"."V_HCFA_PENDING_CHANGES_NUNCMO" already exists
+ORA-31684: Object type VIEW:"SC_BASE"."V_HCFA_PENDING_CHANGES_ADDRESS" already exists
+ORA-31684: Object type VIEW:"SC_BASE"."V_HCFA_DATE_PRE_POST" already exists
+ORA-31684: Object type VIEW:"SC_BASE"."V_ATTESTATION_VIEW" already exists
+ORA-31684: Object type VIEW:"SC_BASE"."V_LEP_VIEW" already exists
+ORA-31684: Object type VIEW:"SC_BASE"."V_HCFA_PENDING_CHANGES_FA_OPT" already exists
+ORA-31684: Object type VIEW:"SC_BASE"."DATE_SPAN_VIEW" already exists
+ORA-31684: Object type VIEW:"SC_BASE"."V_EDI_ERRORS" already exists
+ORA-31684: Object type VIEW:"SC_BASE"."V_EDI_ERRORS_FORRECORDSET" already exists
+ORA-31684: Object type VIEW:"SC_BASE"."V_EDI_ERRORS_FORRECORDTEXTDATA" already exists
+ORA-31684: Object type VIEW:"SC_BASE"."V_EDI_ERRORS_FORRECORDTEXTDEF" already exists
+ORA-31684: Object type VIEW:"SC_BASE"."V_MEDICARE_DEMOGRAPHICS" already exists
+ORA-31684: Object type VIEW:"SC_BASE"."V_DML_LOG_ERRORS" already exists
+ORA-31684: Object type VIEW:"SC_BASE"."V_HCFA_SEND_ENROLL_ERRORS" already exists
+ORA-31684: Object type VIEW:"SC_BASE"."V_MP_ACTION_ERRORS" already exists
+ORA-31684: Object type VIEW:"SC_BASE"."V_NAME_OHCI" already exists
+ORA-31684: Object type VIEW:"SC_BASE"."V_HOM_HEALTH_STATUS_APP" already exists
+ORA-31684: Object type VIEW:"SC_BASE"."V_HOM_REFERRAL_FORM_APP" already exists
+ORA-31684: Object type VIEW:"SC_BASE"."V_POS_EDIT" already exists
+ORA-31684: Object type VIEW:"SC_BASE"."V_PREFERRED_MEMBER_PREMIUM" already exists
+ORA-31684: Object type VIEW:"SC_BASE"."V_EMP_GROUP_MEMBER_PREMIUM" already exists
+ORA-31684: Object type VIEW:"SC_BASE"."V_BEQ_PENDING_TRANSACTIONS" already exists
+ORA-31684: Object type VIEW:"SC_BASE"."V_MEDICAID_PAYMENT_ORG" already exists
+ORA-31684: Object type VIEW:"SC_BASE"."V_MCAID_PAYMENT_COMPARE" already exists
+ORA-31684: Object type VIEW:"SC_BASE"."V_MEDICAID_VARIANCES_ACTIVE" already exists
+ORA-31684: Object type VIEW:"SC_BASE"."V_MEDICAID_ENROLLMENT" already exists
+ORA-31684: Object type VIEW:"SC_BASE"."V_MEDICAID_FILE_SUMMARY" already exists
+ORA-31684: Object type VIEW:"SC_BASE"."V_MEDICAID_SPANS" already exists
+ORA-31684: Object type VIEW:"SC_BASE"."V_LETTER_REFERENCE_DATE" already exists
+ORA-31684: Object type VIEW:"SC_BASE"."V_DRUG_LIMIT" already exists
+ORA-31684: Object type VIEW:"SC_BASE"."V_MEMBER_ATTESTATIONS" already exists
+Processing object type DATABASE_EXPORT/SCHEMA/VIEW/GRANT/OWNER_GRANT/OBJECT_GRANT
+ORA-39111: Dependent object type OBJECT_GRANT:"SC_BASE" skipped, base object type VIEW:"SC_BASE"."PACKAGE_LIBRARY_DETAIL" already exists
+ORA-39111: Dependent object type OBJECT_GRANT:"SC_BASE" skipped, base object type VIEW:"SC_BASE"."V_EDI_ERRORS_FORRECORDTEXTDATA" already exists
+ORA-39111: Dependent object type OBJECT_GRANT:"SC_BASE" skipped, base object type VIEW:"SC_BASE"."V_EDI_ERRORS_FORRECORDTEXTDEF" already exists
+ORA-39111: Dependent object type OBJECT_GRANT:"SC_BASE" skipped, base object type VIEW:"SC_BASE"."V_DML_LOG_ERRORS" already exists
+ORA-39111: Dependent object type OBJECT_GRANT:"SC_BASE" skipped, base object type VIEW:"SC_BASE"."V_HCFA_SEND_ENROLL_ERRORS" already exists
+ORA-39111: Dependent object type OBJECT_GRANT:"SC_BASE" skipped, base object type VIEW:"SC_BASE"."V_MP_ACTION_ERRORS" already exists
+ORA-39111: Dependent object type OBJECT_GRANT:"SC_BASE" skipped, base object type VIEW:"SC_BASE"."V_MP_ACTION_ERRORS" already exists
+ORA-39111: Dependent object type OBJECT_GRANT:"SC_BASE" skipped, base object type VIEW:"SC_BASE"."V_POS_EDIT" already exists
+ORA-39111: Dependent object type OBJECT_GRANT:"SC_BASE" skipped, base object type VIEW:"SC_BASE"."V_POS_EDIT" already exists
+ORA-39111: Dependent object type OBJECT_GRANT:"SC_BASE" skipped, base object type VIEW:"SC_BASE"."V_POS_EDIT" already exists
+ORA-39111: Dependent object type OBJECT_GRANT:"SC_BASE" skipped, base object type VIEW:"SC_BASE"."V_POS_EDIT" already exists
+ORA-39111: Dependent object type OBJECT_GRANT:"SC_BASE" skipped, base object type VIEW:"SC_BASE"."V_BEQ_PENDING_TRANSACTIONS" already exists
+ORA-39111: Dependent object type OBJECT_GRANT:"SC_BASE" skipped, base object type VIEW:"SC_BASE"."V_LETTER_REFERENCE_DATE" already exists
+ORA-39111: Dependent object type OBJECT_GRANT:"SC_BASE" skipped, base object type VIEW:"SC_BASE"."V_DRUG_LIMIT" already exists
+ORA-39111: Dependent object type OBJECT_GRANT:"SC_BASE" skipped, base object type VIEW:"SC_BASE"."V_DRUG_LIMIT" already exists
+ORA-39111: Dependent object type OBJECT_GRANT:"SC_BASE" skipped, base object type VIEW:"SC_BASE"."V_DRUG_LIMIT" already exists
+ORA-39111: Dependent object type OBJECT_GRANT:"SC_BASE" skipped, base object type VIEW:"SC_BASE"."V_DRUG_LIMIT" already exists
+ORA-39111: Dependent object type OBJECT_GRANT:"SC_BASE" skipped, base object type VIEW:"SC_BASE"."V_MEMBER_ATTESTATIONS" already exists
+Processing object type DATABASE_EXPORT/SCHEMA/PACKAGE_BODIES/PACKAGE/PACKAGE_BODY
+ORA-31684: Object type PACKAGE_BODY:"SC_BASE"."FP_BEQ" already exists
+ORA-31684: Object type PACKAGE_BODY:"SC_BASE"."FP_COB" already exists
+ORA-31684: Object type PACKAGE_BODY:"SC_BASE"."FP_DUALSTATUS" already exists
+ORA-31684: Object type PACKAGE_BODY:"SC_BASE"."FP_ECRS" already exists
+ORA-31684: Object type PACKAGE_BODY:"SC_BASE"."FP_EDPS" already exists
+ORA-31684: Object type PACKAGE_BODY:"SC_BASE"."FP_ENROLL" already exists
+ORA-31684: Object type PACKAGE_BODY:"SC_BASE"."FP_FEF" already exists
+ORA-31684: Object type PACKAGE_BODY:"SC_BASE"."FP_HCC" already exists
+ORA-31684: Object type PACKAGE_BODY:"SC_BASE"."FP_LEP" already exists
+ORA-31684: Object type PACKAGE_BODY:"SC_BASE"."FP_LTI" already exists
+ORA-31684: Object type PACKAGE_BODY:"SC_BASE"."FP_MBI" already exists
+ORA-31684: Object type PACKAGE_BODY:"SC_BASE"."FP_MMR" already exists
+ORA-31684: Object type PACKAGE_BODY:"SC_BASE"."FP_MPWR" already exists
+ORA-31684: Object type PACKAGE_BODY:"SC_BASE"."FP_MSPI" already exists
+ORA-31684: Object type PACKAGE_BODY:"SC_BASE"."FP_RXHCC" already exists
+ORA-31684: Object type PACKAGE_BODY:"SC_BASE"."FP_TRR" already exists
+ORA-31684: Object type PACKAGE_BODY:"SC_BASE"."MP_ACTION" already exists
+ORA-31684: Object type PACKAGE_BODY:"SC_BASE"."MP_ARCHIVE" already exists
+ORA-31684: Object type PACKAGE_BODY:"SC_BASE"."MP_COMMON" already exists
+ORA-31684: Object type PACKAGE_BODY:"SC_BASE"."MP_DATE_SPANS" already exists
+ORA-31684: Object type PACKAGE_BODY:"SC_BASE"."MP_DEDUPE" already exists
+ORA-31684: Object type PACKAGE_BODY:"SC_BASE"."MP_EDI_DATA" already exists
+ORA-31684: Object type PACKAGE_BODY:"SC_BASE"."MP_ELECTION_PERIOD" already exists
+ORA-31684: Object type PACKAGE_BODY:"SC_BASE"."MP_EMAIL" already exists
+ORA-31684: Object type PACKAGE_BODY:"SC_BASE"."MP_ENV" already exists
+ORA-31684: Object type PACKAGE_BODY:"SC_BASE"."MP_ESCALATION" already exists
+ORA-31684: Object type PACKAGE_BODY:"SC_BASE"."MP_MEDICAID_RECON" already exists
+ORA-31684: Object type PACKAGE_BODY:"SC_BASE"."MP_MEDICARE_BEQ" already exists
+ORA-31684: Object type PACKAGE_BODY:"SC_BASE"."MP_MEDICARE_COMMON" already exists
+ORA-31684: Object type PACKAGE_BODY:"SC_BASE"."MP_MEDICARE_CUSTOM" already exists
+ORA-31684: Object type PACKAGE_BODY:"SC_BASE"."MP_MEDICARE_EDPS" already exists
+ORA-31684: Object type PACKAGE_BODY:"SC_BASE"."MP_MEDICARE_ELECPERIOD" already exists
+ORA-31684: Object type PACKAGE_BODY:"SC_BASE"."MP_MEDICARE_ENROLL" already exists
+ORA-31684: Object type PACKAGE_BODY:"SC_BASE"."MP_MEDICARE_FEF" already exists
+ORA-31684: Object type PACKAGE_BODY:"SC_BASE"."MP_MEDICARE_HCC" already exists
+ORA-31684: Object type PACKAGE_BODY:"SC_BASE"."MP_MEDICARE_INDIVIDUAL" already exists
+ORA-31684: Object type PACKAGE_BODY:"SC_BASE"."MP_MEDICARE_LIS" already exists
+ORA-31684: Object type PACKAGE_BODY:"SC_BASE"."MP_MEDICARE_LTI" already exists
+ORA-31684: Object type PACKAGE_BODY:"SC_BASE"."MP_MEDICARE_MBI" already exists
+ORA-31684: Object type PACKAGE_BODY:"SC_BASE"."MP_MEDICARE_MEDICAID" already exists
+ORA-31684: Object type PACKAGE_BODY:"SC_BASE"."MP_MEDICARE_MMR" already exists
+ORA-31684: Object type PACKAGE_BODY:"SC_BASE"."MP_MEDICARE_MMR_ADJ" already exists
+ORA-31684: Object type PACKAGE_BODY:"SC_BASE"."MP_MEDICARE_MSP" already exists
+ORA-31684: Object type PACKAGE_BODY:"SC_BASE"."MP_MEDICARE_NUNCMO" already exists
+ORA-31684: Object type PACKAGE_BODY:"SC_BASE"."MP_MEDICARE_SPANS" already exists
+ORA-31684: Object type PACKAGE_BODY:"SC_BASE"."MP_MEDICARE_TRR" already exists
+ORA-31684: Object type PACKAGE_BODY:"SC_BASE"."MP_MEDICARE_UTILITY" already exists
+ORA-31684: Object type PACKAGE_BODY:"SC_BASE"."MP_PACKAGE_MIGRATION" already exists
+ORA-31684: Object type PACKAGE_BODY:"SC_BASE"."MP_PREMIUMBILLING" already exists
+ORA-31684: Object type PACKAGE_BODY:"SC_BASE"."MP_QUEUE" already exists
+ORA-31684: Object type PACKAGE_BODY:"SC_BASE"."MP_SETUP" already exists
+ORA-31684: Object type PACKAGE_BODY:"SC_BASE"."MP_TRUTHTABLE" already exists
+ORA-31684: Object type PACKAGE_BODY:"SC_BASE"."MP_WRAP_MEDICARE" already exists
+ORA-31684: Object type PACKAGE_BODY:"SC_BASE"."MP_XML" already exists
+Processing object type DATABASE_EXPORT/SCHEMA/TYPE/TYPE_BODY
+ORA-31684: Object type TYPE_BODY:"SC_BASE"."TOLISTIMP1" already exists
+ORA-31684: Object type TYPE_BODY:"SC_BASE"."TOLISTHCC1" already exists
+Processing object type DATABASE_EXPORT/SCHEMA/TABLE/STATISTICS/TABLE_STATISTICS
+Processing object type DATABASE_EXPORT/STATISTICS/MARKER
+Processing object type DATABASE_EXPORT/SCHEMA/TABLE/TRIGGER
+Processing object type DATABASE_EXPORT/SCHEMA/MATERIALIZED_VIEW
+ORA-31684: Object type MATERIALIZED_VIEW:"SC_BASE"."R_REP_DAILY_HISTORY" already exists
+ORA-31684: Object type MATERIALIZED_VIEW:"SC_BASE"."R_REP_DAILY_SCHED" already exists
+Job "HEDBA"."SYS_IMPORT_SCHEMA_01" completed with 789 error(s) at Wed Jun 8 12:43:21 2022 elapsed 0 00:00:28
+
+MP_DB import completed
+3601 - Version of DB after import
+
+Session altered.
+
+Number of values in name table. The expected result should be more than 200
+
+  COUNT(*)
+----------
+       209
+
+Logging into MP_DB and upgrading its version to 3500 
+
+Session altered.
+
+
+Session altered.
+
+drop table trr_processor_errors
+           *
+ERROR at line 1:
+ORA-00942: table or view does not exist
+
+
+old  10: ) tablespace &&TABLES_TBSP
+new  10: ) tablespace DATA1
+name_id char(),
+             *
+ERROR at line 3:
+ORA-00910: specified length too long for its datatype
+
+
+old   2: TABLESPACE &&INDEXES_TBSP
+new   2: TABLESPACE INDX1
+create index xak_trr_proc_err_nameid on trr_processor_errors (NAME_ID ASC)
+                                        *
+ERROR at line 1:
+ORA-00942: table or view does not exist
+
+
+
+Function created.
+
+
+Table dropped.
+
+  PAYMENTS_MEMBER	   NUMBER(,2)	      DEFAULT 0,
+                                  *
+ERROR at line 7:
+ORA-01727: numeric precision specifier is out of range (1 to 38)
+
+
+old 125: ) TABLESPACE &TABLES_TBSP
+new 125: ) TABLESPACE DATA1
+	ORA_ERR_ROWID$ UROWID (00),
+	                         *
+ERROR at line 5:
+ORA-01723: zero-length columns are not allowed
+
+
+COMMENT ON TABLE SC_BASE.HCFA_PAYMENT_WORKSPACE_ERR  IS 'DML Error Logging table for HCFA_PAYMENT_WORKSPACE'
+                         *
+ERROR at line 1:
+ORA-00942: table or view does not exist
+
+
+    cost_plan char(1),
+    *
+ERROR at line 3:
+ORA-01430: column being added already exists in table
+
+
+
+View created.
+
+select name_id, contig_start_date, contig_end_date, add_months(trunc(contig_start_date - 1, 'YYYY'), ) - 1 new_enrollee_end_date
+                                                                                                     *
+ERROR at line 2:
+ORA-00936: missing expression
+
+
+
+View created.
+
+  CREATE TABLE "SC_BASE"."ERR$_HCFA_ARCH_BEQ"
+                         *
+ERROR at line 1:
+ORA-00955: name is already used by an existing object
+
+
+
+Comment created.
+
+
+View created.
+
+
+View created.
+
+create table premium_adjustments_log (name_id char(12), period_start date, create_source varchar2(50), process_date date, process_staff char(12))
+             *
+ERROR at line 1:
+ORA-00955: name is already used by an existing object
+
+
+create table premium_adjustments_inprogress (name_id char(12), period_start date, note varchar2(500), reason varchar2(50), create_source varchar2(50), process_date date, process_staff char(12))
+             *
+ERROR at line 1:
+ORA-00955: name is already used by an existing object
+
+
+arguments	   varchar2(0)
+                             *
+ERROR at line 3:
+ORA-01723: zero-length columns are not allowed
+
+
+old   1: create table LOCK_PROCESS ( PROCESS_NAME VARCHAR2(50), run_date DATE, run_staff varchar2(12) ) TABLESPACE &TABLES_TBSP
+new   1: create table LOCK_PROCESS ( PROCESS_NAME VARCHAR2(50), run_date DATE, run_staff varchar2(12) ) TABLESPACE DATA1
+create table LOCK_PROCESS ( PROCESS_NAME VARCHAR2(50), run_date DATE, run_staff varchar2(12) ) TABLESPACE DATA1
+             *
+ERROR at line 1:
+ORA-00955: name is already used by an existing object
+
+
+CREATE UNIQUE INDEX XPKNAME_PROCESS ON LOCK_PROCESS (PROCESS_NAME)
+                    *
+ERROR at line 1:
+ORA-00955: name is already used by an existing object
+
+
+ALTER TABLE LOCK_PROCESS ADD CONSTRAINT XPKNAME_PROCESS_PK PRIMARY KEY(PROCESS_NAME)
+                                                           *
+ERROR at line 1:
+ORA-02260: table can have only one primary key
+
+
+    alter table name modify ( name_first VARCHAR2(), name_last VARCHAR2(40) )
+                                                  *
+ERROR at line 1:
+ORA-00910: specified length too long for its datatype
+
+
+    alter table name_medicare_election modify ( name_first VARCHAR2(), name_last VARCHAR2(40) )
+                                                                    *
+ERROR at line 1:
+ORA-00910: specified length too long for its datatype
+
+
+
+View created.
+
+
+Commit complete.
+
+
+PL/SQL procedure successfully completed.
+
+
+0 rows merged.
+
+
+0 rows merged.
+
+
+0 rows merged.
+
+
+Commit complete.
+
+
+Commit complete.
+
+
+0 rows updated.
+
+Insert into TYPE_LIBRARY (TYPE_ID,PRIMARY,SECONDARY,PROPERTIES) values (mp_common.getid('Type'),'HCFA Rate Info','Factor Types',null)
+*
+ERROR at line 1:
+ORA-00001: unique constraint (SC_BASE.TYPE_LIBRARY_PK) violated
+
+
+values (mp_common.getid('Hcfa Rate Info'),to_date('01-JAN-2020','DD-MON-YYYY'),to_date('-DEC-2020','DD-MON-YYYY'),'Factor Types','N',null,sysdate,'S00000000057',sysdate,'S00000000057','Y')
+                                                                                       *
+ERROR at line 2:
+ORA-01858: a non-numeric character was found where a numeric was expected
+
+
+
+Commit complete.
+
+
+1 row deleted.
+
+
+1 row created.
+
+
+7 rows deleted.
+
+
+1 row created.
+
+
+1 row created.
+
+insert into EDI_RECORD_TEXT_DEF (REC_SET_ID, REC_HEADER, COL_NAME, COL_POSITION, COL_LENGTH, COL_TYPE, COL_FORMAT_MASK, COL_DESCRIPTION, COL_REQUIRED, UI_WIDTH, UI_POSITION, UI_LABEL, UI_COLUMN, CREATE_DATE, CREATE_STAFF, UPDATE_DATE, UPDATE_STAFF) values ('VRSBEQ000001','MMABEQRH','CREATE_DATE',,8,'DATE','CCYYMMDD','File Create Date','Y',320,6,'','',sysdate,'S00000000057',sysdate,'S00000000057')
+                                                                                                                                                                                                                                                                                                         *
+ERROR at line 1:
+ORA-00936: missing expression
+
+
+insert into EDI_RECORD_TEXT_DEF (REC_SET_ID, REC_HEADER, COL_NAME, COL_POSITION, COL_LENGTH, COL_TYPE, COL_FORMAT_MASK, COL_DESCRIPTION, COL_REQUIRED, UI_WIDTH, UI_POSITION, UI_LABEL, UI_COLUMN, CREATE_DATE, CREATE_STAFF, UPDATE_DATE, UPDATE_STAFF) values ('VRSBEQ000001','MMABEQRH','FILE_NUMBER',,9,'CHAR','','File Number','Y',3,6,'','',sysdate,'S00000000057',sysdate,'S00000000057')
+                                                                                                                                                                                                                                                                                                         *
+ERROR at line 1:
+ORA-00936: missing expression
+
+
+
+1 row created.
+
+
+1 row created.
+
+insert into EDI_RECORD_TEXT_DEF (REC_SET_ID, REC_TYPE, COL_NAME, COL_POSITION, COL_LENGTH, COL_TYPE, COL_FORMAT_MASK, COL_DESCRIPTION, COL_REQUIRED, UI_WIDTH, UI_POSITION, UI_LABEL, UI_COLUMN, CREATE_DATE, CREATE_STAFF, UPDATE_DATE, UPDATE_STAFF) values ('VRSBEQ000001','DTL01 ','BIRTH_DATE',,8,'DATE','CCYYMMDD','Birth Date','Y',320,,'','',sysdate,'S00000000057',sysdate,'S00000000057')
+                                                                                                                                                                                                                                                                                                    *
+ERROR at line 1:
+ORA-00936: missing expression
+
+
+insert into EDI_RECORD_TEXT_DEF (REC_SET_ID, REC_TYPE, COL_NAME, COL_POSITION, COL_LENGTH, COL_TYPE, COL_FORMAT_MASK, COL_DESCRIPTION, COL_REQUIRED, UI_WIDTH, UI_POSITION, UI_LABEL, UI_COLUMN, CREATE_DATE, CREATE_STAFF, UPDATE_DATE, UPDATE_STAFF) values ('VRSBEQ000001','DTL01 ','GENDER',,7,'CHAR','','Gender Code','N',40,,'','',sysdate,'S00000000057',sysdate,'S00000000057')
+                                                                                                                                                                                                                                                                                                *
+ERROR at line 1:
+ORA-00936: missing expression
+
+
+
+1 row created.
+
+
+1 row created.
+
+insert into EDI_RECORD_TEXT_DEF (REC_SET_ID, REC_TRAILER, COL_NAME, COL_POSITION, COL_LENGTH, COL_TYPE, COL_FORMAT_MASK, COL_DESCRIPTION, COL_REQUIRED, UI_WIDTH, UI_POSITION, UI_LABEL, UI_COLUMN, CREATE_DATE, CREATE_STAFF, UPDATE_DATE, UPDATE_STAFF) values ('VRSBEQ000001','MMABEQRT','CREATE_DATE',,8,'DATE','CCYYMMDD','File Create Date','Y',320,6,'','',sysdate,'S00000000057',sysdate,'S00000000057')
+                                                                                                                                                                                                                                                                                                          *
+ERROR at line 1:
+ORA-00936: missing expression
+
+
+insert into EDI_RECORD_TEXT_DEF (REC_SET_ID, REC_TRAILER, COL_NAME, COL_POSITION, COL_LENGTH, COL_TYPE, COL_FORMAT_MASK, COL_DESCRIPTION, COL_REQUIRED, UI_WIDTH, UI_POSITION, UI_LABEL, UI_COLUMN, CREATE_DATE, CREATE_STAFF, UPDATE_DATE, UPDATE_STAFF) values ('VRSBEQ000001','MMABEQRT','FILE_NUMBER',,9,'CHAR','','File Number','Y',3,06,'','',sysdate,'S00000000057',sysdate,'S00000000057')
+                                                                                                                                                                                                                                                                                                          *
+ERROR at line 1:
+ORA-00936: missing expression
+
+
+
+1 row created.
+
+
+Commit complete.
+
+
+1 row updated.
+
+
+Commit complete.
+
+insert into AFFILIATION_LIBRARY ( AFFILIATION_ID,AFFILIATION_PRIMARY, AFFILIATION_SECONDARY, CREATE_DATE, CREATE_STAFF, UPDATE_DATE, UPDATE_STAFF, STATUS) select 'AEDIBEQ001','Send BEQ Error','File ID Name Invalid',sysdate,'S00000000057',sysdate,'S00000000057','Y'  from dual where not exists ( select 1 from AFFILIATION_LIBRARY where AFFILIATION_ID = 'AEDIBEQ41' )
+*
+ERROR at line 1:
+ORA-00001: unique constraint (SC_BASE.AFFILIATION_LIBRARY_PK) violated
+
+
+
+0 rows created.
+
+
+0 rows created.
+
+
+0 rows created.
+
+
+0 rows created.
+
+
+0 rows created.
+
+
+0 rows created.
+
+
+0 rows created.
+
+
+0 rows created.
+
+
+0 rows created.
+
+
+0 rows created.
+
+
+0 rows created.
+
+
+0 rows created.
+
+
+0 rows created.
+
+
+0 rows created.
+
+
+0 rows created.
+
+
+0 rows created.
+
+
+0 rows created.
+
+insert into AFFILIATION_LIBRARY (AFFILIATION_ID,AFFILIATION_PRIMARY,AFFILIATION_SECONDARY,NAME_STAFF_FLAG,COUNT,SITE,DEPARTMENT,PRODUCT,CREATE_DATE,CREATE_STAFF,UPDATE_DATE,UPDATE_STAFF,STATUS) values ('AEDIBEQORA01','Send BEQ Error','Create Transaction Error',null,null,null,null,null,sysdate,'S00000000057',sysdate,'S00000000057','Y')
+*
+ERROR at line 1:
+ORA-00001: unique constraint (SC_BASE.AFFILIATION_LIBRARY_PK) violated
+
+
+insert into setting_library (SETTING_ID,PRIMARY,SECONDARY,KEY_WORD,DATA_TYPE,DISPLAY,VALUE_LIST,USER_TYPE,ACCESS_FLAG,DEFAULT_VALUE,DESCRIPTION,CREATE_DATE,CREATE_STAFF,UPDATE_DATE,UPDATE_STAFF,STATUS,DEPARTMENT) values ('XEDIBEQ00001','Send BEQ','Operation Error Action Set','BEQData$RejectTransaction','CHAR','fillin',null,'System','A',null,'12-character GROUP_ID of the action set to be run for any Send BEQ EDI errors found.',sysdate,'S00000000057',sysdate,'S00000000057','Y',null)
+*
+ERROR at line 1:
+ORA-00001: unique constraint (SC_BASE.SETTING_LIBRARY_PK) violated
+
+
+
+Commit complete.
+
+Insert into SETTING_LIBRARY
+*
+ERROR at line 1:
+ORA-00001: unique constraint (SC_BASE.SETTING_LIBRARY_PK) violated
+
+
+
+0 rows created.
+
+
+0 rows created.
+
+
+MSG
+-------------------------------------------------------------------------------------
+create init_setting_library.log to populate and initialize new setting_library table.
+
+update setting_library set val_type = null, arguments = null, update_date = sysdate, update_staff = 'S00000000057'
+                                            *
+ERROR at line 1:
+ORA-00904: "ARGUMENTS": invalid identifier
+
+
+update setting_library set val_type = 'DataWindow', arguments = 'default_value'
+                                                    *
+ERROR at line 1:
+ORA-00904: "ARGUMENTS": invalid identifier
+
+
+update setting_library set val_type = 'DataWindow', arguments = 'default_value'
+                                                    *
+ERROR at line 1:
+ORA-00904: "ARGUMENTS": invalid identifier
+
+
+update setting_library set val_type = 'DataWindow', arguments = 'default_value'
+                                                    *
+ERROR at line 1:
+ORA-00904: "ARGUMENTS": invalid identifier
+
+
+update setting_library set val_type = 'QueryValue', arguments = 'default_value'
+                                                    *
+ERROR at line 1:
+ORA-00904: "ARGUMENTS": invalid identifier
+
+
+update setting_library set val_type = 'LibraryID', arguments = 'default_value,''affiliation_library'',''affiliation_id'''
+                                                   *
+ERROR at line 1:
+ORA-00904: "ARGUMENTS": invalid identifier
+
+
+update setting_library set val_type = 'LibraryID', arguments = 'default_value,''event_library'',''event_id'''
+                                                   *
+ERROR at line 1:
+ORA-00904: "ARGUMENTS": invalid identifier
+
+
+update setting_library set val_type = 'LibraryID', arguments = 'default_value,''result_library'',''result_id'''
+                                                   *
+ERROR at line 1:
+ORA-00904: "ARGUMENTS": invalid identifier
+
+
+update setting_library set val_type = 'LibraryID', arguments = 'default_value,''group_library'',''group_id'''
+                                                   *
+ERROR at line 1:
+ORA-00904: "ARGUMENTS": invalid identifier
+
+
+update setting_library set val_type = 'LibraryID', arguments = 'default_value,''staff'',''staff_id'''
+                                                   *
+ERROR at line 1:
+ORA-00904: "ARGUMENTS": invalid identifier
+
+
+update setting_library set val_type = 'LibraryID', arguments = 'default_value,''result_library'',''result_id'''
+                                                   *
+ERROR at line 1:
+ORA-00904: "ARGUMENTS": invalid identifier
+
+
+update setting_library set val_type = 'DateFormat', arguments = 'default_value'
+                                                    *
+ERROR at line 1:
+ORA-00904: "ARGUMENTS": invalid identifier
+
+
+update setting_library set val_type = 'DateFormat', arguments = 'default_value,''YYYY'''
+                                                    *
+ERROR at line 1:
+ORA-00904: "ARGUMENTS": invalid identifier
+
+
+update setting_library set val_type = 'Pattern', arguments = 'default_value,'';'',''\d\d\d\D'','''''
+                                                 *
+ERROR at line 1:
+ORA-00904: "ARGUMENTS": invalid identifier
+
+
+update setting_library set val_type = 'TRRCodes', arguments = 'default_value'
+                                                  *
+ERROR at line 1:
+ORA-00904: "ARGUMENTS": invalid identifier
+
+
+update setting_library set val_type = 'ProgramId', arguments = 'default_value'
+                                                   *
+ERROR at line 1:
+ORA-00904: "ARGUMENTS": invalid identifier
+
+
+update setting_library set val_type = 'EventType', arguments = 'default_value'
+                                                   *
+ERROR at line 1:
+ORA-00904: "ARGUMENTS": invalid identifier
+
+
+update setting_library set val_type = 'MedicareInd', arguments = 'default_value'
+                                                     *
+ERROR at line 1:
+ORA-00904: "ARGUMENTS": invalid identifier
+
+
+update setting_library set val_type = 'MedicareInd', arguments = 'default_value'
+                                                     *
+ERROR at line 1:
+ORA-00904: "ARGUMENTS": invalid identifier
+
+
+update setting_library set val_type = 'ChangeField', arguments = 'default_value'
+                                                     *
+ERROR at line 1:
+ORA-00904: "ARGUMENTS": invalid identifier
+
+
+update setting_library set val_type = 'SpannedField', arguments = 'default_value'
+                                                      *
+ERROR at line 1:
+ORA-00904: "ARGUMENTS": invalid identifier
+
+
+update setting_library set val_type = 'MedicareField', arguments = 'default_value'
+                                                       *
+ERROR at line 1:
+ORA-00904: "ARGUMENTS": invalid identifier
+
+
+update setting_library set val_type = 'MedicareFieldType', arguments = 'default_value,''span'''
+                                                           *
+ERROR at line 1:
+ORA-00904: "ARGUMENTS": invalid identifier
+
+
+update setting_library set val_type = 'MedicareFieldType', arguments = 'default_value,''date'''
+                                                           *
+ERROR at line 1:
+ORA-00904: "ARGUMENTS": invalid identifier
+
+
+update setting_library set val_type = 'ZoneSeminarResult', arguments = 'default_value'
+                                                           *
+ERROR at line 1:
+ORA-00904: "ARGUMENTS": invalid identifier
+
+
+update setting_library set val_type = 'NameRequired', arguments = 'default_value'
+                                                      *
+ERROR at line 1:
+ORA-00904: "ARGUMENTS": invalid identifier
+
+
+update setting_library set val_type = 'ORECFactorTypes', arguments = 'default_value'
+                                                         *
+ERROR at line 1:
+ORA-00904: "ARGUMENTS": invalid identifier
+
+
+update setting_library set val_type = 'FillinDataType', arguments = 'default_value,value_list,''NUMBER'''
+                                                        *
+ERROR at line 1:
+ORA-00904: "ARGUMENTS": invalid identifier
+
+
+
+0 rows created.
+
+
+0 rows created.
+
+
+1 row updated.
+
+Insert into setting_library (SETTING_ID,PRIMARY,SECONDARY,KEY_WORD,DATA_TYPE,DISPLAY,VALUE_LIST,USER_TYPE,ACCESS_FLAG,DEFAULT_VALUE,DESCRIPTION,CREATE_DATE,CREATE_STAFF,UPDATE_DATE,UPDATE_STAFF,STATUS,DEPARTMENT)
+*
+ERROR at line 1:
+ORA-00001: unique constraint (SC_BASE.SETTING_LIBRARY_PK) violated
+
+
+
+Commit complete.
+
+    TO_DATE('21-APR-2020 16::17', 'DD-MON-YYYY hh24:mi:ss'),
+            *
+ERROR at line 31:
+ORA-01858: a non-numeric character was found where a numeric was expected
+
+
+INSERT INTO query_library (
+*
+ERROR at line 1:
+ORA-00001: unique constraint (SC_BASE.QUERY_LIBRARY_PK) violated
+
+
+
+2 rows updated.
+
+
+2 rows updated.
+
+
+0 rows updated.
+
+declare
+*
+ERROR at line 1:
+ORA-00001: unique constraint (SC_BASE.DATAWINDOW_LIBRARY_PK) violated
+ORA-06512: at line 29
+
+
+
+Commit complete.
+
+DW D00000000169 does not contain PBSELECT; skipping
+
+PL/SQL procedure successfully completed.
+
+
+Commit complete.
+
+DW D00000000170 does not contain PBSELECT; skipping
+
+PL/SQL procedure successfully completed.
+
+
+Commit complete.
+
+
+1 row updated.
+
+
+Commit complete.
+
+
+Warning: Package created with compilation errors.
+
+
+Warning: Package Body created with compilation errors.
+
+
+1 row created.
+
+
+Warning: Package created with compilation errors.
+
+
+Warning: Package Body created with compilation errors.
+
+
+1 row created.
+
+
+Warning: Package created with compilation errors.
+
+
+Warning: Package Body created with compilation errors.
+
+
+1 row created.
+
+
+Warning: Package created with compilation errors.
+
+
+Warning: Package Body created with compilation errors.
+
+
+1 row created.
+
+
+Package created.
+
+
+Warning: Package Body created with compilation errors.
+
+
+1 row created.
+
+
+Package created.
+
+
+Warning: Package Body created with compilation errors.
+
+
+1 row created.
+
+
+Package created.
+
+
+Warning: Package Body created with compilation errors.
+
+
+1 row created.
+
+
+Warning: Package created with compilation errors.
+
+
+Warning: Package Body created with compilation errors.
+
+
+1 row created.
+
+
+Package created.
+
+
+Warning: Package Body created with compilation errors.
+
+
+1 row created.
+
+
+Package created.
+
+
+Warning: Package Body created with compilation errors.
+
+
+1 row created.
+
+
+Warning: Package created with compilation errors.
+
+
+Warning: Package Body created with compilation errors.
+
+
+1 row created.
+
+
+Warning: Function created with compilation errors.
+
+
+Warning: Function created with compilation errors.
+
+
+Package created.
+
+
+Warning: Package Body created with compilation errors.
+
+
+1 row created.
+
+
+Package created.
+
+
+Warning: Package Body created with compilation errors.
+
+
+1 row created.
+
+
+Package created.
+
+
+Warning: Package Body created with compilation errors.
+
+
+1 row created.
+
+
+Commit complete.
+
+
+0 rows created.
+
+
+0 rows created.
+
+
+Table truncated.
+
+
+Commit complete.
+
+BEGIN MP_ARCHIVE.REBUILD_TRIGGERS(); END;
+
+*
+ERROR at line 1:
+ORA-04063: package body "SC_BASE.MP_ARCHIVE" has errors
+ORA-06508: PL/SQL: could not find program unit being called: "SC_BASE.MP_ARCHIVE"
+ORA-06512: at line 1
+
+
+
+1 row updated.
+
+
+1 row created.
+
+
+Commit complete.
+
+Number of values in name table. The expected result should be more than 200
+
+  COUNT(*)
+----------
+       209
+
+3601 - Version of DB before upgrade
+3500 - Version of DB after upgrade
+DB successfully upgraded
+test
+MP_Upgrade_3500.0_to_3601.3,zz_driver_3500.0_to_3601.3.sql,3601
+after IFS
+changing directory to path where sql file is present
+Directory changed
+upgrading DB to next version
+
+Session altered.
+
+Setting environment variables
+
+20220608_124324_DB12C_build_check.sql.log
+
+Database: DB12C
+Opened: OCT-14-2021 02:18:55
+Log Mode: NOARCHIVELOG
+
+
+Host IP Address: 10.12.120.205
+Host Name: haeng-mdeevi
+Host Address: ip-10-12-120-205.us-east-2.compute.internal
+
+Setting environment variables
+
+INSTANCE_NUMBER INSTANCE_NAME	 HOST_NAME							  VERSION	    STARTUP_TIME		   STATUS	PARALLEL THREAD#			ARCHIVER LOG_SWITCH_WAIT LOGINS     SHUTDOWN_PENDING DATABASE_STATUS   INSTANCE_ROLE	  ACTIVE_STATE	BLOCKED
+--------------- ---------------- ---------------------------------------------------------------- ----------------- ------------------------------ ------------ -------- ------------------------------ -------- --------------- ---------- ---------------- ----------------- ------------------ ------------- -------
+1		DB12C		 haeng-mdeevi							  12.1.0.2.0	    2022-JUN-08 01:25:37	   OPEN 	NO	 1				STOPPED 		 ALLOWED    NO		     ACTIVE	       PRIMARY_INSTANCE   NORMAL	NO
+
+SID   SERIAL# USERNAME			     STATUS   SCHEMANAME		     OSUSER			    MACHINE							     TERMINAL	      PROGRAM							       TYPE	  MODULE							   LOGON_TIME			  LAST_CALL_ET EVENT
+----- ------- ------------------------------ -------- ------------------------------ ------------------------------ ---------------------------------------------------------------- ---------------- ---------------------------------------------------------------- ---------- ---------------------------------------------------------------- ------------------------------ ------------ ----------------------------------------------------------------
+237   62003   WEBLOGIC_DW22_3		     INACTIVE WEBLOGIC_DW22_3		     weblogic			    ip-10-12-120-205.us-east-2.compute.internal 		     unknown	      JDBC Thin Client						       USER	  JDBC Thin Client						   2022-JUN-08 01:32:41 	  37	       SQL*Net message from client
+354   57454   WEBLOGIC_DW22_3		     INACTIVE WEBLOGIC_DW22_3		     weblogic			    ip-10-12-120-205.us-east-2.compute.internal 		     unknown	      JDBC Thin Client						       USER	  JDBC Thin Client						   2022-JUN-08 01:32:41 	  37	       SQL*Net message from client
+121   26792   WEBLOGIC_V22_3		     INACTIVE WEBLOGIC_V22_3		     weblogic			    ip-10-12-120-205.us-east-2.compute.internal 		     unknown	      JDBC Thin Client						       USER	  JDBC Thin Client						   2022-JUN-08 01:32:41 	  38	       SQL*Net message from client
+242   57215   SC_BASE			     KILLED   SC_BASE			     weblogic			    ip-10-12-120-205.us-east-2.compute.internal 		     unknown	      JDBC Thin Client						       USER	  JDBC Thin Client						   2022-JUN-08 08:17:07 	  15959        SQL*Net message from client
+591   62481   SC_BASE			     KILLED   SC_BASE			     weblogic			    ip-10-12-120-205.us-east-2.compute.internal 		     unknown	      JDBC Thin Client						       USER	  JDBC Thin Client						   2022-JUN-08 09:50:25 	  10362        SQL*Net message from client
+244   55262   WEBLOGIC_V22_3		     INACTIVE WEBLOGIC_V22_3		     weblogic			    ip-10-12-120-205.us-east-2.compute.internal 		     unknown	      JDBC Thin Client						       USER	  JDBC Thin Client						   2022-JUN-08 11:21:54 	  38	       SQL*Net message from client
+470   46155   WEBLOGIC_DW22_3		     INACTIVE WEBLOGIC_DW22_3		     weblogic			    ip-10-12-120-205.us-east-2.compute.internal 		     unknown	      JDBC Thin Client						       USER	  JDBC Thin Client						   2022-JUN-08 11:22:04 	  37	       SQL*Net message from client
+479   56379   WEBLOGIC_V22_3		     INACTIVE WEBLOGIC_V22_3		     weblogic			    ip-10-12-120-205.us-east-2.compute.internal 		     unknown	      JDBC Thin Client						       USER	  JDBC Thin Client						   2022-JUN-08 12:01:28 	  38	       SQL*Net message from client
+476   31766   WEBLOGIC_V22_3		     INACTIVE WEBLOGIC_V22_3		     weblogic			    ip-10-12-120-205.us-east-2.compute.internal 		     unknown	      JDBC Thin Client						       USER	  JDBC Thin Client						   2022-JUN-08 12:11:10 	  1934	       SQL*Net message from client
+355   46716   WEBLOGIC_V22_3		     INACTIVE WEBLOGIC_V22_3		     weblogic			    ip-10-12-120-205.us-east-2.compute.internal 		     unknown	      JDBC Thin Client						       USER	  JDBC Thin Client						   2022-JUN-08 12:11:10 	  1880	       SQL*Net message from client
+246   42492   WEBLOGIC_V22_3		     INACTIVE WEBLOGIC_V22_3		     weblogic			    ip-10-12-120-205.us-east-2.compute.internal 		     unknown	      JDBC Thin Client						       USER	  JDBC Thin Client						   2022-JUN-08 12:11:10 	  1880	       SQL*Net message from client
+130   64638   WEBLOGIC_V22_3		     INACTIVE WEBLOGIC_V22_3		     weblogic			    ip-10-12-120-205.us-east-2.compute.internal 		     unknown	      JDBC Thin Client						       USER	  JDBC Thin Client						   2022-JUN-08 12:11:10 	  1933	       SQL*Net message from client
+14    55885   WEBLOGIC_V22_3		     INACTIVE WEBLOGIC_V22_3		     weblogic			    ip-10-12-120-205.us-east-2.compute.internal 		     unknown	      JDBC Thin Client						       USER	  JDBC Thin Client						   2022-JUN-08 12:11:10 	  1933	       SQL*Net message from client
+11    63447   WEBLOGIC_V22_3		     INACTIVE WEBLOGIC_V22_3		     weblogic			    ip-10-12-120-205.us-east-2.compute.internal 		     unknown	      JDBC Thin Client						       USER	  JDBC Thin Client						   2022-JUN-08 12:11:10 	  1934	       SQL*Net message from client
+13    59235   WEBLOGIC_V22_3		     INACTIVE WEBLOGIC_V22_3		     weblogic			    ip-10-12-120-205.us-east-2.compute.internal 		     unknown	      JDBC Thin Client						       USER	  JDBC Thin Client						   2022-JUN-08 12:11:10 	  1934	       SQL*Net message from client
+814   60856   WEBLOGIC_V22_3		     INACTIVE WEBLOGIC_V22_3		     weblogic			    ip-10-12-120-205.us-east-2.compute.internal 		     unknown	      JDBC Thin Client						       USER	  JDBC Thin Client						   2022-JUN-08 12:11:10 	  1934	       SQL*Net message from client
+596   52789   WEBLOGIC_V22_3		     INACTIVE WEBLOGIC_V22_3		     weblogic			    ip-10-12-120-205.us-east-2.compute.internal 		     unknown	      JDBC Thin Client						       USER	  JDBC Thin Client						   2022-JUN-08 12:11:10 	  1934	       SQL*Net message from client
+712   36535   WEBLOGIC_V22_3		     INACTIVE WEBLOGIC_V22_3		     weblogic			    ip-10-12-120-205.us-east-2.compute.internal 		     unknown	      JDBC Thin Client						       USER	  JDBC Thin Client						   2022-JUN-08 12:11:10 	  1934	       SQL*Net message from client
+826   60129   SC_BASE			     INACTIVE SC_BASE			     mdeevi			    MDEEVI-WIN10						     unknown	      SQL Developer						       USER	  SQL Developer 						   2022-JUN-08 12:39:50 	  150	       SQL*Net message from client
+362   6887    SC_BASE			     ACTIVE   SC_BASE			     weblogic			    haeng-mdeevi								      sqlplus@haeng-mdeevi (TNS V1-V3)				       USER	  SQL*Plus							   2022-JUN-08 12:43:24 	  0	       SQL*Net message to client
+
+VERSION_DATE		       VERSION_INFO VERSION_DETAIL DB_PATCH_LEVEL
+------------------------------ ------------ -------------- ------------------------
+2022-JUN-08 12:43:24	       2020.3	    3500	   0
+
+SCRIPT_NAME					   UPGRADE_DATE_FORMATT
+-------------------------------------------------- --------------------
+MP8.3 - l_2407.sql				   2009-APR-09 13:43:14
+MP9.3 - a_2009_3.sql				   2009-JUL-24 12:14:18
+MP9.3 - b_2501.sql				   2009-JUL-24 12:18:50
+MP9.3 - c_2502.sql				   2009-JUL-24 12:32:39
+MP9.3 - d_2503.sql				   2009-JUL-24 12:34:25
+MP9.3 - e_2504.sql				   2009-JUL-24 12:35:30
+MP9.3 - f_2505.sql				   2009-AUG-11 11:52:06
+MP9.3 - g_2506.sql				   2009-AUG-11 11:52:28
+MP9.3 - h_2507.sql				   2009-SEP-10 23:20:09
+MP9.3 - i_2508.sql				   2009-SEP-10 23:22:03
+MP9.3 - j_2509.sql				   2009-SEP-10 23:22:36
+MP9.3 - k_2510.sql				   2011-APR-26 09:58:10
+MP9.3 - l_2511.sql				   2011-APR-26 09:58:28
+MP9.3 - m_2512.sql				   2011-APR-26 10:01:00
+MP9.3 - n_2513.sql				   2011-APR-26 10:02:29
+MP9.3 - o_2514.sql				   2011-APR-26 10:02:53
+MP9.3 - p_2515.sql				   2011-APR-26 10:03:56
+MP9.3 - q_2516.sql				   2011-APR-26 10:04:21
+MP9.3 - r_2517.sql				   2011-APR-26 10:05:42
+MP9.3 - s_2518.sql				   2011-APR-26 10:06:50
+MP9.3 - t_2519.sql				   2011-APR-26 10:07:00
+MP11.1 - c_2702.sql				   2011-APR-26 10:18:01
+MP11.1 - d_2703.sql				   2011-APR-26 10:18:38
+MP11.1 - e_2704.sql				   2011-APR-26 10:19:13
+MP11.1 - f_2705.sql				   2011-APR-26 10:19:49
+MP11.1 - g_2705a.sql				   2012-AUG-07 16:57:04
+MP11.1 - h_2706.sql				   2012-AUG-07 16:57:40
+MP11.1 - i_2707.sql				   2012-AUG-07 16:57:56
+MP11.1 - j_2708.sql				   2012-AUG-07 16:58:19
+MP11.1 - k_2709.sql				   2012-AUG-07 16:58:35
+MP11.1 - l_2710.sql				   2012-AUG-07 16:58:56
+MP11.1 - m_2710.1.sql				   2012-AUG-07 16:59:32
+MP11.1 - n_2710.2.sql				   2012-AUG-07 17:00:43
+MP11.1 - o_2710.3.sql				   2012-AUG-07 17:00:53
+MP11.1 - p_2710.4.sql				   2012-AUG-07 17:01:01
+MP11.1 - q_2711.sql				   2012-AUG-07 17:01:15
+MP11.1 - z_2705.1_dbpatch.sql			   2012-AUG-07 17:03:01
+MP12.1 - a_2011.1.2711_to_2012.1.2802.sql	   2012-AUG-07 17:11:34
+MP12.1 - b_2803.sql				   2012-AUG-07 17:12:49
+MP12.1 - c_2804.sql				   2012-AUG-07 17:13:09
+MP12.1 - d_2805.sql				   2012-AUG-07 17:13:30
+MP12.1 - e_2806.sql				   2012-AUG-07 17:13:58
+MP12.1 - f_2806.1.sql				   2012-AUG-07 17:14:09
+MP12.1 - g_2807.sql				   2012-AUG-07 17:14:18
+MP12.1 - h_2808.sql				   2012-AUG-07 17:14:21
+MP12.1 - i_2809.sql				   2012-AUG-07 17:14:30
+MP12.1 - j_2810.sql				   2012-AUG-07 17:14:47
+j1_2810_missing_rx_disb_interactions.sql	   2012-AUG-07 17:15:45
+MP12.1 - z_missinggrants.sql			   2012-AUG-07 17:16:42
+2012_hcfa_rate_info_standard.sql		   2012-OCT-05 15:23:35
+invoice_tracking_v9.sql 			   2013-FEB-01 16:29:42
+z_Master_ARC_Codes_FEB2012.sql			   2013-FEB-28 11:02:30
+2013_cutoff_dates.sql				   2013-FEB-28 11:33:27
+Package_Migration_Installation_2012.sql 	   2013-FEB-28 11:37:49
+MASTER_TRC_Script.sql				   2013-JUN-27 12:16:58
+MP12.1 - k_2811.sql				   2013-JUL-24 12:32:59
+MP12.1 - l_2811.1.sql				   2013-JUL-24 12:33:21
+m_2811.2.sql					   2013-JUL-24 12:33:24
+n_2811.3.sql					   2013-JUL-24 12:33:28
+o_2811_4.sql					   2013-JUL-24 12:33:32
+p_2811_5.sql					   2013-JUL-24 12:33:35
+q_2811_6.sql					   2013-JUL-24 12:33:40
+MP13.2 - a_2012.1.2811_to_2013.2.2900.sql	   2013-JUL-24 12:34:32
+MP13.2 - b_2901.sql				   2013-JUL-24 12:35:25
+MP13.2 - c_2902.sql				   2013-JUL-24 12:35:36
+MP13.2 - d_2903.sql				   2013-JUL-24 12:35:54
+MP13.2 - e_2904.sql				   2013-JUL-24 12:36:04
+MP13.2 - f_2905.sql				   2013-JUL-31 11:06:19
+factor rates 2012_2013_08192013.sql		   2013-AUG-28 12:16:14
+21495_Package_migration_update.sql		   2013-NOV-20 10:36:35
+MP13.2 - g_2906.sql				   2014-JUL-09 12:54:17
+MP13.2 - h_2906.1.sql				   2014-JUL-09 12:54:44
+MP13.2 - i_2907.sql				   2014-JUL-09 12:55:36
+MP13.2 - z_rebuild_hpo_hcc.sql			   2014-JUL-09 12:55:57
+MP13.2 - j_2908.sql				   2014-JUL-09 12:58:00
+MP13.2 - k_2909.sql				   2014-JUL-09 12:58:17
+MP13.2 - l_2909.1.sql				   2014-JUL-09 12:58:29
+MP13.2 - m_2909.2.sql				   2014-JUL-09 12:58:40
+MP13.2 - n_2910.sql				   2014-JUL-09 12:58:50
+MP14.2 - a_13.2.2909_to_14.2.3000.sql		   2014-JUL-09 12:59:12
+MP14.2 - b_3001.sql				   2014-JUL-09 12:59:29
+MP14.2 - c_3002.sql				   2014-JUL-09 12:59:44
+MP14.2 - d_3003.sql				   2014-OCT-02 14:28:36
+MP14.2 - e_3004.sql				   2014-OCT-02 14:28:49
+z_CMSnov2014_newcodes.sql			   2014-OCT-02 14:28:49
+2014_cutoff_dates.sql				   2014-DEC-15 17:16:50
+2015_Cutoff_Script.SQL				   2014-DEC-15 17:17:13
+23647_RFI_Escalation_Update.sql 		   2015-JAN-15 11:48:21
+MP14.2 - e1_3004.1.sql				   2015-MAR-05 09:47:34
+MP14.2 - e2_3004.2.sql				   2015-MAR-05 09:48:53
+MP14.2 - e3_3004.3.sql				   2015-MAR-05 09:51:25
+install_23531_CMSFeb2015_Updates.sql		   2015-MAR-05 09:52:09
+2014 std rates 13.2.2907+.sql			   2015-MAR-05 11:25:51
+2014_MPDESIGN_BASE_RATE.sql			   2015-MAR-05 11:27:55
+MPDESIGN_2014_STANDARD_RATES.SQL		   2015-MAR-05 11:27:55
+update_hccs_for_new_year2014			   2015-MAR-05 11:33:01
+2014_std_rate_fixes_02042014.sql		   2015-MAR-05 11:33:35
+icd9_edits_2014.sql				   2015-MAR-05 11:33:35
+2014_std_rate_fixes_12102013_v2.sql		   2015-MAR-05 11:34:27
+2015_MPDESIGN_BASE_RATE.sql			   2015-MAR-05 11:37:55
+2015_std_rates.sql				   2015-MAR-05 11:48:17
+MPDESIGN_2015_STANDARD_RATES.SQL		   2015-MAR-05 11:48:17
+update_hccs_for_new_year2015			   2015-MAR-05 11:48:45
+fix_D3_disabled_rx_factors.sql			   2015-MAR-05 11:49:14
+2013_MPDESIGN_BASE_RATE.sql			   2015-MAR-05 16:47:16
+MP13.2 - g_2906.sql				   2015-AUG-05 15:11:15
+MP13.2 - h_2906.1.sql				   2015-AUG-05 15:11:16
+MP13.2 - z_rebuild_hpo_hcc.sql			   2015-AUG-05 15:11:27
+MP13.2 - i_2907.sql				   2015-AUG-05 15:11:27
+MP13.2 - j_2908.sql				   2015-AUG-05 15:11:32
+z_patch_2908.1.sql				   2015-AUG-05 15:11:33
+MP13.2 - l_2909.1.sql				   2015-AUG-05 15:11:34
+MP13.2 - k_2909.sql				   2015-AUG-05 15:11:34
+MP13.2 - m_2909.2.sql				   2015-AUG-05 15:11:34
+z_case_22390_workaround_trigger.sql		   2015-AUG-05 15:11:35
+MP13.2 - n_2910.sql				   2015-AUG-05 15:11:35
+MP13.2 - o_2911.sql				   2015-AUG-05 15:11:38
+MP13.2 - o1_2911.1.sql				   2015-AUG-05 15:11:39
+MP14.2 - a_13.2.2909_to_14.2.3000.sql		   2015-AUG-05 15:11:59
+MP14.2 - b_3001.sql				   2015-AUG-05 15:12:00
+MP14.2 - c_3002.sql				   2015-AUG-05 15:12:01
+MP14.2 - d_3003.sql				   2015-AUG-05 15:12:03
+MP14.2 - e_3004.sql				   2015-AUG-05 15:12:06
+MP14.2 - e1_3004.1.sql				   2015-AUG-05 15:12:12
+z_CMSnov2014_newcodes.sql			   2015-AUG-05 15:12:12
+MASTER_TRC_Script.sql				   2015-AUG-05 15:12:13
+MASTER_TRC_Script.sql				   2015-AUG-05 15:15:19
+MP14.2 - e2_3004.2.sql				   2015-AUG-05 15:15:20
+MP14.2 - e3_3004.3.sql				   2015-AUG-05 15:15:21
+MP14.2 - f_3005.sql				   2015-AUG-05 15:15:27
+MP14.2 - g_3006.sql				   2015-AUG-05 15:15:28
+MP14.2 - g1_3006.1.sql				   2015-AUG-05 15:15:28
+MP14.2 - g2_3006.2.sql				   2015-AUG-05 15:15:28
+MP14.2 - g3_3006.3.sql				   2015-AUG-05 15:15:29
+MP14.2 - g4_3006.4.sql				   2015-AUG-05 15:15:30
+MP14.2 - g5_3006.5.sql				   2015-AUG-05 15:15:31
+MP14.2 - h_3007.sql				   2015-AUG-05 15:15:36
+MASTER_ARC_Script.sql				   2018-MAR-15 14:22:20
+MASTER_TRC_Script.sql				   2018-MAR-15 14:22:21
+MP14.2 - h1_3007.1.sql				   2018-MAR-15 14:22:25
+h2_3007.2.sql					   2018-MAR-15 14:22:25
+h2_3007.3.sql					   2018-MAR-15 14:22:25
+MP14.2 - i_3008.sql				   2018-MAR-15 14:22:28
+MP14.2 - i1_3008.1.sql				   2018-MAR-15 14:22:32
+MP14.2 - i2_3008.2.sql				   2018-MAR-15 14:22:34
+MP14.2 - i3_3008.3.sql				   2018-MAR-15 14:22:35
+MP14.2 - i4_3008.4.sql				   2018-MAR-15 14:22:36
+MP14.2 - i5_3008.5.sql				   2018-MAR-15 14:22:37
+MP14.2 - i6_3008.6.sql				   2018-MAR-15 14:22:39
+MP14.2 - i7_3008.7.sql				   2018-MAR-15 14:22:40
+MP14.2 - i9_3008.9.sql				   2018-MAR-15 14:22:41
+MP14.2 - i8_3008.8.sql				   2018-MAR-15 14:22:41
+MP14.2 - i10_3008.10.sql			   2018-MAR-15 14:22:41
+MP14.2 - i11_3008.11.sql			   2018-MAR-15 14:22:42
+MP14.2 - j_3009.sql				   2018-MAR-15 14:22:44
+MP14.2 - j1_3009.1.sql				   2018-MAR-15 14:22:46
+MP14.2 - k_3010.sql				   2018-MAR-15 14:22:49
+MP14.2 - k1_3010.1.sql				   2018-MAR-15 14:22:50
+MP14.2 - k2_3010.2.sql				   2018-MAR-15 14:22:50
+MP14.2 - k3_3010.3.sql				   2018-MAR-15 14:22:51
+a_14.2.3008.4_to_16.1.3100.sql			   2018-MAR-15 14:23:04
+MP16.1 - b_3101.sql				   2018-MAR-15 14:23:07
+MP16.1 - c_3102.sql				   2018-MAR-15 14:23:09
+MP16.1 - d_3103.sql				   2018-MAR-15 14:23:10
+MP16.1 - e_3104.sql				   2018-MAR-15 14:23:14
+MP16.1 - f_3105.sql				   2018-MAR-15 14:23:16
+z_nov2016_beq_2016.1.sql (v2)			   2018-MAR-15 14:23:18
+z_nov2016_mao004_2016.1.sql			   2018-MAR-15 14:23:18
+MP16.1 - z_2017pymtcalc_2016.1.sql		   2018-MAR-15 14:23:21
+MP16.1 - g_3106.sql				   2018-MAR-15 14:23:22
+MP16.1 - g1_3106.1.sql				   2018-MAR-15 14:23:23
+MP16.1 - h_3107.sql				   2018-MAR-15 14:23:28
+MP16.1 - h1_3107.1.sql				   2018-MAR-15 14:23:28
+z_3108_mparchive_privs.sql			   2018-MAR-15 14:46:41
+MASTER_ARC_Script.sql				   2018-MAR-15 14:49:13
+MASTER_TRC_Script.sql				   2018-MAR-15 14:49:13
+MP16.1 - i_3108.sql				   2018-MAR-15 14:49:56
+MP16.1 - i1_3108.1.sql				   2018-MAR-15 14:49:57
+MP16.1 - i2_3108.2.sql				   2018-MAR-15 14:49:57
+MP16.1 - j_3109.sql				   2018-MAR-15 14:49:58
+MP16.1 - k_3110.sql				   2018-MAR-15 14:49:59
+MP16.1 - k1_3110.1.sql				   2018-MAR-15 14:50:00
+MP16.1 - l_3111.sql				   2018-MAR-15 14:50:00
+MP16.1 - m_3112.sql				   2018-MAR-15 14:50:03
+MP16.1 - n_3113.sql				   2018-MAR-15 14:50:06
+MP18.1 - a_16.1.3113_to_18.1.3200.sql		   2018-MAR-15 14:50:18
+MP18.1 - b_3201.sql				   2018-MAR-15 14:50:20
+MP18.1 - b1_3201.1.sql				   2018-MAR-15 14:50:20
+MP18.1 - c_3202.sql				   2018-MAR-15 14:50:21
+MP18.1 - c1_3202.1.sql				   2018-MAR-15 21:38:24
+MP18.1 - d_3203.sql				   2018-MAR-15 21:38:54
+MP18.1 - d1_3203.1.sql				   2018-MAR-15 21:39:25
+MP18.1 - d3_3203.3.sql				   2018-OCT-26 15:27:49
+MP18.1 - e_3204.sql				   2018-OCT-26 15:29:16
+MP18.2 - a_18.1.3204_to_18.2.3300.sql		   2018-OCT-26 15:29:52
+MP18.2 - a_18.1.3204_to_18.2.3300.sql		   2018-OCT-26 15:43:17
+mparchive_privs.sql				   2018-OCT-26 16:06:53
+mparchive_privs.sql				   2018-OCT-26 16:11:01
+mparchive_privs.sql				   2018-OCT-26 16:24:45
+MP18.2 - a_18.1.3204_to_18.2.3300.sql		   2018-OCT-26 16:26:14
+MP18.2 - b_3301.sql				   2018-OCT-26 16:33:33
+MP18.2 - c_3302.sql				   2018-OCT-26 16:33:51
+MP18.2 - d_3303.sql				   2018-OCT-26 16:34:25
+MP18.2 - e_3304.sql				   2018-OCT-26 16:39:23
+MP18.2 - f_3305.sql				   2020-MAY-19 08:23:49
+MP18.2 - g_3306.sql				   2020-MAY-19 08:24:08
+MP18.2 - g1_3306.1.sql				   2020-MAY-19 08:26:00
+g2_3306.2.sql					   2020-MAY-19 08:28:57
+MP18.2 - g3_3306.3.sql				   2020-MAY-19 08:45:52
+MP18.2 - g4_3306.4.sql				   2020-MAY-19 08:47:22
+MP19.1 - a_18.2.3306.4_to_19.1.3400.sql 	   2020-MAY-19 08:48:54
+MP19.1 - b_3401.sql				   2020-MAY-19 08:49:42
+MP19.1 - c_3402.sql				   2020-MAY-19 08:51:36
+MP19.1 - c3_3402.3.sql				   2020-MAY-19 08:52:15
+MP19.1 - c4_3402.4.sql				   2020-MAY-19 08:53:44
+MP19.1 - d_3403.sql				   2020-MAY-19 08:55:53
+MP19.1 - e_3404.sql				   2020-MAY-19 08:56:16
+MP19.1 - e1_3404.1.sql				   2020-MAY-19 08:56:32
+MP19.1 - f_3405.sql				   2020-MAY-19 08:57:06
+MP19.1 - f2_3405.2.sql				   2020-MAY-19 08:57:30
+MP19.1 - g_3406.sql				   2020-MAY-19 08:58:04
+SF00167102_ALTER_BP_XREF_ADD_PMI_COL.sql	   2021-JUN-23 13:38:09
+MP20.3 - a_19.1.3406.2_to_20.3.3500.sql 	   2022-JUN-08 12:38:38
+MP20.3 - b_3501.sql				   2022-JUN-08 12:38:38
+MP20.3 - c_3502.sql				   2022-JUN-08 12:38:39
+MP20.3 - c1_3502.1.sql				   2022-JUN-08 12:38:39
+MP20.3 - c2_3502.2.sql				   2022-JUN-08 12:38:39
+MP20.3 - d1_3503.1.sql				   2022-JUN-08 12:38:41
+MP20.3 - d_3503.sql				   2022-JUN-08 12:38:41
+MP20.3 - e_3504.sql				   2022-JUN-08 12:38:51
+MP20.3 - e1_3504.1.sql				   2022-JUN-08 12:38:54
+MP20.3 - f2_3505.2.sql				   2022-JUN-08 12:38:58
+MP20.3 - f1_3505.1.sql				   2022-JUN-08 12:38:58
+MP20.3 - f_3505.sql				   2022-JUN-08 12:38:58
+MP21.3 - f_3600.sql				   2022-JUN-08 12:39:05
+MP21.3 - b_3601.sql				   2022-JUN-08 12:39:08
+MP21.3 - b2_3601.2.sql				   2022-JUN-08 12:39:09
+MP21.3 - b1_3601.1.sql				   2022-JUN-08 12:39:09
+MP21.3 - b3_3601.3.sql				   2022-JUN-08 12:39:09
+MP20.3 - a_19.1.3406.2_to_20.3.3500.sql 	   2022-JUN-08 12:43:24
+Setting environment variables
+upgrading DB
+Setting environment variables
+
+20220608_124324_DB12C_build_check.sql.log
+
+Database: DB12C
+Opened: OCT-14-2021 02:18:55
+Log Mode: NOARCHIVELOG
+
+
+Host IP Address: 10.12.120.205
+Host Name: haeng-mdeevi
+Host Address: ip-10-12-120-205.us-east-2.compute.internal
+
+Setting environment variables
+
+INSTANCE_NUMBER INSTANCE_NAME	 HOST_NAME							  VERSION	    STARTUP_TIME		   STATUS	PARALLEL THREAD#			ARCHIVER LOG_SWITCH_WAIT LOGINS     SHUTDOWN_PENDING DATABASE_STATUS   INSTANCE_ROLE	  ACTIVE_STATE	BLOCKED
+--------------- ---------------- ---------------------------------------------------------------- ----------------- ------------------------------ ------------ -------- ------------------------------ -------- --------------- ---------- ---------------- ----------------- ------------------ ------------- -------
+1		DB12C		 haeng-mdeevi							  12.1.0.2.0	    2022-JUN-08 01:25:37	   OPEN 	NO	 1				STOPPED 		 ALLOWED    NO		     ACTIVE	       PRIMARY_INSTANCE   NORMAL	NO
+
+SID   SERIAL# USERNAME			     STATUS   SCHEMANAME		     OSUSER			    MACHINE							     TERMINAL	      PROGRAM							       TYPE	  MODULE							   LOGON_TIME			  LAST_CALL_ET EVENT
+----- ------- ------------------------------ -------- ------------------------------ ------------------------------ ---------------------------------------------------------------- ---------------- ---------------------------------------------------------------- ---------- ---------------------------------------------------------------- ------------------------------ ------------ ----------------------------------------------------------------
+237   62003   WEBLOGIC_DW22_3		     INACTIVE WEBLOGIC_DW22_3		     weblogic			    ip-10-12-120-205.us-east-2.compute.internal 		     unknown	      JDBC Thin Client						       USER	  JDBC Thin Client						   2022-JUN-08 01:32:41 	  37	       SQL*Net message from client
+354   57454   WEBLOGIC_DW22_3		     INACTIVE WEBLOGIC_DW22_3		     weblogic			    ip-10-12-120-205.us-east-2.compute.internal 		     unknown	      JDBC Thin Client						       USER	  JDBC Thin Client						   2022-JUN-08 01:32:41 	  37	       SQL*Net message from client
+121   26792   WEBLOGIC_V22_3		     INACTIVE WEBLOGIC_V22_3		     weblogic			    ip-10-12-120-205.us-east-2.compute.internal 		     unknown	      JDBC Thin Client						       USER	  JDBC Thin Client						   2022-JUN-08 01:32:41 	  38	       SQL*Net message from client
+242   57215   SC_BASE			     KILLED   SC_BASE			     weblogic			    ip-10-12-120-205.us-east-2.compute.internal 		     unknown	      JDBC Thin Client						       USER	  JDBC Thin Client						   2022-JUN-08 08:17:07 	  15959        SQL*Net message from client
+591   62481   SC_BASE			     KILLED   SC_BASE			     weblogic			    ip-10-12-120-205.us-east-2.compute.internal 		     unknown	      JDBC Thin Client						       USER	  JDBC Thin Client						   2022-JUN-08 09:50:25 	  10362        SQL*Net message from client
+244   55262   WEBLOGIC_V22_3		     INACTIVE WEBLOGIC_V22_3		     weblogic			    ip-10-12-120-205.us-east-2.compute.internal 		     unknown	      JDBC Thin Client						       USER	  JDBC Thin Client						   2022-JUN-08 11:21:54 	  38	       SQL*Net message from client
+470   46155   WEBLOGIC_DW22_3		     INACTIVE WEBLOGIC_DW22_3		     weblogic			    ip-10-12-120-205.us-east-2.compute.internal 		     unknown	      JDBC Thin Client						       USER	  JDBC Thin Client						   2022-JUN-08 11:22:04 	  37	       SQL*Net message from client
+479   56379   WEBLOGIC_V22_3		     INACTIVE WEBLOGIC_V22_3		     weblogic			    ip-10-12-120-205.us-east-2.compute.internal 		     unknown	      JDBC Thin Client						       USER	  JDBC Thin Client						   2022-JUN-08 12:01:28 	  38	       SQL*Net message from client
+476   31766   WEBLOGIC_V22_3		     INACTIVE WEBLOGIC_V22_3		     weblogic			    ip-10-12-120-205.us-east-2.compute.internal 		     unknown	      JDBC Thin Client						       USER	  JDBC Thin Client						   2022-JUN-08 12:11:10 	  1934	       SQL*Net message from client
+355   46716   WEBLOGIC_V22_3		     INACTIVE WEBLOGIC_V22_3		     weblogic			    ip-10-12-120-205.us-east-2.compute.internal 		     unknown	      JDBC Thin Client						       USER	  JDBC Thin Client						   2022-JUN-08 12:11:10 	  1880	       SQL*Net message from client
+246   42492   WEBLOGIC_V22_3		     INACTIVE WEBLOGIC_V22_3		     weblogic			    ip-10-12-120-205.us-east-2.compute.internal 		     unknown	      JDBC Thin Client						       USER	  JDBC Thin Client						   2022-JUN-08 12:11:10 	  1880	       SQL*Net message from client
+130   64638   WEBLOGIC_V22_3		     INACTIVE WEBLOGIC_V22_3		     weblogic			    ip-10-12-120-205.us-east-2.compute.internal 		     unknown	      JDBC Thin Client						       USER	  JDBC Thin Client						   2022-JUN-08 12:11:10 	  1933	       SQL*Net message from client
+14    55885   WEBLOGIC_V22_3		     INACTIVE WEBLOGIC_V22_3		     weblogic			    ip-10-12-120-205.us-east-2.compute.internal 		     unknown	      JDBC Thin Client						       USER	  JDBC Thin Client						   2022-JUN-08 12:11:10 	  1933	       SQL*Net message from client
+11    63447   WEBLOGIC_V22_3		     INACTIVE WEBLOGIC_V22_3		     weblogic			    ip-10-12-120-205.us-east-2.compute.internal 		     unknown	      JDBC Thin Client						       USER	  JDBC Thin Client						   2022-JUN-08 12:11:10 	  1934	       SQL*Net message from client
+13    59235   WEBLOGIC_V22_3		     INACTIVE WEBLOGIC_V22_3		     weblogic			    ip-10-12-120-205.us-east-2.compute.internal 		     unknown	      JDBC Thin Client						       USER	  JDBC Thin Client						   2022-JUN-08 12:11:10 	  1934	       SQL*Net message from client
+814   60856   WEBLOGIC_V22_3		     INACTIVE WEBLOGIC_V22_3		     weblogic			    ip-10-12-120-205.us-east-2.compute.internal 		     unknown	      JDBC Thin Client						       USER	  JDBC Thin Client						   2022-JUN-08 12:11:10 	  1934	       SQL*Net message from client
+596   52789   WEBLOGIC_V22_3		     INACTIVE WEBLOGIC_V22_3		     weblogic			    ip-10-12-120-205.us-east-2.compute.internal 		     unknown	      JDBC Thin Client						       USER	  JDBC Thin Client						   2022-JUN-08 12:11:10 	  1934	       SQL*Net message from client
+712   36535   WEBLOGIC_V22_3		     INACTIVE WEBLOGIC_V22_3		     weblogic			    ip-10-12-120-205.us-east-2.compute.internal 		     unknown	      JDBC Thin Client						       USER	  JDBC Thin Client						   2022-JUN-08 12:11:10 	  1934	       SQL*Net message from client
+826   60129   SC_BASE			     INACTIVE SC_BASE			     mdeevi			    MDEEVI-WIN10						     unknown	      SQL Developer						       USER	  SQL Developer 						   2022-JUN-08 12:39:50 	  150	       SQL*Net message from client
+362   6887    SC_BASE			     ACTIVE   SC_BASE			     weblogic			    haeng-mdeevi								      sqlplus@haeng-mdeevi (TNS V1-V3)				       USER	  SQL*Plus							   2022-JUN-08 12:43:24 	  0	       SQL*Net message to client
+
+VERSION_DATE		       VERSION_INFO VERSION_DETAIL DB_PATCH_LEVEL
+------------------------------ ------------ -------------- ------------------------
+2022-JUN-08 12:43:24	       2020.3	    3500	   0
+
+SCRIPT_NAME					   UPGRADE_DATE_FORMATT
+-------------------------------------------------- --------------------
+MP8.3 - l_2407.sql				   2009-APR-09 13:43:14
+MP9.3 - a_2009_3.sql				   2009-JUL-24 12:14:18
+MP9.3 - b_2501.sql				   2009-JUL-24 12:18:50
+MP9.3 - c_2502.sql				   2009-JUL-24 12:32:39
+MP9.3 - d_2503.sql				   2009-JUL-24 12:34:25
+MP9.3 - e_2504.sql				   2009-JUL-24 12:35:30
+MP9.3 - f_2505.sql				   2009-AUG-11 11:52:06
+MP9.3 - g_2506.sql				   2009-AUG-11 11:52:28
+MP9.3 - h_2507.sql				   2009-SEP-10 23:20:09
+MP9.3 - i_2508.sql				   2009-SEP-10 23:22:03
+MP9.3 - j_2509.sql				   2009-SEP-10 23:22:36
+MP9.3 - k_2510.sql				   2011-APR-26 09:58:10
+MP9.3 - l_2511.sql				   2011-APR-26 09:58:28
+MP9.3 - m_2512.sql				   2011-APR-26 10:01:00
+MP9.3 - n_2513.sql				   2011-APR-26 10:02:29
+MP9.3 - o_2514.sql				   2011-APR-26 10:02:53
+MP9.3 - p_2515.sql				   2011-APR-26 10:03:56
+MP9.3 - q_2516.sql				   2011-APR-26 10:04:21
+MP9.3 - r_2517.sql				   2011-APR-26 10:05:42
+MP9.3 - s_2518.sql				   2011-APR-26 10:06:50
+MP9.3 - t_2519.sql				   2011-APR-26 10:07:00
+MP11.1 - c_2702.sql				   2011-APR-26 10:18:01
+MP11.1 - d_2703.sql				   2011-APR-26 10:18:38
+MP11.1 - e_2704.sql				   2011-APR-26 10:19:13
+MP11.1 - f_2705.sql				   2011-APR-26 10:19:49
+MP11.1 - g_2705a.sql				   2012-AUG-07 16:57:04
+MP11.1 - h_2706.sql				   2012-AUG-07 16:57:40
+MP11.1 - i_2707.sql				   2012-AUG-07 16:57:56
+MP11.1 - j_2708.sql				   2012-AUG-07 16:58:19
+MP11.1 - k_2709.sql				   2012-AUG-07 16:58:35
+MP11.1 - l_2710.sql				   2012-AUG-07 16:58:56
+MP11.1 - m_2710.1.sql				   2012-AUG-07 16:59:32
+MP11.1 - n_2710.2.sql				   2012-AUG-07 17:00:43
+MP11.1 - o_2710.3.sql				   2012-AUG-07 17:00:53
+MP11.1 - p_2710.4.sql				   2012-AUG-07 17:01:01
+MP11.1 - q_2711.sql				   2012-AUG-07 17:01:15
+MP11.1 - z_2705.1_dbpatch.sql			   2012-AUG-07 17:03:01
+MP12.1 - a_2011.1.2711_to_2012.1.2802.sql	   2012-AUG-07 17:11:34
+MP12.1 - b_2803.sql				   2012-AUG-07 17:12:49
+MP12.1 - c_2804.sql				   2012-AUG-07 17:13:09
+MP12.1 - d_2805.sql				   2012-AUG-07 17:13:30
+MP12.1 - e_2806.sql				   2012-AUG-07 17:13:58
+MP12.1 - f_2806.1.sql				   2012-AUG-07 17:14:09
+MP12.1 - g_2807.sql				   2012-AUG-07 17:14:18
+MP12.1 - h_2808.sql				   2012-AUG-07 17:14:21
+MP12.1 - i_2809.sql				   2012-AUG-07 17:14:30
+MP12.1 - j_2810.sql				   2012-AUG-07 17:14:47
+j1_2810_missing_rx_disb_interactions.sql	   2012-AUG-07 17:15:45
+MP12.1 - z_missinggrants.sql			   2012-AUG-07 17:16:42
+2012_hcfa_rate_info_standard.sql		   2012-OCT-05 15:23:35
+invoice_tracking_v9.sql 			   2013-FEB-01 16:29:42
+z_Master_ARC_Codes_FEB2012.sql			   2013-FEB-28 11:02:30
+2013_cutoff_dates.sql				   2013-FEB-28 11:33:27
+Package_Migration_Installation_2012.sql 	   2013-FEB-28 11:37:49
+MASTER_TRC_Script.sql				   2013-JUN-27 12:16:58
+MP12.1 - k_2811.sql				   2013-JUL-24 12:32:59
+MP12.1 - l_2811.1.sql				   2013-JUL-24 12:33:21
+m_2811.2.sql					   2013-JUL-24 12:33:24
+n_2811.3.sql					   2013-JUL-24 12:33:28
+o_2811_4.sql					   2013-JUL-24 12:33:32
+p_2811_5.sql					   2013-JUL-24 12:33:35
+q_2811_6.sql					   2013-JUL-24 12:33:40
+MP13.2 - a_2012.1.2811_to_2013.2.2900.sql	   2013-JUL-24 12:34:32
+MP13.2 - b_2901.sql				   2013-JUL-24 12:35:25
+MP13.2 - c_2902.sql				   2013-JUL-24 12:35:36
+MP13.2 - d_2903.sql				   2013-JUL-24 12:35:54
+MP13.2 - e_2904.sql				   2013-JUL-24 12:36:04
+MP13.2 - f_2905.sql				   2013-JUL-31 11:06:19
+factor rates 2012_2013_08192013.sql		   2013-AUG-28 12:16:14
+21495_Package_migration_update.sql		   2013-NOV-20 10:36:35
+MP13.2 - g_2906.sql				   2014-JUL-09 12:54:17
+MP13.2 - h_2906.1.sql				   2014-JUL-09 12:54:44
+MP13.2 - i_2907.sql				   2014-JUL-09 12:55:36
+MP13.2 - z_rebuild_hpo_hcc.sql			   2014-JUL-09 12:55:57
+MP13.2 - j_2908.sql				   2014-JUL-09 12:58:00
+MP13.2 - k_2909.sql				   2014-JUL-09 12:58:17
+MP13.2 - l_2909.1.sql				   2014-JUL-09 12:58:29
+MP13.2 - m_2909.2.sql				   2014-JUL-09 12:58:40
+MP13.2 - n_2910.sql				   2014-JUL-09 12:58:50
+MP14.2 - a_13.2.2909_to_14.2.3000.sql		   2014-JUL-09 12:59:12
+MP14.2 - b_3001.sql				   2014-JUL-09 12:59:29
+MP14.2 - c_3002.sql				   2014-JUL-09 12:59:44
+MP14.2 - d_3003.sql				   2014-OCT-02 14:28:36
+MP14.2 - e_3004.sql				   2014-OCT-02 14:28:49
+z_CMSnov2014_newcodes.sql			   2014-OCT-02 14:28:49
+2014_cutoff_dates.sql				   2014-DEC-15 17:16:50
+2015_Cutoff_Script.SQL				   2014-DEC-15 17:17:13
+23647_RFI_Escalation_Update.sql 		   2015-JAN-15 11:48:21
+MP14.2 - e1_3004.1.sql				   2015-MAR-05 09:47:34
+MP14.2 - e2_3004.2.sql				   2015-MAR-05 09:48:53
+MP14.2 - e3_3004.3.sql				   2015-MAR-05 09:51:25
+install_23531_CMSFeb2015_Updates.sql		   2015-MAR-05 09:52:09
+2014 std rates 13.2.2907+.sql			   2015-MAR-05 11:25:51
+2014_MPDESIGN_BASE_RATE.sql			   2015-MAR-05 11:27:55
+MPDESIGN_2014_STANDARD_RATES.SQL		   2015-MAR-05 11:27:55
+update_hccs_for_new_year2014			   2015-MAR-05 11:33:01
+2014_std_rate_fixes_02042014.sql		   2015-MAR-05 11:33:35
+icd9_edits_2014.sql				   2015-MAR-05 11:33:35
+2014_std_rate_fixes_12102013_v2.sql		   2015-MAR-05 11:34:27
+2015_MPDESIGN_BASE_RATE.sql			   2015-MAR-05 11:37:55
+2015_std_rates.sql				   2015-MAR-05 11:48:17
+MPDESIGN_2015_STANDARD_RATES.SQL		   2015-MAR-05 11:48:17
+update_hccs_for_new_year2015			   2015-MAR-05 11:48:45
+fix_D3_disabled_rx_factors.sql			   2015-MAR-05 11:49:14
+2013_MPDESIGN_BASE_RATE.sql			   2015-MAR-05 16:47:16
+MP13.2 - g_2906.sql				   2015-AUG-05 15:11:15
+MP13.2 - h_2906.1.sql				   2015-AUG-05 15:11:16
+MP13.2 - z_rebuild_hpo_hcc.sql			   2015-AUG-05 15:11:27
+MP13.2 - i_2907.sql				   2015-AUG-05 15:11:27
+MP13.2 - j_2908.sql				   2015-AUG-05 15:11:32
+z_patch_2908.1.sql				   2015-AUG-05 15:11:33
+MP13.2 - l_2909.1.sql				   2015-AUG-05 15:11:34
+MP13.2 - k_2909.sql				   2015-AUG-05 15:11:34
+MP13.2 - m_2909.2.sql				   2015-AUG-05 15:11:34
+z_case_22390_workaround_trigger.sql		   2015-AUG-05 15:11:35
+MP13.2 - n_2910.sql				   2015-AUG-05 15:11:35
+MP13.2 - o_2911.sql				   2015-AUG-05 15:11:38
+MP13.2 - o1_2911.1.sql				   2015-AUG-05 15:11:39
+MP14.2 - a_13.2.2909_to_14.2.3000.sql		   2015-AUG-05 15:11:59
+MP14.2 - b_3001.sql				   2015-AUG-05 15:12:00
+MP14.2 - c_3002.sql				   2015-AUG-05 15:12:01
+MP14.2 - d_3003.sql				   2015-AUG-05 15:12:03
+MP14.2 - e_3004.sql				   2015-AUG-05 15:12:06
+MP14.2 - e1_3004.1.sql				   2015-AUG-05 15:12:12
+z_CMSnov2014_newcodes.sql			   2015-AUG-05 15:12:12
+MASTER_TRC_Script.sql				   2015-AUG-05 15:12:13
+MASTER_TRC_Script.sql				   2015-AUG-05 15:15:19
+MP14.2 - e2_3004.2.sql				   2015-AUG-05 15:15:20
+MP14.2 - e3_3004.3.sql				   2015-AUG-05 15:15:21
+MP14.2 - f_3005.sql				   2015-AUG-05 15:15:27
+MP14.2 - g_3006.sql				   2015-AUG-05 15:15:28
+MP14.2 - g1_3006.1.sql				   2015-AUG-05 15:15:28
+MP14.2 - g2_3006.2.sql				   2015-AUG-05 15:15:28
+MP14.2 - g3_3006.3.sql				   2015-AUG-05 15:15:29
+MP14.2 - g4_3006.4.sql				   2015-AUG-05 15:15:30
+MP14.2 - g5_3006.5.sql				   2015-AUG-05 15:15:31
+MP14.2 - h_3007.sql				   2015-AUG-05 15:15:36
+MASTER_ARC_Script.sql				   2018-MAR-15 14:22:20
+MASTER_TRC_Script.sql				   2018-MAR-15 14:22:21
+MP14.2 - h1_3007.1.sql				   2018-MAR-15 14:22:25
+h2_3007.2.sql					   2018-MAR-15 14:22:25
+h2_3007.3.sql					   2018-MAR-15 14:22:25
+MP14.2 - i_3008.sql				   2018-MAR-15 14:22:28
+MP14.2 - i1_3008.1.sql				   2018-MAR-15 14:22:32
+MP14.2 - i2_3008.2.sql				   2018-MAR-15 14:22:34
+MP14.2 - i3_3008.3.sql				   2018-MAR-15 14:22:35
+MP14.2 - i4_3008.4.sql				   2018-MAR-15 14:22:36
+MP14.2 - i5_3008.5.sql				   2018-MAR-15 14:22:37
+MP14.2 - i6_3008.6.sql				   2018-MAR-15 14:22:39
+MP14.2 - i7_3008.7.sql				   2018-MAR-15 14:22:40
+MP14.2 - i9_3008.9.sql				   2018-MAR-15 14:22:41
+MP14.2 - i8_3008.8.sql				   2018-MAR-15 14:22:41
+MP14.2 - i10_3008.10.sql			   2018-MAR-15 14:22:41
+MP14.2 - i11_3008.11.sql			   2018-MAR-15 14:22:42
+MP14.2 - j_3009.sql				   2018-MAR-15 14:22:44
+MP14.2 - j1_3009.1.sql				   2018-MAR-15 14:22:46
+MP14.2 - k_3010.sql				   2018-MAR-15 14:22:49
+MP14.2 - k1_3010.1.sql				   2018-MAR-15 14:22:50
+MP14.2 - k2_3010.2.sql				   2018-MAR-15 14:22:50
+MP14.2 - k3_3010.3.sql				   2018-MAR-15 14:22:51
+a_14.2.3008.4_to_16.1.3100.sql			   2018-MAR-15 14:23:04
+MP16.1 - b_3101.sql				   2018-MAR-15 14:23:07
+MP16.1 - c_3102.sql				   2018-MAR-15 14:23:09
+MP16.1 - d_3103.sql				   2018-MAR-15 14:23:10
+MP16.1 - e_3104.sql				   2018-MAR-15 14:23:14
+MP16.1 - f_3105.sql				   2018-MAR-15 14:23:16
+z_nov2016_beq_2016.1.sql (v2)			   2018-MAR-15 14:23:18
+z_nov2016_mao004_2016.1.sql			   2018-MAR-15 14:23:18
+MP16.1 - z_2017pymtcalc_2016.1.sql		   2018-MAR-15 14:23:21
+MP16.1 - g_3106.sql				   2018-MAR-15 14:23:22
+MP16.1 - g1_3106.1.sql				   2018-MAR-15 14:23:23
+MP16.1 - h_3107.sql				   2018-MAR-15 14:23:28
+MP16.1 - h1_3107.1.sql				   2018-MAR-15 14:23:28
+z_3108_mparchive_privs.sql			   2018-MAR-15 14:46:41
+MASTER_ARC_Script.sql				   2018-MAR-15 14:49:13
+MASTER_TRC_Script.sql				   2018-MAR-15 14:49:13
+MP16.1 - i_3108.sql				   2018-MAR-15 14:49:56
+MP16.1 - i1_3108.1.sql				   2018-MAR-15 14:49:57
+MP16.1 - i2_3108.2.sql				   2018-MAR-15 14:49:57
+MP16.1 - j_3109.sql				   2018-MAR-15 14:49:58
+MP16.1 - k_3110.sql				   2018-MAR-15 14:49:59
+MP16.1 - k1_3110.1.sql				   2018-MAR-15 14:50:00
+MP16.1 - l_3111.sql				   2018-MAR-15 14:50:00
+MP16.1 - m_3112.sql				   2018-MAR-15 14:50:03
+MP16.1 - n_3113.sql				   2018-MAR-15 14:50:06
+MP18.1 - a_16.1.3113_to_18.1.3200.sql		   2018-MAR-15 14:50:18
+MP18.1 - b_3201.sql				   2018-MAR-15 14:50:20
+MP18.1 - b1_3201.1.sql				   2018-MAR-15 14:50:20
+MP18.1 - c_3202.sql				   2018-MAR-15 14:50:21
+MP18.1 - c1_3202.1.sql				   2018-MAR-15 21:38:24
+MP18.1 - d_3203.sql				   2018-MAR-15 21:38:54
+MP18.1 - d1_3203.1.sql				   2018-MAR-15 21:39:25
+MP18.1 - d3_3203.3.sql				   2018-OCT-26 15:27:49
+MP18.1 - e_3204.sql				   2018-OCT-26 15:29:16
+MP18.2 - a_18.1.3204_to_18.2.3300.sql		   2018-OCT-26 15:29:52
+MP18.2 - a_18.1.3204_to_18.2.3300.sql		   2018-OCT-26 15:43:17
+mparchive_privs.sql				   2018-OCT-26 16:06:53
+mparchive_privs.sql				   2018-OCT-26 16:11:01
+mparchive_privs.sql				   2018-OCT-26 16:24:45
+MP18.2 - a_18.1.3204_to_18.2.3300.sql		   2018-OCT-26 16:26:14
+MP18.2 - b_3301.sql				   2018-OCT-26 16:33:33
+MP18.2 - c_3302.sql				   2018-OCT-26 16:33:51
+MP18.2 - d_3303.sql				   2018-OCT-26 16:34:25
+MP18.2 - e_3304.sql				   2018-OCT-26 16:39:23
+MP18.2 - f_3305.sql				   2020-MAY-19 08:23:49
+MP18.2 - g_3306.sql				   2020-MAY-19 08:24:08
+MP18.2 - g1_3306.1.sql				   2020-MAY-19 08:26:00
+g2_3306.2.sql					   2020-MAY-19 08:28:57
+MP18.2 - g3_3306.3.sql				   2020-MAY-19 08:45:52
+MP18.2 - g4_3306.4.sql				   2020-MAY-19 08:47:22
+MP19.1 - a_18.2.3306.4_to_19.1.3400.sql 	   2020-MAY-19 08:48:54
+MP19.1 - b_3401.sql				   2020-MAY-19 08:49:42
+MP19.1 - c_3402.sql				   2020-MAY-19 08:51:36
+MP19.1 - c3_3402.3.sql				   2020-MAY-19 08:52:15
+MP19.1 - c4_3402.4.sql				   2020-MAY-19 08:53:44
+MP19.1 - d_3403.sql				   2020-MAY-19 08:55:53
+MP19.1 - e_3404.sql				   2020-MAY-19 08:56:16
+MP19.1 - e1_3404.1.sql				   2020-MAY-19 08:56:32
+MP19.1 - f_3405.sql				   2020-MAY-19 08:57:06
+MP19.1 - f2_3405.2.sql				   2020-MAY-19 08:57:30
+MP19.1 - g_3406.sql				   2020-MAY-19 08:58:04
+SF00167102_ALTER_BP_XREF_ADD_PMI_COL.sql	   2021-JUN-23 13:38:09
+MP20.3 - a_19.1.3406.2_to_20.3.3500.sql 	   2022-JUN-08 12:38:38
+MP20.3 - b_3501.sql				   2022-JUN-08 12:38:38
+MP20.3 - c_3502.sql				   2022-JUN-08 12:38:39
+MP20.3 - c1_3502.1.sql				   2022-JUN-08 12:38:39
+MP20.3 - c2_3502.2.sql				   2022-JUN-08 12:38:39
+MP20.3 - d1_3503.1.sql				   2022-JUN-08 12:38:41
+MP20.3 - d_3503.sql				   2022-JUN-08 12:38:41
+MP20.3 - e_3504.sql				   2022-JUN-08 12:38:51
+MP20.3 - e1_3504.1.sql				   2022-JUN-08 12:38:54
+MP20.3 - f2_3505.2.sql				   2022-JUN-08 12:38:58
+MP20.3 - f1_3505.1.sql				   2022-JUN-08 12:38:58
+MP20.3 - f_3505.sql				   2022-JUN-08 12:38:58
+MP21.3 - f_3600.sql				   2022-JUN-08 12:39:05
+MP21.3 - b_3601.sql				   2022-JUN-08 12:39:08
+MP21.3 - b2_3601.2.sql				   2022-JUN-08 12:39:09
+MP21.3 - b1_3601.1.sql				   2022-JUN-08 12:39:09
+MP21.3 - b3_3601.3.sql				   2022-JUN-08 12:39:09
+MP20.3 - a_19.1.3406.2_to_20.3.3500.sql 	   2022-JUN-08 12:43:24
+Setting environment variables
+not spooling currently
+
+PL/SQL procedure successfully completed.
+
+
+Session altered.
+
+
+1 row updated.
+
+
+1 row created.
+
+
+Commit complete.
+
+
+PL/SQL procedure successfully completed.
+
+
+Session altered.
+
+INSERT INTO SC_BASE.SETTING_LIBRARY (SETTING_ID,PRIMARY,SECONDARY,KEY_WORD,DATA_TYPE,DISPLAY,VALUE_LIST,USER_TYPE,ACCESS_FLAG,DEFAULT_VALUE,DESCRIPTION,CREATE_DATE,CREATE_STAFF,UPDATE_DATE,UPDATE_STAFF,STATUS,DEPARTMENT)
+*
+ERROR at line 1:
+ORA-00001: unique constraint (SC_BASE.SETTING_LIBRARY_PK) violated
+
+
+
+Commit complete.
+
+
+Package created.
+
+
+Warning: Package Body created with compilation errors.
+
+
+1 row created.
+
+
+Commit complete.
+
+
+Package created.
+
+
+Warning: Package Body created with compilation errors.
+
+
+1 row created.
+
+
+Package created.
+
+
+Warning: Package Body created with compilation errors.
+
+
+1 row created.
+
+
+Commit complete.
+
+
+Package created.
+
+
+Warning: Package Body created with compilation errors.
+
+
+1 row created.
+
+
+Commit complete.
+
+
+1 row updated.
+
+
+1 row created.
+
+
+Commit complete.
+
+
+PL/SQL procedure successfully completed.
+
+
+Session altered.
+
+alter table hcfa_arch_trr add (preferred_language char(1), accessibility_format char(1))
+                               *
+ERROR at line 1:
+ORA-01430: column being added already exists in table
+
+
+alter table hcfa_arch_enroll add (preferred_language char(1), accessibility_format char(1))
+                                  *
+ERROR at line 1:
+ORA-01430: column being added already exists in table
+
+
+
+0 rows updated.
+
+create view v_member_communication_method as
+            *
+ERROR at line 1:
+ORA-00955: name is already used by an existing object
+
+
+
+0 rows created.
+
+
+0 rows created.
+
+
+0 rows created.
+
+
+0 rows created.
+
+
+0 rows created.
+
+
+0 rows created.
+
+
+0 rows created.
+
+
+0 rows created.
+
+		select mp_common.getid('Datawindow') into v_dw_id from dual;
+		       *
+ERROR at line 14:
+ORA-06550: line 14, column 10:
+PL/SQL: ORA-06575: Package or function MP_COMMON is in an invalid state
+ORA-06550: line 14, column 3:
+PL/SQL: SQL Statement ignored
+
+
+
+Commit complete.
+
+		select mp_common.getid('Datawindow') into v_dw_id from dual;
+		       *
+ERROR at line 14:
+ORA-06550: line 14, column 10:
+PL/SQL: ORA-06575: Package or function MP_COMMON is in an invalid state
+ORA-06550: line 14, column 3:
+PL/SQL: SQL Statement ignored
+
+
+
+Commit complete.
+
+		select mp_common.getid('Datawindow') into v_dw_id from dual;
+		       *
+ERROR at line 14:
+ORA-06550: line 14, column 10:
+PL/SQL: ORA-06575: Package or function MP_COMMON is in an invalid state
+ORA-06550: line 14, column 3:
+PL/SQL: SQL Statement ignored
+
+
+
+Commit complete.
+
+
+Package created.
+
+
+Warning: Package Body created with compilation errors.
+
+
+1 row created.
+
+
+Commit complete.
+
+BEGIN MP_ARCHIVE.REBUILD_TRIGGERS(); END;
+
+*
+ERROR at line 1:
+ORA-04063: package body "SC_BASE.MP_ARCHIVE" has errors
+ORA-06508: PL/SQL: could not find program unit being called: "SC_BASE.MP_ARCHIVE"
+ORA-06512: at line 1
+
+
+
+1 row updated.
+
+
+1 row created.
+
+
+Commit complete.
+
+
+PL/SQL procedure successfully completed.
+
+
+Session altered.
+
+
+Package created.
+
+
+Warning: Package Body created with compilation errors.
+
+
+1 row created.
+
+
+Commit complete.
+
+
+1 row updated.
+
+
+1 row created.
+
+
+Commit complete.
+
+
+PL/SQL procedure successfully completed.
+
+
+Session altered.
+
+(state char(2))
+ *
+ERROR at line 2:
+ORA-01430: column being added already exists in table
+
+
+
+Function created.
+
+
+Commit complete.
+
+INSERT INTO type_library (
+*
+ERROR at line 1:
+ORA-00001: unique constraint (SC_BASE.TYPE_LIBRARY_PK) violated
+
+
+create table bak_35627_procedure_library
+             *
+ERROR at line 1:
+ORA-00955: name is already used by an existing object
+
+
+create table bak_35627_edi_file_library
+             *
+ERROR at line 1:
+ORA-00955: name is already used by an existing object
+
+
+
+0 rows merged.
+
+
+0 rows merged.
+
+
+0 rows merged.
+
+
+0 rows merged.
+
+
+0 rows merged.
+
+
+0 rows merged.
+
+
+0 rows merged.
+
+
+0 rows merged.
+
+
+0 rows merged.
+
+
+0 rows merged.
+
+
+0 rows merged.
+
+
+0 rows merged.
+
+
+0 rows merged.
+
+
+0 rows merged.
+
+
+0 rows merged.
+
+
+0 rows merged.
+
+
+0 rows merged.
+
+
+0 rows merged.
+
+
+0 rows merged.
+
+
+0 rows merged.
+
+
+0 rows merged.
+
+
+0 rows merged.
+
+
+0 rows merged.
+
+
+0 rows merged.
+
+
+0 rows merged.
+
+
+0 rows merged.
+
+
+0 rows merged.
+
+
+0 rows merged.
+
+
+0 rows merged.
+
+
+0 rows merged.
+
+
+0 rows merged.
+
+
+1 row merged.
+
+
+0 rows merged.
+
+
+1 row merged.
+
+
+0 rows merged.
+
+
+0 rows merged.
+
+
+0 rows merged.
+
+
+0 rows merged.
+
+
+0 rows merged.
+
+
+0 rows merged.
+
+
+0 rows merged.
+
+
+0 rows merged.
+
+
+0 rows merged.
+
+
+0 rows merged.
+
+
+0 rows merged.
+
+
+1 row merged.
+
+create table bkp_querylib_3503 as
+             *
+ERROR at line 1:
+ORA-00955: name is already used by an existing object
+
+
+
+0 rows updated.
+
+
+Commit complete.
+
+
+Package created.
+
+
+Warning: Package Body created with compilation errors.
+
+
+1 row created.
+
+
+Package created.
+
+
+Warning: Package Body created with compilation errors.
+
+
+1 row created.
+
+
+Package created.
+
+
+Warning: Package Body created with compilation errors.
+
+
+1 row created.
+
+
+Package created.
+
+
+Warning: Package Body created with compilation errors.
+
+
+1 row created.
+
+
+Package created.
+
+
+Warning: Package Body created with compilation errors.
+
+
+1 row created.
+
+
+Package created.
+
+
+Warning: Package Body created with compilation errors.
+
+
+1 row created.
+
+
+Package created.
+
+
+Warning: Package Body created with compilation errors.
+
+
+1 row created.
+
+
+Package created.
+
+
+Warning: Package Body created with compilation errors.
+
+
+1 row created.
+
+
+Package created.
+
+
+Warning: Package Body created with compilation errors.
+
+
+1 row created.
+
+
+Package created.
+
+
+Warning: Package Body created with compilation errors.
+
+
+1 row created.
+
+
+Commit complete.
+
+
+Package created.
+
+
+Warning: Package Body created with compilation errors.
+
+
+1 row created.
+
+
+Package created.
+
+
+Warning: Package Body created with compilation errors.
+
+
+1 row created.
+
+
+Commit complete.
+
+BEGIN MP_ARCHIVE.REBUILD_TRIGGERS(); END;
+
+*
+ERROR at line 1:
+ORA-04063: package body "SC_BASE.MP_ARCHIVE" has errors
+ORA-06508: PL/SQL: could not find program unit being called: "SC_BASE.MP_ARCHIVE"
+ORA-06512: at line 1
+
+
+
+1 row updated.
+
+
+1 row created.
+
+
+Commit complete.
+
+
+PL/SQL procedure successfully completed.
+
+
+Session altered.
+
+add (hospicevbid_ind char(1)
+     *
+ERROR at line 2:
+ORA-01430: column being added already exists in table
+
+
+add (hospicevbid_ind char(1)
+     *
+ERROR at line 2:
+ORA-01430: column being added already exists in table
+
+
+old  15: TABLESPACE &&INDEXES_TBSP  ENABLE
+new  15: TABLESPACE INDX1  ENABLE
+old  17: TABLESPACE &&TABLES_TBSP
+new  17: TABLESPACE DATA1
+CREATE TABLE SC_BASE.HOSPICE_VBID_COUNTY_RATES
+                     *
+ERROR at line 1:
+ORA-00955: name is already used by an existing object
+
+
+
+0 rows created.
+
+
+Package created.
+
+
+Warning: Package Body created with compilation errors.
+
+
+1 row created.
+
+BEGIN MP_ARCHIVE.REBUILD_TRIGGERS(); END;
+
+*
+ERROR at line 1:
+ORA-04063: package body "SC_BASE.MP_ARCHIVE" has errors
+ORA-06508: PL/SQL: could not find program unit being called: "SC_BASE.MP_ARCHIVE"
+ORA-06512: at line 1
+
+
+
+1 row updated.
+
+
+1 row created.
+
+
+Commit complete.
+
+
+PL/SQL procedure successfully completed.
+
+
+Session altered.
+
+Enter value for grantto: BEGIN mp_common.writelog('S00000000057', 'START: Preparing to upgrade to build 3504', 'MP20.3.3504', '', 1); END;
+
+      *
+ERROR at line 1:
+ORA-06550: line 1, column 7:
+PLS-00905: object SC_BASE.MP_COMMON is invalid
+ORA-06550: line 1, column 7:
+PL/SQL: Statement ignored
+
+
+
+INSTANCE_NUMBER INSTANCE_NAME	 HOST_NAME							  VERSION	    STARTUP_TIME		   STATUS
+--------------- ---------------- ---------------------------------------------------------------- ----------------- ------------------------------ --------
+     ########## DB12C		 haeng-mdeevi							  12.1.0.2.0	    2022-JUN-08 01:25:37	   OPEN
+
+1 row selected.
+
+    mp_common.writelog('S00000000057', 'Invalid object prior to upgrade: '|| rec.object_type || ' SC_BASE.' || rec.object_name, 'MP20.3.3504', '', 1);
+    *
+ERROR at line 7:
+ORA-06550: line 7, column 5:
+PLS-00905: object SC_BASE.MP_COMMON is invalid
+ORA-06550: line 7, column 5:
+PL/SQL: Statement ignored
+
+
+BEGIN mp_common.writelog('S00000000057', 'Executing DDL upgrade', 'MP20.3.3504', '', 1); END;
+
+      *
+ERROR at line 1:
+ORA-06550: line 1, column 7:
+PLS-00905: object SC_BASE.MP_COMMON is invalid
+ORA-06550: line 1, column 7:
+PL/SQL: Statement ignored
+
+
+
+Warning: Function created with compilation errors.
+
+
+Warning: Function created with compilation errors.
+
+
+View created.
+
+ACTION_LOG.BATCH_ID index already exists: XAK_ACTION_LOG_BATCH_ID
+
+PL/SQL procedure successfully completed.
+
+HCFA_ARCH_BEQ.RECORD_ID index already exists: XAK_HCFA_ARCH_BEQ_RECORD_ID
+
+PL/SQL procedure successfully completed.
+
+
+Table altered.
+
+
+Table altered.
+
+
+Table altered.
+
+
+Table altered.
+
+
+Table altered.
+
+
+Table altered.
+
+
+Table altered.
+
+
+Table altered.
+
+
+Commit complete.
+
+BEGIN mp_common.writelog('S00000000057', 'Executing Config upgrade', 'MP20.3.3504', '', 1); END;
+
+      *
+ERROR at line 1:
+ORA-06550: line 1, column 7:
+PLS-00905: object SC_BASE.MP_COMMON is invalid
+ORA-06550: line 1, column 7:
+PL/SQL: Statement ignored
+
+
+
+1 row merged.
+
+
+1 row merged.
+
+
+Commit complete.
+
+BEGIN mp_common.writelog('S00000000057', 'Executing PL/SQL upgrade', 'MP20.3.3504', '', 1); END;
+
+      *
+ERROR at line 1:
+ORA-06550: line 1, column 7:
+PLS-00905: object SC_BASE.MP_COMMON is invalid
+ORA-06550: line 1, column 7:
+PL/SQL: Statement ignored
+
+
+
+Package created.
+
+
+Warning: Package Body created with compilation errors.
+
+
+1 row created.
+
+
+Commit complete.
+
+
+Package created.
+
+
+Warning: Package Body created with compilation errors.
+
+
+1 row created.
+
+
+Package created.
+
+
+Package body created.
+
+
+1 row created.
+
+
+Package created.
+
+
+Package body created.
+
+
+1 row created.
+
+
+Package created.
+
+
+Warning: Package Body created with compilation errors.
+
+
+1 row created.
+
+
+Package created.
+
+
+Package body created.
+
+
+1 row created.
+
+
+Commit complete.
+
+
+PL/SQL procedure successfully completed.
+
+
+Commit complete.
+
+BEGIN MP_ARCHIVE.REBUILD_TRIGGERS(); END;
+
+*
+ERROR at line 1:
+ORA-04063: package body "SC_BASE.MP_ARCHIVE" has errors
+ORA-06508: PL/SQL: could not find program unit being called: "SC_BASE.MP_ARCHIVE"
+ORA-06512: at line 1
+
+
+Invalid object post upgrade: PACKAGE SC_BASE.MP_ESCALATION
+Invalid object post upgrade: PACKAGE BODY SC_BASE.MP_ARCHIVE
+Invalid object post upgrade: PACKAGE BODY SC_BASE.MP_DEDUPE
+Invalid object post upgrade: PACKAGE BODY SC_BASE.MP_ESCALATION
+Invalid object post upgrade: PACKAGE BODY SC_BASE.MP_MEDICARE_HCC
+Invalid object post upgrade: PACKAGE BODY SC_BASE.MP_MEDICARE_MMR
+Invalid object post upgrade: PACKAGE BODY SC_BASE.MP_MEDICARE_MSP
+Invalid object post upgrade: PACKAGE BODY SC_BASE.MP_PREMIUMBILLING
+Invalid object post upgrade: PACKAGE BODY SC_BASE.MP_SETUP
+Invalid object post upgrade: PACKAGE BODY SC_BASE.MP_TRR_PROCESSOR
+Invalid object post upgrade: PACKAGE BODY SC_BASE.MP_TRUTHTABLE
+Invalid object post upgrade: PACKAGE BODY SC_BASE.MP_WRAP_MEDICARE
+Invalid object post upgrade: PROCEDURE SC_BASE.VERIFYDEATAILID
+
+PL/SQL procedure successfully completed.
+
+
+1 row updated.
+
+
+1 row created.
+
+
+Commit complete.
+
+
+PL/SQL procedure successfully completed.
+
+
+PL/SQL procedure successfully completed.
+
+
+Session altered.
+
+
+PL/SQL procedure successfully completed.
+
+
+INSTANCE_NUMBER INSTANCE_NAME	 HOST_NAME							  VERSION	    STARTUP_TIME		   STATUS
+--------------- ---------------- ---------------------------------------------------------------- ----------------- ------------------------------ --------
+     ########## DB12C		 haeng-mdeevi							  12.1.0.2.0	    2022-JUN-08 01:25:37	   OPEN
+
+1 row selected.
+
+Current user: SC_BASE
+0 enabled MP_ARCHIVE triggers found.
+0 disabled MP_ARCHIVE triggers found.
+
+PL/SQL procedure successfully completed.
+
+Invalid object prior to upgrade: PACKAGE SC_BASE.MP_ESCALATION
+Invalid object prior to upgrade: PACKAGE BODY SC_BASE.MP_ARCHIVE
+Invalid object prior to upgrade: PACKAGE BODY SC_BASE.MP_DEDUPE
+Invalid object prior to upgrade: PACKAGE BODY SC_BASE.MP_ESCALATION
+Invalid object prior to upgrade: PACKAGE BODY SC_BASE.MP_MEDICARE_HCC
+Invalid object prior to upgrade: PACKAGE BODY SC_BASE.MP_MEDICARE_MMR
+Invalid object prior to upgrade: PACKAGE BODY SC_BASE.MP_MEDICARE_MSP
+Invalid object prior to upgrade: PACKAGE BODY SC_BASE.MP_PREMIUMBILLING
+Invalid object prior to upgrade: PACKAGE BODY SC_BASE.MP_SETUP
+Invalid object prior to upgrade: PACKAGE BODY SC_BASE.MP_TRR_PROCESSOR
+Invalid object prior to upgrade: PACKAGE BODY SC_BASE.MP_TRUTHTABLE
+Invalid object prior to upgrade: PACKAGE BODY SC_BASE.MP_WRAP_MEDICARE
+Invalid object prior to upgrade: PROCEDURE SC_BASE.VERIFYDEATAILID
+
+PL/SQL procedure successfully completed.
+
+
+PL/SQL procedure successfully completed.
+
+    ADD SEP_REASON_CODE CHAR(2)
+        *
+ERROR at line 2:
+ORA-01430: column being added already exists in table
+
+
+alter table HCFA_ARCH_ENROLL ADD (SEP_REASON_CODE	VARCHAR2(2))
+                                  *
+ERROR at line 1:
+ORA-01430: column being added already exists in table
+
+
+alter table HCFA_ARCH_ENROLL ADD (PACKAGE_ID	CHAR(12))
+                                  *
+ERROR at line 1:
+ORA-01430: column being added already exists in table
+
+
+
+View created.
+
+
+View created.
+
+
+Commit complete.
+
+
+PL/SQL procedure successfully completed.
+
+
+0 rows created.
+
+
+0 rows created.
+
+
+0 rows created.
+
+
+0 rows created.
+
+
+0 rows created.
+
+
+0 rows created.
+
+
+0 rows created.
+
+
+0 rows created.
+
+
+0 rows created.
+
+
+0 rows created.
+
+
+0 rows created.
+
+begin
+*
+ERROR at line 1:
+ORA-20001: ******* Enroll/Disenroll query not updated ********
+ORA-06512: at line 9
+
+
+
+24 rows deleted.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+PL/SQL procedure successfully completed.
+
+
+Commit complete.
+
+
+PL/SQL procedure successfully completed.
+
+
+Commit complete.
+
+
+PL/SQL procedure successfully completed.
+
+
+Commit complete.
+
+
+0 rows created.
+
+
+0 rows created.
+
+
+Commit complete.
+
+
+Package created.
+
+
+Package body created.
+
+
+1 row created.
+
+
+Package created.
+
+
+Package body created.
+
+
+1 row created.
+
+
+Package created.
+
+
+Package body created.
+
+
+1 row created.
+
+BEGIN MP_ARCHIVE.REBUILD_TRIGGERS(); END;
+
+*
+ERROR at line 1:
+ORA-04063: package body "SC_BASE.MP_ARCHIVE" has errors
+ORA-06508: PL/SQL: could not find program unit being called: "SC_BASE.MP_ARCHIVE"
+ORA-06512: at line 1
+
+
+
+1 row updated.
+
+
+1 row created.
+
+
+Commit complete.
+
+
+PL/SQL procedure successfully completed.
+
+
+Session altered.
+
+
+PL/SQL procedure successfully completed.
+
+
+INSTANCE_NUMBER INSTANCE_NAME	 HOST_NAME							  VERSION	    STARTUP_TIME		   STATUS
+--------------- ---------------- ---------------------------------------------------------------- ----------------- ------------------------------ --------
+     ########## DB12C		 haeng-mdeevi							  12.1.0.2.0	    2022-JUN-08 01:25:37	   OPEN
+
+1 row selected.
+
+Current user: SC_BASE
+0 enabled MP_ARCHIVE triggers found.
+0 disabled MP_ARCHIVE triggers found.
+
+PL/SQL procedure successfully completed.
+
+Invalid object prior to upgrade: PACKAGE SC_BASE.MP_ESCALATION
+Invalid object prior to upgrade: PACKAGE BODY SC_BASE.MP_ARCHIVE
+Invalid object prior to upgrade: PACKAGE BODY SC_BASE.MP_DEDUPE
+Invalid object prior to upgrade: PACKAGE BODY SC_BASE.MP_ESCALATION
+Invalid object prior to upgrade: PACKAGE BODY SC_BASE.MP_MEDICARE_HCC
+Invalid object prior to upgrade: PACKAGE BODY SC_BASE.MP_MEDICARE_MMR
+Invalid object prior to upgrade: PACKAGE BODY SC_BASE.MP_MEDICARE_MSP
+Invalid object prior to upgrade: PACKAGE BODY SC_BASE.MP_PREMIUMBILLING
+Invalid object prior to upgrade: PACKAGE BODY SC_BASE.MP_SETUP
+Invalid object prior to upgrade: PACKAGE BODY SC_BASE.MP_TRR_PROCESSOR
+Invalid object prior to upgrade: PACKAGE BODY SC_BASE.MP_TRUTHTABLE
+Invalid object prior to upgrade: PACKAGE BODY SC_BASE.MP_WRAP_MEDICARE
+Invalid object prior to upgrade: PROCEDURE SC_BASE.VERIFYDEATAILID
+
+PL/SQL procedure successfully completed.
+
+
+PL/SQL procedure successfully completed.
+
+
+Commit complete.
+
+
+PL/SQL procedure successfully completed.
+
+
+1 row merged.
+
+
+1 row merged.
+
+
+Commit complete.
+
+
+Commit complete.
+
+
+PL/SQL procedure successfully completed.
+
+
+Package created.
+
+
+Package body created.
+
+
+1 row created.
+
+
+Package created.
+
+
+Package body created.
+
+
+1 row created.
+
+
+Package created.
+
+
+Warning: Package Body created with compilation errors.
+
+
+1 row created.
+
+
+Package created.
+
+
+Warning: Package Body created with compilation errors.
+
+
+1 row created.
+
+
+Commit complete.
+
+
+Package created.
+
+
+Warning: Package Body created with compilation errors.
+
+
+1 row created.
+
+BEGIN MP_ARCHIVE.REBUILD_TRIGGERS(); END;
+
+*
+ERROR at line 1:
+ORA-04063: package body "SC_BASE.MP_ARCHIVE" has errors
+ORA-06508: PL/SQL: could not find program unit being called: "SC_BASE.MP_ARCHIVE"
+ORA-06512: at line 1
+
+
+Invalid object post upgrade: PACKAGE SC_BASE.MP_ESCALATION
+Invalid object post upgrade: PACKAGE BODY SC_BASE.MP_ARCHIVE
+Invalid object post upgrade: PACKAGE BODY SC_BASE.MP_DEDUPE
+Invalid object post upgrade: PACKAGE BODY SC_BASE.MP_ESCALATION
+Invalid object post upgrade: PACKAGE BODY SC_BASE.MP_MEDICARE_HCC
+Invalid object post upgrade: PACKAGE BODY SC_BASE.MP_MEDICARE_MMR
+Invalid object post upgrade: PACKAGE BODY SC_BASE.MP_MEDICARE_MSP
+Invalid object post upgrade: PACKAGE BODY SC_BASE.MP_PREMIUMBILLING
+Invalid object post upgrade: PACKAGE BODY SC_BASE.MP_SETUP
+Invalid object post upgrade: PACKAGE BODY SC_BASE.MP_TRR_PROCESSOR
+Invalid object post upgrade: PACKAGE BODY SC_BASE.MP_TRUTHTABLE
+Invalid object post upgrade: PACKAGE BODY SC_BASE.MP_WRAP_MEDICARE
+Invalid object post upgrade: PROCEDURE SC_BASE.VERIFYDEATAILID
+
+PL/SQL procedure successfully completed.
+
+
+1 row updated.
+
+
+1 row created.
+
+
+Commit complete.
+
+
+PL/SQL procedure successfully completed.
+
+
+PL/SQL procedure successfully completed.
+
+
+Session altered.
+
+
+Package created.
+
+
+Package body created.
+
+
+1 row created.
+
+
+1 row updated.
+
+
+1 row created.
+
+
+Commit complete.
+
+
+PL/SQL procedure successfully completed.
+
+
+Session altered.
+
+
+Package created.
+
+
+Package body created.
+
+
+1 row created.
+
+
+1 row updated.
+
+
+1 row created.
+
+
+Commit complete.
+
+
+PL/SQL procedure successfully completed.
+
+
+Session altered.
+
+
+PL/SQL procedure successfully completed.
+
+
+INSTANCE_NUMBER INSTANCE_NAME	 HOST_NAME							  VERSION	    STARTUP_TIME		   STATUS
+--------------- ---------------- ---------------------------------------------------------------- ----------------- ------------------------------ --------
+     ########## DB12C		 haeng-mdeevi							  12.1.0.2.0	    2022-JUN-08 01:25:37	   OPEN
+
+1 row selected.
+
+Current user: SC_BASE
+0 enabled MP_ARCHIVE triggers found.
+0 disabled MP_ARCHIVE triggers found.
+
+PL/SQL procedure successfully completed.
+
+Invalid object prior to upgrade: PACKAGE SC_BASE.MP_ESCALATION
+Invalid object prior to upgrade: PACKAGE BODY SC_BASE.MP_ARCHIVE
+Invalid object prior to upgrade: PACKAGE BODY SC_BASE.MP_DEDUPE
+Invalid object prior to upgrade: PACKAGE BODY SC_BASE.MP_ESCALATION
+Invalid object prior to upgrade: PACKAGE BODY SC_BASE.MP_MEDICARE_HCC
+Invalid object prior to upgrade: PACKAGE BODY SC_BASE.MP_MEDICARE_MMR
+Invalid object prior to upgrade: PACKAGE BODY SC_BASE.MP_MEDICARE_MSP
+Invalid object prior to upgrade: PACKAGE BODY SC_BASE.MP_PREMIUMBILLING
+Invalid object prior to upgrade: PACKAGE BODY SC_BASE.MP_SETUP
+Invalid object prior to upgrade: PACKAGE BODY SC_BASE.MP_TRR_PROCESSOR
+Invalid object prior to upgrade: PACKAGE BODY SC_BASE.MP_TRUTHTABLE
+Invalid object prior to upgrade: PACKAGE BODY SC_BASE.MP_WRAP_MEDICARE
+Invalid object prior to upgrade: PROCEDURE SC_BASE.VERIFYDEATAILID
+
+PL/SQL procedure successfully completed.
+
+
+PL/SQL procedure successfully completed.
+
+
+PL/SQL procedure successfully completed.
+
+
+PL/SQL procedure successfully completed.
+
+create global temporary table auto_trr_workspace (RECORD_ID	   CHAR(12),
+                              *
+ERROR at line 1:
+ORA-00955: name is already used by an existing object
+
+
+
+Commit complete.
+
+
+PL/SQL procedure successfully completed.
+
+Insert into SETTING_LIBRARY
+*
+ERROR at line 1:
+ORA-00001: unique constraint (SC_BASE.SETTING_LIBRARY_PK) violated
+
+
+
+1 row merged.
+
+
+1 row merged.
+
+
+Commit complete.
+
+
+PL/SQL procedure successfully completed.
+
+
+Package created.
+
+
+Package body created.
+
+
+1 row created.
+
+
+Package created.
+
+
+Warning: Package Body created with compilation errors.
+
+
+1 row created.
+
+
+Package created.
+
+
+Package body created.
+
+
+1 row created.
+
+
+Package created.
+
+
+Warning: Package Body created with compilation errors.
+
+
+1 row created.
+
+
+Package created.
+
+
+Package body created.
+
+
+1 row created.
+
+
+Package created.
+
+
+Package body created.
+
+
+1 row created.
+
+
+Package created.
+
+
+Package body created.
+
+
+1 row created.
+
+
+Package created.
+
+
+Package body created.
+
+
+1 row created.
+
+
+Package created.
+
+
+Warning: Package Body created with compilation errors.
+
+
+1 row created.
+
+
+Package created.
+
+
+Package body created.
+
+
+1 row created.
+
+
+Package created.
+
+
+Package body created.
+
+
+1 row created.
+
+
+Package created.
+
+
+Warning: Package Body created with compilation errors.
+
+
+1 row created.
+
+
+Package created.
+
+
+Warning: Package Body created with compilation errors.
+
+
+1 row created.
+
+
+Commit complete.
+
+
+PL/SQL procedure successfully completed.
+
+
+Commit complete.
+
+BEGIN MP_ARCHIVE.REBUILD_TRIGGERS(); END;
+
+*
+ERROR at line 1:
+ORA-04063: package body "SC_BASE.MP_ARCHIVE" has errors
+ORA-06508: PL/SQL: could not find program unit being called: "SC_BASE.MP_ARCHIVE"
+ORA-06512: at line 1
+
+
+Invalid object post upgrade: PACKAGE SC_BASE.MP_ESCALATION
+Invalid object post upgrade: PACKAGE BODY SC_BASE.MP_ARCHIVE
+Invalid object post upgrade: PACKAGE BODY SC_BASE.MP_DEDUPE
+Invalid object post upgrade: PACKAGE BODY SC_BASE.MP_ESCALATION
+Invalid object post upgrade: PACKAGE BODY SC_BASE.MP_MEDICARE_HCC
+Invalid object post upgrade: PACKAGE BODY SC_BASE.MP_MEDICARE_MMR
+Invalid object post upgrade: PACKAGE BODY SC_BASE.MP_MEDICARE_MSP
+Invalid object post upgrade: PACKAGE BODY SC_BASE.MP_PREMIUMBILLING
+Invalid object post upgrade: PACKAGE BODY SC_BASE.MP_SETUP
+Invalid object post upgrade: PACKAGE BODY SC_BASE.MP_TRR_PROCESSOR
+Invalid object post upgrade: PACKAGE BODY SC_BASE.MP_TRUTHTABLE
+Invalid object post upgrade: PACKAGE BODY SC_BASE.MP_WRAP_MEDICARE
+Invalid object post upgrade: PROCEDURE SC_BASE.VERIFYDEATAILID
+
+PL/SQL procedure successfully completed.
+
+
+1 row updated.
+
+
+1 row created.
+
+
+Commit complete.
+
+
+PL/SQL procedure successfully completed.
+
+
+PL/SQL procedure successfully completed.
+
+
+Session altered.
+
+
+PL/SQL procedure successfully completed.
+
+
+INSTANCE_NUMBER INSTANCE_NAME	 HOST_NAME							  VERSION	    STARTUP_TIME		   STATUS
+--------------- ---------------- ---------------------------------------------------------------- ----------------- ------------------------------ --------
+     ########## DB12C		 haeng-mdeevi							  12.1.0.2.0	    2022-JUN-08 01:25:37	   OPEN
+
+1 row selected.
+
+Current user: SC_BASE
+0 enabled MP_ARCHIVE triggers found.
+0 disabled MP_ARCHIVE triggers found.
+
+PL/SQL procedure successfully completed.
+
+Invalid object prior to upgrade: PACKAGE SC_BASE.MP_ESCALATION
+Invalid object prior to upgrade: PACKAGE BODY SC_BASE.MP_ARCHIVE
+Invalid object prior to upgrade: PACKAGE BODY SC_BASE.MP_DEDUPE
+Invalid object prior to upgrade: PACKAGE BODY SC_BASE.MP_ESCALATION
+Invalid object prior to upgrade: PACKAGE BODY SC_BASE.MP_MEDICARE_HCC
+Invalid object prior to upgrade: PACKAGE BODY SC_BASE.MP_MEDICARE_MMR
+Invalid object prior to upgrade: PACKAGE BODY SC_BASE.MP_MEDICARE_MSP
+Invalid object prior to upgrade: PACKAGE BODY SC_BASE.MP_PREMIUMBILLING
+Invalid object prior to upgrade: PACKAGE BODY SC_BASE.MP_SETUP
+Invalid object prior to upgrade: PACKAGE BODY SC_BASE.MP_TRR_PROCESSOR
+Invalid object prior to upgrade: PACKAGE BODY SC_BASE.MP_TRUTHTABLE
+Invalid object prior to upgrade: PACKAGE BODY SC_BASE.MP_WRAP_MEDICARE
+Invalid object prior to upgrade: PROCEDURE SC_BASE.VERIFYDEATAILID
+
+PL/SQL procedure successfully completed.
+
+
+PL/SQL procedure successfully completed.
+
+
+PL/SQL procedure successfully completed.
+
+
+PL/SQL procedure successfully completed.
+
+
+Commit complete.
+
+
+PL/SQL procedure successfully completed.
+
+
+0 rows created.
+
+Insert into SETTING_LIBRARY
+*
+ERROR at line 1:
+ORA-00001: unique constraint (SC_BASE.SETTING_LIBRARY_PK) violated
+
+
+
+Commit complete.
+
+
+PL/SQL procedure successfully completed.
+
+
+Package created.
+
+
+Warning: Package Body created with compilation errors.
+
+
+1 row created.
+
+
+Commit complete.
+
+BEGIN MP_ARCHIVE.REBUILD_TRIGGERS(); END;
+
+*
+ERROR at line 1:
+ORA-04063: package body "SC_BASE.MP_ARCHIVE" has errors
+ORA-06508: PL/SQL: could not find program unit being called: "SC_BASE.MP_ARCHIVE"
+ORA-06512: at line 1
+
+
+Invalid object post upgrade: PACKAGE SC_BASE.MP_ESCALATION
+Invalid object post upgrade: PACKAGE BODY SC_BASE.MP_ARCHIVE
+Invalid object post upgrade: PACKAGE BODY SC_BASE.MP_DEDUPE
+Invalid object post upgrade: PACKAGE BODY SC_BASE.MP_ESCALATION
+Invalid object post upgrade: PACKAGE BODY SC_BASE.MP_MEDICARE_HCC
+Invalid object post upgrade: PACKAGE BODY SC_BASE.MP_MEDICARE_MMR
+Invalid object post upgrade: PACKAGE BODY SC_BASE.MP_MEDICARE_MSP
+Invalid object post upgrade: PACKAGE BODY SC_BASE.MP_PREMIUMBILLING
+Invalid object post upgrade: PACKAGE BODY SC_BASE.MP_SETUP
+Invalid object post upgrade: PACKAGE BODY SC_BASE.MP_TRR_PROCESSOR
+Invalid object post upgrade: PACKAGE BODY SC_BASE.MP_TRUTHTABLE
+Invalid object post upgrade: PACKAGE BODY SC_BASE.MP_WRAP_MEDICARE
+Invalid object post upgrade: PROCEDURE SC_BASE.VERIFYDEATAILID
+
+PL/SQL procedure successfully completed.
+
+
+1 row updated.
+
+
+1 row created.
+
+
+Commit complete.
+
+
+PL/SQL procedure successfully completed.
+
+
+PL/SQL procedure successfully completed.
+
+
+Package created.
+
+
+Package body created.
+
+
+1 row created.
+
+
+1 row updated.
+
+
+1 row created.
+
+
+Commit complete.
+
+
+PL/SQL procedure successfully completed.
+
+
+Session altered.
+
+
+Package created.
+
+
+Warning: Package Body created with compilation errors.
+
+
+1 row created.
+
+
+Commit complete.
+
+
+1 row updated.
+
+
+1 row created.
+
+
+Commit complete.
+
+
+PL/SQL procedure successfully completed.
+
+
+Session altered.
+
+
+Package created.
+
+
+Package body created.
+
+
+1 row created.
+
+
+1 row updated.
+
+
+1 row created.
+
+
+Commit complete.
+
+
+PL/SQL procedure successfully completed.
+
+Number of values in name table. The expected result should be more than 200
+
+  COUNT(*)
+----------
+       209
+
+1 row selected.
+
+3500 - Version of DB before upgrade
+3601 - Version of DB after upgrade
+DB successfully upgraded

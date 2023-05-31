@@ -1,0 +1,18 @@
+{
+  "jobName" : "EligibilityIncIT-1658721697576",
+  "extractStartTime" : "2022-07-24T00:02:40.576",
+  "extractEndTime" : "2022-07-25T00:05:00.576",
+  "extractType" : "Scheduled",
+  "extracts" : [ {
+    "extractName" : "EligibilityIT",
+    "inputQueryLocation" : "/home/weblogic/cprime_22.1.1.3/healthrules-connector-server-4.0.4/bcbsne-eligibilityextract/resources/EligibilityIncrementalExtract_DWQuery.txt",
+    "outputLocation" : "/home/weblogic/cprime_22.1.1.3/healthrules-connector-server-4.0.4/he-extract/output/bcbsne-eligibility/",
+    "nameValuePairs" : null,
+    "filterColumns" : null,
+    "fileWriterClass" : "com.healthedge.customer.bcbsne.eligibility.extract.IncrementalEligibilityExtractWriter",
+    "extractFileExtension" : "txt",
+    "extractSource" : "dw",
+    "beanMappingFile" : "/home/weblogic/cprime_22.1.1.3/healthrules-connector-server-4.0.4/bcbsne-eligibilityextract/resources/eligibility_extractMapping.xml",
+    "beanStreamName" : "eligibility_extract"
+  } ]
+}

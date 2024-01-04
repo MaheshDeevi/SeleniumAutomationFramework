@@ -18,6 +18,7 @@ The Selenium Automation Framework is a robust and scalable automation framework 
 
 - [Java](https://www.java.com/) installed
 - [Maven](https://maven.apache.org/) installed
+- [Docker](https://www.docker.com/products/docker-desktop) installed (for running tests in Docker containers)
 
 ### Setup
 

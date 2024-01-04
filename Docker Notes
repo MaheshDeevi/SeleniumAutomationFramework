@@ -1,0 +1,17 @@
+#For formatting Yaml content
+https://jsonformatter.org/yaml-formatter
+
+commands
+--------
+docker-compose up
+ - Creates all services given in docker file and makes service up and running.
+docker-compose down
+ - Removes all services given in docker file and makes service down.
+docker-compose stop
+  - Just stops all the services without removing them.
+
+docker-compose -f <file_name> up
+
+docker-compose scale chrome=5
+
+docker-compose ps

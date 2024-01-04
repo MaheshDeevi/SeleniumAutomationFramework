@@ -1,7 +1,5 @@
 # Selenium Automation Framework
 
-[![License](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
-
 ## Overview
 
 The Selenium Automation Framework is a robust and scalable automation framework designed to simplify web application testing using Selenium WebDriver. It provides a structured and organized approach to create and maintain automated test scripts, making it easier for testers to write and execute tests.
@@ -56,13 +54,9 @@ The Selenium Automation Framework is a robust and scalable automation framework 
 
 Contributions are welcome! Please follow the [contribution guidelines](CONTRIBUTING.md).
 
-## License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
 ## Acknowledgments
 
 - [SeleniumHQ](https://www.selenium.dev/) for providing the Selenium WebDriver.
 - [Maven](https://maven.apache.org/) for project management and build automation.
-- Your Name and other contributors for their valuable contributions.
+
 

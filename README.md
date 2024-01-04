@@ -18,7 +18,6 @@ The Selenium Automation Framework is a robust and scalable automation framework 
 
 - [Java](https://www.java.com/) installed
 - [Maven](https://maven.apache.org/) installed
-- ### Note : Browser-specific WebDriver executable is not required, Selenium Manager will take care of this.
 
 ### Setup
 
@@ -49,10 +48,6 @@ The Selenium Automation Framework is a robust and scalable automation framework 
     ```bash
     mvn test
     ```
-
-## Contributing
-
-Contributions are welcome! Please follow the [contribution guidelines](CONTRIBUTING.md).
 
 ## Acknowledgments
 
